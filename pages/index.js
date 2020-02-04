@@ -1,5 +1,6 @@
-function HomePage() {
-  return <div>Cowabunga</div>
-}
+import withLayout from '../src/components/Layout'
 
-export default HomePage
+function HomePage() {
+  return <div>Plastic Origin</div>
+}
+export default withLayout(HomePage)
