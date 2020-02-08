@@ -1,0 +1,8 @@
+{
+  "appService.zipIgnorePattern": [
+    "node_modules{,/**}",
+    ".vscode{,/**}"
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/e7577477-e952-4a8a-885f-17a477b6bd3d/resourceGroups/DEV-PlasticOrigin-WebSite/providers/Microsoft.Web/sites/plasticorigins",
+  "appService.deploySubpath": ""
+}
