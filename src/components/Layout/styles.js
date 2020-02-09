@@ -1,18 +1,21 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   ::selection {
-    background: $white;
+    background: ${props => props.theme.white};
     opacity: .15;
   }
   ::-moz-selection {
-    background: $white;
+    background: ${props => props.theme.white};
   }
 
   body {
-    background-color:$white;
-    color: $black;
+    background-color:${props => props.theme.white};
+    color: ${props => props.black};
     font-family: 'Montserrat', sans-serif;
+    /* max-width: 1042px; */
+    margin: 0 auto;
+    font-size: 62.5%
   }
 
   ul {
@@ -21,6 +24,11 @@ const GlobalStyle = createGlobalStyle`
       cursor: pointer;
     }
   }
+`
+
+export const Wrapper = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  margin: auto;
 `
 
 export default GlobalStyle

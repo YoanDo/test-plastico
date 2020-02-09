@@ -1,10 +1,13 @@
 import { Fragment } from 'react'
-import Header from '../Header'
-import GlobalStyle from './styles'
+
+import Menu from '../Menu'
+import GlobalStyle, { Wrapper } from './styles'
 
 const withLayout = Page => () => (
   <Fragment>
-    <Header />
+    <Wrapper>
+      <Menu />
+    </Wrapper>
     <Page />
     <GlobalStyle whiteColor />
   </Fragment>
