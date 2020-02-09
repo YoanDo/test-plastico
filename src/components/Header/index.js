@@ -1,5 +1,11 @@
 import React from 'react'
 
-const Header = () => <span>header</span>
+import { Banner, Title } from './styles'
+
+const Header = () => (
+  <Banner>
+    <Title>Plastic Origins</Title>
+  </Banner>
+)
 
 export default Header
