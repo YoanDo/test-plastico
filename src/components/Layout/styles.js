@@ -13,9 +13,8 @@ const GlobalStyle = createGlobalStyle`
     background-color:${props => props.theme.white};
     color: ${props => props.black};
     font-family: 'Montserrat', sans-serif;
-    /* max-width: 1042px; */
     margin: 0 auto;
-    font-size: 62.5%
+    font-size: 62.5%;
   }
 
   ul {
@@ -23,6 +22,12 @@ const GlobalStyle = createGlobalStyle`
     li {
       cursor: pointer;
     }
+  }
+  h1,h2,h3,h4{
+    font-family: 'Bebas Neue';
+  }
+  span{
+    color: ${props => props.theme.black}
   }
 `
 
