@@ -1,0 +1,27 @@
+import styled from 'styled-components'
+
+export const Datas = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  align-items: center;
+  justify-content: space-around;
+`
+export const DataWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+export const Count = styled.span`
+  font-size: ${props => props.theme.mainTitleFS};
+  color: ${props => props.theme.white};
+  font-family: 'Bebas Neue';
+`
+export const Key = styled.span`
+  font-size: ${props => props.theme.fourthFS};
+  color: ${props => props.theme.white};
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  font-weight: regular;
+  opacity: 0.85;
+`
