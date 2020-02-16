@@ -10,9 +10,11 @@ export const Banner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 `
-export const Title = styled.span`
+export const Title = styled.h1`
   color: ${props => props.theme.white};
   text-transform: uppercase;
   font-size: ${props => props.theme.mainTitleFS};
+  letter-spacing: 1.93px;
 `

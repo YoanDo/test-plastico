@@ -7,9 +7,12 @@ const theme = {
 
   // sizes
   maxWidth: '1042px',
-  // font-sizes
-  defaultFS: '1.2em',
-  mainTitleFS: '7.6em',
+  // font-sizes - scale: 1.250
+  defaultFS: '1.3em',
+  mainTitleFS: '7.74em',
+  secondaryFS: '6.19em',
+  thirdFS: '4.959em',
+  fourthFS: '2.031em',
 }
 
 export default theme

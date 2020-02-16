@@ -20,6 +20,7 @@ export const Links = styled.div`
   span {
     margin-right: 16px;
     cursor: pointer;
+    color: ${props => props.theme.black};
   }
 `
 

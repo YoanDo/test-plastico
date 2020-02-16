@@ -26,9 +26,6 @@ const GlobalStyle = createGlobalStyle`
   h1,h2,h3,h4{
     font-family: 'Bebas Neue';
   }
-  span{
-    color: ${props => props.theme.black}
-  }
 `
 
 export const Wrapper = styled.div`
