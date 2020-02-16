@@ -1,5 +1,6 @@
 import React from 'react'
 import CountUp from 'react-countup'
+import { FormattedMessage } from 'react-intl'
 
 import { number, string } from 'prop-types'
 import { DataWrapper, Count, Key } from './styles.js'
@@ -9,7 +10,9 @@ const Data = ({ label, value, timing }) => (
     <Count>
       <CountUp duration={timing} end={value} start={0} />
     </Count>
-    <Key>{label}</Key>
+    <Key>
+      <FormattedMessage id={label} />
+    </Key>
   </DataWrapper>
 )
 
