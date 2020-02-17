@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "package.js",
+  "engines": {
+    "node": "12.8.0"
+  },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "core-util-is": "^1.0.2",
@@ -34,9 +37,11 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
+    "heroku-postbuild": "npm run build",
     "lint:fix": "eslint . --fix",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
