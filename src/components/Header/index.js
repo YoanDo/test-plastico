@@ -8,7 +8,7 @@ const Header = () => (
   <Banner>
     <Title>Plastic Origins</Title>
     <Breaker />
-    <KeyDatas />>
+    <KeyDatas />
   </Banner>
 )
 

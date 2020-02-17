@@ -28,7 +28,7 @@ export const SurfRiderRibbon = styled.div`
   width: ${ribbonWidth};
   font-family: 'Montserrat';
   position: absolute;
-  left: 16px;
+  left: 0;
   top: 0;
   background: ${props => props.theme.surfRiderBlue};
   display: flex;
