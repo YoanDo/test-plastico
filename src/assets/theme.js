@@ -3,7 +3,7 @@ const theme = {
   white: '#FFF',
   black: '#555555',
   surfRiderBlue: '#0073be',
-  secondaryColor: '#F6B083',
+  secondaryColor: '#70F9C5',
 
   // sizes
   maxWidth: '1042px',

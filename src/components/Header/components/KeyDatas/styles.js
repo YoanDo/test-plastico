@@ -14,8 +14,9 @@ export const DataWrapper = styled.div`
 `
 export const Count = styled.span`
   font-size: ${props => props.theme.mainTitleFS};
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.secondaryColor};
   font-family: 'Bebas Neue';
+  opacity: 0.85;
 `
 export const Key = styled.span`
   font-size: ${props => props.theme.fourthFS};
