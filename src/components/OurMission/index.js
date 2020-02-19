@@ -23,6 +23,11 @@ const OurMission = () => (
         <AboutImage />
       </Left>
     </Section>
+    <Section>
+      TODO -<span>Collect </span>
+      <span>/ label</span>
+      <span>/ analyse</span>
+    </Section>
   </Wrapper>
 )
 export default OurMission
