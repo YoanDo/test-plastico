@@ -2,5 +2,7 @@
   "lang": "ENGLISH",
   "km": "covered kilometers",
   "contributor": "contributors",
-  "trashperKm": "Trash per kilometer"
+  "trash_per_km": "Trash per kilometer",
+  "about_us_1": "80% of ocean plastic",
+  "about_us_2": " comes from land-based sources. Plastic Origin is a project that aims at mapping plastic pollution in european rivers and provide data to all stakeholders"
 }
