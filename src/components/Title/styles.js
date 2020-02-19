@@ -4,8 +4,8 @@ export const TitleWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-bottom: 10vh; //todo remove
   flex-direction: column;
+  margin-right: calc(${props => props.theme.mainTitleFS}*2);
 `
 
 export const TextTitle = styled.h1`
