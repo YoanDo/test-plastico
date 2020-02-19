@@ -5,7 +5,7 @@ import GlobalStyle, { Wrapper } from './styles'
 
 const withLayout = Page => () => (
   <Fragment>
-    <Wrapper>
+    <Wrapper menu>
       <Menu />
     </Wrapper>
     <Page />

@@ -11,8 +11,10 @@ export const DataWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 17vw;
 `
 export const Count = styled.span`
+  text-align: center;
   font-size: ${props => props.theme.mainTitleFS};
   color: ${props => props.theme.secondaryColor};
   font-family: 'Bebas Neue';

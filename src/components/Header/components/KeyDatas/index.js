@@ -5,9 +5,9 @@ import { Datas } from './styles.js'
 
 const KeyDatas = () => (
   <Datas>
-    <Data label="km" value={3456} timing={5} />
     <Data label="contributor" value={870} timing={4} />
-    <Data label="trashperKm" value={20} timing={3} />
+    <Data label="km" value={3456} timing={5} />
+    <Data label="trash_per_km" value={20} timing={3} />
   </Datas>
 )
 

@@ -4,14 +4,14 @@ const ribbonWidth = '100px'
 const menuHeight = '50px'
 
 export const MenuWrapper = styled.div`
+  margin: auto;
   height: ${menuHeight};
   position: relative;
   display: flex;
   padding-left: calc(${ribbonWidth} + 16px * 2);
-  padding-right: 16px;
   justify-content: space-between;
   align-items: center;
-  max-width: ${props => props.maxWidth};
+  max-width: ${props => props.theme.maxWidth};
 `
 export const Links = styled.div`
   display: flex;

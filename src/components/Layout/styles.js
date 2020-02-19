@@ -25,12 +25,15 @@ const GlobalStyle = createGlobalStyle`
   }
   h1,h2,h3,h4{
     font-family: 'Bebas Neue';
+    color: ${props => props.theme.black};
+    margin: 0;
   }
 `
 
 export const Wrapper = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: auto;
+  padding: ${props => (props.menu ? 0 : `calc(${props.theme.mainTitleFS}*2) 0`)};
 `
 
 export default GlobalStyle
