@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import background from '../../assets/images/kayaks.png'
+import background from '../../assets/images/kayaks.jpg'
 
 export const Section = styled.div`
   width: 100%;
@@ -28,7 +28,7 @@ export const About = styled.h2`
       width: 104%;
       position: absolute;
       height: 20px;
-      background-color: #70f9c5;
+      background-color: ${props => props.theme.secondaryColor};
       content: '';
       transform: rotate(1deg);
     }
@@ -36,7 +36,6 @@ export const About = styled.h2`
 `
 
 export const AboutImage = styled.div`
-  background: lime;
   width: 100%;
   height: 40vh;
   background-image: url(${background});
