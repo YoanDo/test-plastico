@@ -18,6 +18,7 @@ export const Links = styled.div`
   align-items: center;
   padding-right: 16px;
   span {
+    font-size: ${props => props.theme.defaultFS};
     margin-right: 16px;
     cursor: pointer;
     color: ${props => props.theme.black};

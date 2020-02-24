@@ -21,10 +21,11 @@ export const Count = styled.span`
   opacity: 0.85;
 `
 export const Key = styled.span`
-  font-size: ${props => props.theme.fourthFS};
   color: ${props => props.theme.white};
-  text-transform: uppercase;
   font-family: 'Montserrat';
+  font-size: ${props => props.theme.fourthFS};
   font-weight: regular;
   opacity: 0.85;
+  text-align: center;
+  text-transform: uppercase;
 `
