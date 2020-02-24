@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat&display=swap"
+            href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat:300,400&display=swap"
             rel="stylesheet"
           ></link>
           {/* Step 5: Output the styles in the head  */}

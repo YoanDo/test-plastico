@@ -12,6 +12,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-color:${props => props.theme.white};
     color: ${props => props.black};
+    font-weight: 300;
+    font-size: ${props => props.theme.defaultFS};
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
     font-size: 62.5%;
@@ -27,6 +29,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Bebas Neue';
     color: ${props => props.theme.black};
     margin: 0;
+  }
+  p {
+    color: ${props => props.theme.black};
+    font-size: ${props => props.theme.defaultFS};
+    letter-spacing: 1.3px;
   }
 `
 
