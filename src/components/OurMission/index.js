@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade'
 import { Wrapper } from '../Layout/styles'
 import { About, AboutImage, Left, Section } from './styles'
 import Title from '../Title'
+import Goals from '../Goals'
 
 const OurMission = () => (
   <Wrapper>
@@ -24,9 +25,7 @@ const OurMission = () => (
       </Left>
     </Section>
     <Section>
-      TODO -<span>Collect </span>
-      <span>/ label</span>
-      <span>/ analyse</span>
+      <Goals />
     </Section>
   </Wrapper>
 )

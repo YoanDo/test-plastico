@@ -16,7 +16,7 @@ export const Left = styled.div`
 
 export const About = styled.h2`
   max-width: 50vw;
-  font-weight: 400;
+  font-weight: 300;
   font-family: 'Montserrat';
   font-size: ${props => props.theme.fourthFS};
   span {
@@ -41,5 +41,5 @@ export const AboutImage = styled.div`
   background-image: url(${background});
   background-position: center;
   background-size: cover;
-  margin: calc(${props => props.theme.mainTitleFS} / 2) 0;
+  margin-top: calc(${props => props.theme.mainTitleFS} / 2);
 `
