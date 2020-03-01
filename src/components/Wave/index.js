@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { PlainBlue } from './styles'
+import { PlainBlue, WaveContent, WaveWrapper } from './styles'
+import GetInvolved from '../GetInvolved'
 
 const Wave = () => (
-  <>
+  <WaveWrapper>
     <svg width="1440px" height="213px" viewBox="0 0 1440 213" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="wave-(3)" fill="#0073BE">
@@ -14,7 +15,11 @@ const Wave = () => (
         </g>
       </g>
     </svg>
-    <PlainBlue>WIP</PlainBlue>
+    <PlainBlue>
+      <WaveContent>
+        <GetInvolved />
+      </WaveContent>
+    </PlainBlue>
     <svg width="1440px" height="223px" viewBox="0 0 1440 223" version="1.1">
       <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="wave-(2)" fill="#0073BE">
@@ -25,7 +30,7 @@ const Wave = () => (
         </g>
       </g>
     </svg>
-  </>
+  </WaveWrapper>
 )
 
 export default Wave
