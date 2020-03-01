@@ -5,11 +5,14 @@
   "trash_per_km": "Trash per kilometer",
   "about_us_1": "80% of ocean plastic",
   "about_us_2": " comes from land-based sources. Plastic Origin is a project that aims at mapping plastic pollution in european rivers and provide data to all stakeholders",
+  "our_mission_1": "our",
+  "our_mission_2": "goal",
   "collect_title": "Collect",
   "collect_text": "Trained volunteers collect information and images on plastic pollution with Plastic Origins app",
   "analyse_title": "Analyse",
   "analyse_text": "Online contributors label images of pollution with Trashroulette platform",
   "broadcast_title": "Broadcast",
-  "broadcast_text": "Data collected is analyzed and featured in Plastic origins website for all interested parties"
-
+  "broadcast_text": "Data collected is analyzed and featured in Plastic origins website for all interested parties",
+  "get_involved_1": "get",
+  "get_involved_2": "involved"
 }
