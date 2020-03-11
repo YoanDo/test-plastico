@@ -9,6 +9,11 @@ export const CartWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: ${props => (props.marginBottom ? `calc(${props.theme.mainTitleFS}/2)` : 0)};
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.007);
+  }
+  cursor: pointer;
 `
 export const Title = styled.h2`
   flex-basis: 23%;
