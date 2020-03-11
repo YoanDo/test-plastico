@@ -23,7 +23,7 @@ const Menu = () => (
       <span>Data</span>
       <span>About us</span>
     </Links>
-    <Button label="Download the app" />
+    <Button label="download_app" />
   </MenuWrapper>
 )
 
