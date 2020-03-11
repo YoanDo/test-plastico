@@ -1,16 +1,25 @@
 import React from 'react'
-import { string } from 'prop-types'
+import { string, bool } from 'prop-types'
+import { FormattedMessage } from 'react-intl'
 
 import { ButtonWrapper } from './styles'
 
-const Button = ({ label }) => <ButtonWrapper>{label}</ButtonWrapper>
+const Button = ({ label, negative, fullWidth }) => (
+  <ButtonWrapper negative={negative} fullWidth={fullWidth}>
+    <FormattedMessage id={label} />
+  </ButtonWrapper>
+)
 
 Button.propTypes = {
   label: string,
+  negative: bool,
+  fullWidth: bool,
 }
 
 Button.defaultProps = {
   label: null,
+  negative: false,
+  fullWidth: false,
 }
 
 export default Button
