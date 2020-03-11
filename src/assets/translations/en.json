@@ -1,5 +1,6 @@
 {
   "lang": "ENGLISH",
+  "download_app": "download the app",
   "km": "covered kilometers",
   "contributor": "contributors",
   "trash_per_km": "Trash per kilometer",
@@ -14,5 +15,15 @@
   "broadcast_title": "Broadcast",
   "broadcast_text": "Data collected is analyzed and featured in Plastic origins website for all interested parties",
   "get_involved_1": "get",
-  "get_involved_2": "involved"
+  "get_involved_2": "involved",
+  "get_involved_collect_title": "Collect",
+  "get_involved_collect_content": "Follow a short online training and run the rivers to collect data on plastic pollution",
+  "get_involved_collect_cta": "Join us",
+  "get_involved_label_title": "Train",
+  "get_involved_label_content": "Help our IA to detect plastic waste. Tag the pictures and videos collected by our volunteers from your computer",
+  "get_involved_label_cta": "Tag content",
+  "get_involved_donate_title": "Support",
+  "get_involved_donate_content": "Plastic origin is a young project with a lot of ambition. Give us the opportunity to grow faster by supporting us financially",
+  "get_involved_donate_cta": "Donate"
+
 }
