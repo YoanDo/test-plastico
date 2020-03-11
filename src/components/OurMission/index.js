@@ -12,7 +12,7 @@ const OurMission = () => (
     <Section>
       <Title>
         <FormattedMessage id="our_mission_1" /> <br />
-        <FormattedMessage id="our_mission_1" />
+        <FormattedMessage id="our_mission_2" />
       </Title>
       <Left>
         <Fade bottom>
