@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 
-import withLayout from '../src/components/Layout'
+import Footer from '../src/components/Footer'
 import Header from '../src/components/Header'
-import { Wrapper } from '../src/components/Layout/styles'
 import OurMission from '../src/components/OurMission'
-import Wave from '../src/components/Wave'
 import Video from '../src/components/Video'
+import Wave from '../src/components/Wave'
+import withLayout from '../src/components/Layout'
 
 const HomePage = () => (
   <Fragment>
@@ -13,13 +13,7 @@ const HomePage = () => (
     <OurMission />
     <Video />
     <Wave />
-    <Wrapper>
-      data <br />
-      get involve
-      <br />
-      footer
-      <br />
-    </Wrapper>
+    <Footer />
   </Fragment>
 )
 export default withLayout(HomePage)
