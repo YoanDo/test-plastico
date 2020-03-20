@@ -56,3 +56,14 @@ export const LogoWrapper = styled.div`
   width: 85px;
   margin: auto auto 5px auto;
 `
+
+export const SocialWrapper = styled.div`
+  margin-right: 16px;
+`
+
+export const RightWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+`

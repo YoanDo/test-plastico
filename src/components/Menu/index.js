@@ -1,8 +1,9 @@
 import React from 'react'
 
-import { Links, MenuWrapper, SurfRiderRibbon, TopRibbon, LogoWrapper } from './styles'
+import { Links, LogoWrapper, MenuWrapper, RightWrapper, SocialWrapper, SurfRiderRibbon, TopRibbon } from './styles'
 import SurfRiderLogo from '../../assets/images/logos/surfrider.svg'
 import Button from '../Button'
+import Social from '../Social'
 
 const Menu = () => (
   <MenuWrapper>
@@ -23,7 +24,12 @@ const Menu = () => (
       <span>Data</span>
       <span>About us</span>
     </Links>
-    <Button label="download_app" />
+    <RightWrapper>
+      <SocialWrapper>
+        <Social />
+      </SocialWrapper>
+      <Button label="download_app" />
+    </RightWrapper>
   </MenuWrapper>
 )
 
