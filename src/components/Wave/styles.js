@@ -20,7 +20,7 @@ export const WaveImgBot = styled.img`
 `
 
 export const PlainBlue = styled.div`
-  margin: -10px 0;
+  margin: -20px 0;
   width: 100%;
   background-color: ${props => props.theme.surfRiderBlue};
   border: ${props => props.theme.surfRiderBlue} 2px solid;
