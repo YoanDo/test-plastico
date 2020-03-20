@@ -3,7 +3,7 @@ import React from 'react'
 import { Icon, Link } from '../styles'
 
 const Instagram = () => (
-  <Link>
+  <Link href="https://www.instagram.com/surfridereurope/" target="blank">
     <Icon preserveAspectRatio="xMinYMax meet" viewBox="0 0 64 64">
       <path
         data-name="layer1"

@@ -3,7 +3,7 @@ import React from 'react'
 import { Icon, Link } from '../styles'
 
 const Facebook = () => (
-  <Link>
+  <Link href="https://www.facebook.com/surfridereurope" target="blank">
     <Icon preserveAspectRatio="xMinYMax meet" viewBox="0 0 64 64">
       <path
         data-name="layer1"
