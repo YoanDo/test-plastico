@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import Footer from '../src/components/Footer'
 import Header from '../src/components/Header'
-import OurMission from '../src/components/OurMission'
+import Project from '../src/components/Project'
 import Video from '../src/components/Video'
 import Wave from '../src/components/Wave'
 import withLayout from '../src/components/Layout'
@@ -10,7 +10,7 @@ import withLayout from '../src/components/Layout'
 const HomePage = () => (
   <Fragment>
     <Header />
-    <OurMission />
+    <Project />
     <Video />
     <Wave />
     <Footer />

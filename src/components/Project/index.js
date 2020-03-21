@@ -7,8 +7,8 @@ import { About, AboutImage, Left, Section } from './styles'
 import Title from '../Title'
 import Goals from '../Goals'
 
-const OurMission = () => (
-  <Wrapper>
+const Project = () => (
+  <Wrapper name="project">
     <Section>
       <Title>
         <FormattedMessage id="our_mission_1" /> <br />
@@ -32,4 +32,4 @@ const OurMission = () => (
     </Section>
   </Wrapper>
 )
-export default OurMission
+export default Project
