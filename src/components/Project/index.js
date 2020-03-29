@@ -8,13 +8,13 @@ import Title from '../Title'
 import Goals from '../Goals'
 
 const Project = () => (
-  <Wrapper name="project">
+  <Wrapper>
     <Section>
       <Title>
         <FormattedMessage id="our_mission_1" /> <br />
         <FormattedMessage id="our_mission_2" />
       </Title>
-      <Left>
+      <Left name="project">
         <Fade bottom>
           <About>
             "

@@ -7,11 +7,10 @@ import Menu from '../Menu'
 import GlobalStyle, { Wrapper } from './styles'
 
 const withLayout = Page => () => {
-  const { target, offSet } = useRouter().query
+  const { target } = useRouter().query
   const smoothScroll = () => {
     if (isNil(target)) return null
-    const adjust = (!isNil(offSet) && offSet) || 0
-    const targetPosition = document.getElementsByName(target)[0].offsetTop - adjust
+    const targetPosition = document.getElementsByName(target)[0].offsetTop
     scroll.scrollTo(targetPosition, {
       activeClass: true,
       duration: 500,

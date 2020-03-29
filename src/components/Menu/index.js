@@ -20,10 +20,10 @@ const Menu = () => (
       </LogoWrapper>
     </SurfRiderRibbon>
     <Links>
-      <Link href={{ pathname: '/', query: { target: 'project', offSet: -100 } }}>
+      <Link href={{ pathname: '/', query: { target: 'project' } }}>
         <span>The project</span>
       </Link>
-      <Link href={{ pathname: '/', query: { target: 'getInvolved', offSet: 100 } }}>
+      <Link href={{ pathname: '/', query: { target: 'getInvolved' } }}>
         <span>Contribute</span>
       </Link>
       <Link href="/data">

@@ -5,7 +5,7 @@ import GetInvolved from '../GetInvolved'
 
 const Wave = () => (
   <WaveWrapper>
-    <WaveImgTop />
+    <WaveImgTop name="getInvolved" />
     <PlainBlue>
       <WaveContent>
         <GetInvolved />

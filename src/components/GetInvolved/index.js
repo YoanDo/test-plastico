@@ -5,7 +5,7 @@ import Cart from '../Cart'
 import { CartWrapper, Wrapper } from './styles'
 
 const GetInvolved = () => (
-  <Wrapper name="getInvolved">
+  <Wrapper>
     <Title>
       <FormattedMessage id="get_involved_1" />
       <br />
