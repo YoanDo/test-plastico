@@ -10,7 +10,7 @@ import Goals from '../Goals'
 const Project = () => (
   <Wrapper>
     <Section>
-      <Title>
+      <Title color={props => props.theme.black}>
         <FormattedMessage id="our_mission_1" /> <br />
         <FormattedMessage id="our_mission_2" />
       </Title>

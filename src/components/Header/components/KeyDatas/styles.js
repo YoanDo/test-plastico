@@ -6,12 +6,17 @@ export const Datas = styled.div`
   width: 70%;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `
 export const DataWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 17vw;
+  width: 100%;
+  flex: 0.33;
 `
 export const Count = styled.span`
   text-align: center;
@@ -28,4 +33,7 @@ export const Key = styled.span`
   opacity: 0.85;
   text-align: center;
   text-transform: uppercase;
+  @media (max-width: 900px) {
+    color: ${props => props.theme.black};
+  }
 `

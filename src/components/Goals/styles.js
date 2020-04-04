@@ -6,4 +6,9 @@ export const GoalsWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
 `

@@ -5,9 +5,12 @@ export const GoalWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 15vw;
   min-width: 200px;
   height: 100%;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `
 
 export const Title = styled.h2`

@@ -6,12 +6,19 @@ export const Section = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 export const Left = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  @media (max-width: 900px) {
+    align-items: center;
+  }
 `
 
 export const About = styled.h2`
@@ -32,6 +39,9 @@ export const About = styled.h2`
       content: '';
       transform: rotate(1deg);
     }
+  }
+  @media (max-width: 900px) {
+    max-width: 100%;
   }
 `
 

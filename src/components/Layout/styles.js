@@ -43,6 +43,10 @@ export const Wrapper = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: auto;
   padding: ${props => (props.menu ? 0 : `calc(${props.theme.mainTitleFS}*2) 0 0 0`)};
+  @media (max-width: 900px) {
+    padding: 0 20px;
+    margin-top: ${props => (props.menu ? 0 : '20vh')};
+  }
 `
 
 export default GlobalStyle

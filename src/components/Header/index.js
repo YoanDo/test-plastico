@@ -2,11 +2,13 @@ import React from 'react'
 
 import Breaker from '../Breaker'
 import KeyDatas from './components/KeyDatas'
-import { Banner, Title } from './styles'
+import { Banner, Title, MobileBanner } from './styles'
 
 const Header = () => (
   <Banner>
-    <Title>Plastic Origins</Title>
+    <MobileBanner>
+      <Title>Plastic Origins</Title>
+    </MobileBanner>
     <Breaker />
     <KeyDatas />
   </Banner>
