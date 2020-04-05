@@ -8,4 +8,7 @@ export const VideoWrapper = styled.div`
   justify-content: center;
   max-width: ${props => props.theme.maxWidth};
   margin: auto;
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `

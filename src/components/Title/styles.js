@@ -6,6 +6,9 @@ export const TitleWrapper = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   margin-right: calc(${props => props.theme.mainTitleFS}*2);
+  @media (max-width: 900px) {
+    margin-right: auto;
+  }
 `
 
 export const TextTitle = styled.h1`

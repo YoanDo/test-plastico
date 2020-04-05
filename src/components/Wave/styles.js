@@ -12,6 +12,9 @@ export const WaveWrapper = styled.div`
 export const WaveImgTop = styled.img`
   content: url(${waveTop});
   width: 100%;
+  @media (max-width: 900px) {
+    width: 101%;
+  }
 `
 
 export const WaveImgBot = styled.img`

@@ -12,6 +12,10 @@ export const MenuWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: ${props => props.theme.maxWidth};
+  @media (max-width: 900px) {
+    max-width: 100vw;
+    overflow-x: hidden; //wip
+  }
 `
 export const Links = styled.div`
   display: flex;
