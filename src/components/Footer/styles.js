@@ -8,6 +8,9 @@ export const FooterWrapper = styled.div`
   max-width: ${props => props.theme.maxWidth};
   min-height: 20vh;
   padding: ${props => (props.menu ? 0 : `calc(${props.theme.mainTitleFS}*2) 0 0 0`)};
+  @media (max-width: 900px) {
+    padding: 0 20px;
+  }
 `
 
 export const SocialWrapper = styled.div`
