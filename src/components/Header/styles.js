@@ -38,6 +38,6 @@ export const MobileBanner = styled.div`
     background-position: center;
     background-size: cover;
     height: 100%;
-    height: calc(100vh - 50px);
+    height: calc(100vh);
   }
 `

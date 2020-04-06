@@ -1,20 +1,16 @@
 import styled from 'styled-components'
 
-const ribbonWidth = '100px'
-const menuHeight = '50px'
-
 export const MenuWrapper = styled.div`
   margin: auto;
-  height: ${menuHeight};
+  height: ${props => props.theme.menuHeight};
   position: relative;
   display: flex;
-  padding-left: calc(${ribbonWidth} + 16px * 2);
+  padding-left: calc(${props => props.theme.ribbonWidth} + 16px * 2);
   justify-content: space-between;
   align-items: center;
   max-width: ${props => props.theme.maxWidth};
   @media (max-width: 900px) {
-    max-width: 100vw;
-    overflow-x: hidden; //wip
+    display: none;
   }
 `
 export const Links = styled.div`
@@ -30,7 +26,7 @@ export const Links = styled.div`
 `
 
 export const SurfRiderRibbon = styled.div`
-  width: ${ribbonWidth};
+  width: ${props => props.theme.ribbonWidth};
   font-family: 'Montserrat';
   position: absolute;
   left: 0;
@@ -47,7 +43,7 @@ export const TopRibbon = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: ${menuHeight};
+  height: ${props => props.theme.menuHeight};
   margin: auto;
   span {
     color: white;

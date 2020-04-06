@@ -13,6 +13,10 @@ const theme = {
   secondaryFS: '6.19em',
   thirdFS: '4.959em',
   fourthFS: '2.031em',
+
+  // menu
+  menuHeight: '50px',
+  ribbonWidth: '100px',
 }
 
 export default theme
