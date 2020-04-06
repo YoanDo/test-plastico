@@ -18,7 +18,9 @@ export const SocialWrapper = styled.div`
   flex-direction: column;
 `
 
-export const Link = styled.a``
+export const Link = styled.a`
+  margin: 0;
+`
 
 export const SurfRiderLogo = styled.svg`
   flex: none;
