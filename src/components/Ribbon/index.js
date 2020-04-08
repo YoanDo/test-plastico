@@ -2,7 +2,7 @@ import React from 'react'
 import { string } from 'prop-types'
 
 import { LogoWrapper, SurfRiderRibbon, TopRibbon } from './styles'
-import SurfRiderLogo from '../../assets/images/logos/surfrider.svg'
+import SurfRiderLogo from '../../assets/svg/surfrider.svg'
 
 const Ribbon = ({ top, left, right }) => (
   <SurfRiderRibbon top={top} right={right} left={left}>
@@ -13,7 +13,7 @@ const Ribbon = ({ top, left, right }) => (
       </span>
     </TopRibbon>
     <LogoWrapper>
-      <img src={SurfRiderLogo} alt="surfrider logo" />
+      <embed src={SurfRiderLogo} alt="surfrider logo" />
     </LogoWrapper>
   </SurfRiderRibbon>
 )
