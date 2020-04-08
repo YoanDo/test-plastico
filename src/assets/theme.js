@@ -16,7 +16,7 @@ const theme = {
 
   // menu
   menuHeight: '50px',
-  ribbonWidth: '100px',
+  ribbonWidth: '90px',
 }
 
 export default theme

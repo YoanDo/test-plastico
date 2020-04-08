@@ -17,6 +17,10 @@ export const DataWrapper = styled.div`
   align-items: center;
   width: 100%;
   flex: 0.33;
+  @media (max-width: 900px) {
+    flex: 1;
+    flex-direction: column;
+  }
 `
 export const Count = styled.span`
   text-align: center;

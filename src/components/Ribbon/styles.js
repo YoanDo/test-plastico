@@ -33,7 +33,7 @@ export const TopRibbon = styled.div`
 
 export const LogoWrapper = styled.div`
   width: 100%;
-  max-width: 80px;
+  max-width: 76px;
   margin: auto auto 5px auto;
   embed {
     width: 100%;
