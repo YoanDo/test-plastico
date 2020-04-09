@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <Banner>
       <MobileBanner>
-        {isTabletOrMobile && <Ribbon right="20px" top="-28px" left="auto" />}
+        {isTabletOrMobile && <Ribbon right="20px" top="0" left="auto" />}
         <Title>Plastic Origins</Title>
       </MobileBanner>
       <Breaker />

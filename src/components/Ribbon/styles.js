@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const SurfRiderRibbon = styled.div`
   width: ${props => props.theme.ribbonWidth};
+  min-height: 170px;
   font-family: 'Montserrat';
   position: absolute;
   left: ${props => props.left};
@@ -14,7 +15,8 @@ export const SurfRiderRibbon = styled.div`
   justify-content: center;
   border-radius: 0 0 3px 3px;
   @media (max-width: 900px) {
-    transform: scale(0.7);
+    align-items: center;
+    padding-bottom: 5px;
   }
 `
 
@@ -31,11 +33,8 @@ export const TopRibbon = styled.div`
   }
 `
 
-export const LogoWrapper = styled.div`
+export const BotRibbon = styled.div`
   width: 100%;
   max-width: 76px;
   margin: auto auto 5px auto;
-  embed {
-    width: 100%;
-  }
 `
