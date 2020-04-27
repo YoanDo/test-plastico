@@ -7,19 +7,25 @@ export const FooterWrapper = styled.div`
   margin: auto;
   max-width: ${props => props.theme.maxWidth};
   min-height: 20vh;
-  padding: ${props => (props.menu ? 0 : `calc(${props.theme.mainTitleFS}*2) 0 0 0`)};
+  justify-content: space-between;
+  padding: ${props => `${props.theme.spacing(3)} ${props.theme.spacing(1)} `};
   @media (max-width: 900px) {
-    padding: 0 20px;
   }
 `
 
 export const SocialWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  p {
+    margin-top: 0;
+    line-height: 1.6;
+    color: ${props => props.theme.black};
+  }
 `
 
 export const Link = styled.a`
   margin: 0;
+  max-width: 70px;
 `
 
 export const SurfRiderLogo = styled.svg`
