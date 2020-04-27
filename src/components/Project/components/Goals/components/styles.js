@@ -7,7 +7,11 @@ export const GoalWrapper = styled.div`
   justify-content: center;
   min-width: 200px;
   height: 100%;
+  @media (min-width: 900px) {
+    flex-basis: 25%;
+  }
   @media (max-width: 900px) {
+    margin-bottom: ${props => props.theme.spacing(1)};
     flex-direction: column;
     width: 100%;
   }

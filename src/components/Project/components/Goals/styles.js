@@ -5,7 +5,7 @@ export const GoalsWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   @media (max-width: 900px) {
     flex-direction: column;
     width: 100%;
