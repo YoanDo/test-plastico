@@ -6,7 +6,7 @@ import { useMediaQuery } from 'react-responsive'
 import { Wrapper } from '../Layout/styles'
 import { About, AboutImage, Left, Section } from './styles'
 import Title from '../Title'
-import Goals from '../Goals'
+import Goals from './components/Goals'
 
 const Project = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' })
@@ -23,11 +23,13 @@ const Project = () => {
           {!isTabletOrMobile && <span name="project" />}
           <Fade bottom>
             <About>
-              "
               <span>
+                "
                 <FormattedMessage id="about_us_1" />
               </span>
-              <FormattedMessage id="about_us_2" />"
+              <span>
+                <FormattedMessage id="about_us_2" />"
+              </span>
             </About>
           </Fade>
           <AboutImage />

@@ -8,8 +8,8 @@ export const CartWrapper = styled.div`
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  margin-bottom: ${props => (props.marginBottom ? `calc(${props.theme.mainTitleFS}/2)` : 0)};
-  padding: ${props => `calc(${props.theme.mainTitleFS}/2)`};
+  margin: ${props => props.theme.spacing(1)} 0;
+  padding: ${props => props.theme.spacing(2)};
   transition: all 0.2s ease-in-out;
   &:hover {
     transform: scale(1.007);
@@ -17,7 +17,6 @@ export const CartWrapper = styled.div`
   @media (max-width: 900px) {
     align-items: center;
     flex-direction: column;
-    max-width: 70vw;
     width: 100%;
   }
 `

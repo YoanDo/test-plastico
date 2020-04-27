@@ -21,14 +21,15 @@ export const Left = styled.div`
   }
 `
 
-export const About = styled.h2`
+export const About = styled.div`
   max-width: 50vw;
   font-weight: 300;
   font-family: 'Montserrat';
-  font-size: ${props => props.theme.fourthFS};
+  color: ${props => props.theme.black};
   span {
+    font-size: ${props => props.theme.fourthFS};
     position: relative;
-    &:after {
+    &:first-of-type:after {
       z-index: -1;
       top: 6px;
       left: -5px;
@@ -51,5 +52,5 @@ export const AboutImage = styled.div`
   background-image: url(${background});
   background-position: center;
   background-size: cover;
-  margin-top: calc(${props => props.theme.mainTitleFS} / 2);
+  margin-top: ${props => props.theme.spacing(2)};
 `
