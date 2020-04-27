@@ -17,6 +17,9 @@ const theme = {
   // menu
   menuHeight: '50px',
   ribbonWidth: '90px',
+
+  // spacing
+  spacing: x => `${x * 2}em`,
 }
 
 export default theme
