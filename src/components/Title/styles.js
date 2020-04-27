@@ -5,7 +5,7 @@ export const TitleWrapper = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  margin-right: calc(${props => props.theme.mainTitleFS}*2);
+  margin-right: ${props => props.theme.spacing(7)};
   @media (max-width: 900px) {
     margin-right: auto;
   }

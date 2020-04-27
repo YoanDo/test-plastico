@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   align-items: center;
   @media (max-width: 900px) {
     flex-direction: column;
-    padding: 0 20px;
+    padding: 0 ${props => props.theme.spacing(1)};
     max-width: 70vw;
   }
 `

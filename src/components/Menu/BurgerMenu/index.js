@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 import styles from './styles'
 import Social from '../../Social'
-import NavigationLinks from '../components/Links'
+import NavigationLinks from '../../Navigation'
 
 const BurgerMenu = ({ pageWrapId }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,8 +16,9 @@ const BurgerMenu = ({ pageWrapId }) => {
 
   return (
     <MediaQuery maxDeviceWidth={900}>
+      {/* eslint-disable-next-line react/jsx-no-bind */}
       <Menu styles={styles} pageWrapId={pageWrapId} isOpen={isOpen} onStateChange={isMenuOpen}>
-        <NavigationLinks closePanel={() => setIsOpen(false)} />
+        <NavigationLinks burger closePanel={() => setIsOpen(false)} />
         <Social />
       </Menu>
     </MediaQuery>

@@ -32,19 +32,18 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.black};
     margin: 0;
   }
-  p {
-    color: ${props => props.theme.black};
+  p, span {
     font-size: ${props => props.theme.defaultFS};
-    letter-spacing: 1.3px;
+    line-height: 1.3;
   }
 `
 
 export const Wrapper = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: auto;
-  padding: ${props => (props.menu ? 0 : `calc(${props.theme.mainTitleFS}*2) 0 0 0`)};
+  padding: ${props => (props.menu ? 0 : `${props.theme.spacing(6)} 0 0 0`)};
   @media (max-width: 900px) {
-    padding: 0 20px;
+    padding: 0 ${props => props.theme.spacing(1)};
     margin-top: ${props => (props.menu ? 0 : '20vh')};
   }
 `

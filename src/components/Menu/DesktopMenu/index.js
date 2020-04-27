@@ -3,7 +3,7 @@ import React from 'react'
 import { MenuWrapper, RightWrapper, SocialWrapper } from './styles'
 import Button from '../../Button'
 import Social from '../../Social'
-import NavigationLinks from '../components/Links'
+import NavigationLinks from '../../Navigation'
 
 import Ribbon from '../../Ribbon'
 
