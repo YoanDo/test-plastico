@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import Social from '../Social'
 import SurfRiderLink from './components/SurfRiderLink'
@@ -10,7 +11,9 @@ const Footer = () => (
     <SurfRiderLink />
     <Navigation column align="flex-start" />
     <SocialWrapper>
-      <p>Follow us</p>
+      <p>
+        <FormattedMessage id="follow_us" />
+      </p>
       <Social />
     </SocialWrapper>
   </FooterWrapper>

@@ -4,10 +4,10 @@ export const FooterWrapper = styled.div`
   align-items: flex-start;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin: auto;
   max-width: ${props => props.theme.maxWidth};
   min-height: 20vh;
-  justify-content: space-between;
   padding: ${props => `${props.theme.spacing(3)} ${props.theme.spacing(1)} `};
   @media (max-width: 900px) {
   }
@@ -34,8 +34,4 @@ export const SurfRiderLogo = styled.svg`
   transition: fill 0.25s;
   height: 100px;
   width: auto;
-
-  ${Link}:hover & {
-    fill: ${props => props.theme.secondaryColor};
-  }
 `
