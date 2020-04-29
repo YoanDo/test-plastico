@@ -15,7 +15,7 @@ const Menu = () => (
       <SocialWrapper>
         <Social />
       </SocialWrapper>
-      <Button label="download_app" />
+      {/* <Button label="download_app" /> */}
     </RightWrapper>
   </MenuWrapper>
 )

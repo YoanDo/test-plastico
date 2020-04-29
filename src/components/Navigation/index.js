@@ -2,13 +2,15 @@ import React from 'react'
 import Link from 'next/link'
 
 import { func, bool, string } from 'prop-types'
-
 import { Links } from './styles'
 
 const NavigationLinks = ({ align, closePanel, column, burger }) => (
   <Links column={column} burger={burger} align={align} onClick={() => closePanel()}>
+    <Link href={{ pathname: '/' }}>
+      <span>Plastic origins</span>
+    </Link>
     <Link href={{ pathname: '/', query: { target: 'project' } }}>
-      <span>The project</span>
+      <span>Our project</span>
     </Link>
     <Link href={{ pathname: '/', query: { target: 'getInvolved' } }}>
       <span>Contribute</span>
