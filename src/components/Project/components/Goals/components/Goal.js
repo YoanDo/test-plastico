@@ -11,9 +11,9 @@ const Goal = ({ label, delay }) => (
         <Title>
           <FormattedMessage id={`${label}_title`} />
         </Title>
-        <p>
+        <span>
           <FormattedMessage id={`${label}_text`} />
-        </p>
+        </span>
       </Fragment>
     </Fade>
   </GoalWrapper>

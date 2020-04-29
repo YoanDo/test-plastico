@@ -7,6 +7,10 @@ export const GoalWrapper = styled.div`
   justify-content: center;
   min-width: 200px;
   height: 100%;
+  span {
+    font-size: ${props => props.theme.biggerFS};
+    color: ${props => props.theme.black};
+  }
   @media (min-width: 900px) {
     flex-basis: 25%;
   }

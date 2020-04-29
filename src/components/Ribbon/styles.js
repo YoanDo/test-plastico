@@ -1,19 +1,20 @@
 import styled from 'styled-components'
 
 export const SurfRiderRibbon = styled.div`
-  width: ${props => props.theme.ribbonWidth};
-  min-height: 170px;
-  font-family: 'Montserrat';
-  position: absolute;
-  left: ${props => props.left};
-  top: ${props => props.top};
-  right: ${props => props.right};
+  align-items: flex-end;
   background: ${props => props.theme.surfRiderBlue};
+  border-radius: 0 0 3px 3px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  font-family: 'Montserrat';
   justify-content: center;
-  border-radius: 0 0 3px 3px;
+  left: ${props => props.left};
+  min-height: 170px;
+  position: absolute;
+  right: ${props => props.right};
+  top: ${props => props.top};
+  width: ${props => props.theme.ribbonWidth};
+  font-size: ${props => props.theme.defaultFS};
   @media (max-width: 900px) {
     align-items: center;
     padding-bottom: 5px;
@@ -29,7 +30,7 @@ export const TopRibbon = styled.div`
   span {
     color: white;
     text-align: center;
-    font-size: ${props => props.theme.defaultFS};
+    font-size: ${props => props.theme.smallFS};
   }
 `
 

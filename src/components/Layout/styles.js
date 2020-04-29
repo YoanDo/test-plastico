@@ -32,9 +32,17 @@ const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.black};
     margin: 0;
   }
-  p, span {
+  p,label, button {
     font-size: ${props => props.theme.defaultFS};
     line-height: 1.3;
+  }
+
+  input:focus, textarea:focus, select:focus{
+    outline: none;
+  }
+
+  ::selection {
+    background-color: ${props => props.theme.secondaryColor};
   }
 `
 

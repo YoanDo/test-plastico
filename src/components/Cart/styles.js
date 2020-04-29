@@ -26,7 +26,8 @@ export const Title = styled.h2`
   font-size: ${props => props.theme.thirdFS};
 `
 
-export const Content = styled.p`
+export const Content = styled.span`
+  font-size: ${props => props.theme.biggerFS};
   flex-basis: 45%;
 `
 export const ButtonWrapper = styled.div`
