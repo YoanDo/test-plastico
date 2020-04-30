@@ -15,7 +15,7 @@ const Project = () => {
     <Wrapper>
       {isTabletOrMobile && <span name="project" />}
       <Section>
-        <Title color={props => props.theme.black}>
+        <Title>
           <FormattedMessage id="our_mission_1" /> <br />
           <FormattedMessage id="our_mission_2" />
         </Title>
