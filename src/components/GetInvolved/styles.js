@@ -12,6 +12,5 @@ export const Wrapper = styled.div`
   @media (max-width: 900px) {
     flex-direction: column;
     padding: 0 ${props => props.theme.spacing(1)};
-    max-width: 70vw;
   }
 `

@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const CartWrapper = styled.div`
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   align-items: center;
   border-radius: 6px;
   border: solid white 1px;
@@ -11,9 +14,6 @@ export const CartWrapper = styled.div`
   margin: ${props => props.theme.spacing(1)} 0;
   padding: ${props => props.theme.spacing(2)};
   transition: all 0.2s ease-in-out;
-  &:hover {
-    transform: scale(1.007);
-  }
   @media (max-width: 900px) {
     align-items: center;
     flex-direction: column;
@@ -29,6 +29,9 @@ export const Title = styled.h2`
 export const Content = styled.span`
   font-size: ${props => props.theme.biggerFS};
   flex-basis: 45%;
+  @media (max-width: 900px) {
+    margin-bottom: ${props => props.theme.spacing(1)};
+  }
 `
 export const ButtonWrapper = styled.div`
   flex-basis: 20%;

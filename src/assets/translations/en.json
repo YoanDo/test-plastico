@@ -24,6 +24,23 @@
   "get_involved_label_cta": "Tag content",
   "get_involved_donate_title": "Support",
   "get_involved_donate_content": "Plastic origin is a young project with a lot of ambition. Give us the opportunity to grow faster by supporting us financially",
-  "get_involved_donate_cta": "Donate"
-
+  "get_involved_donate_cta": "Donate",
+  "follow_us": "Follow us",
+  "first_name": "First Name",
+  "last_name": "Last Name",
+  "email": "Email",
+  "birthday": "Birthday",
+  "password": "Password",
+  "confirm_password": "Confirm password",
+  "subscribe": "Subscribe to our newsletter",
+  "signup_error_first_name": "What's your first name ?",
+  "signup_error_last_name": "What's your last name ?",
+  "signup_error_email": "Please provide a valid email",
+  "signup_error_birthday": "What's your birthday ? ",
+  "signup_error_password": "Choose a strong password 💪",
+  "signup_error_password_confirmation": "Please confirm your password!",
+  "signup_error_password_match": "Passwords should match",
+  "confirm": "Join",
+  "not_registered": "Not registered yet ?",
+  "already_registered": "Already registered ?"
 }
