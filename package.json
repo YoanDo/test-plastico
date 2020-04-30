@@ -27,6 +27,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
+    "commitizen": "^4.0.4",
+    "cz-conventional-changelog": "^3.1.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^4.3.0",
@@ -42,6 +44,7 @@
   },
   "scripts": {
     "build": "next build",
+    "commit": "npx git-cz",
     "dev": "next",
     "heroku-postbuild": "npm run build",
     "lint:fix": "eslint . --fix",
@@ -58,5 +61,10 @@
   "bugs": {
     "url": "https://github.com/surfriderfoundationeurope/plastic-origin/issues"
   },
-  "homepage": "https://github.com/surfriderfoundationeurope/plastic-origin#readme"
+  "homepage": "https://github.com/surfriderfoundationeurope/plastic-origin#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
