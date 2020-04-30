@@ -17,7 +17,10 @@ const Menu = () => (
         <Social />
       </SocialWrapper>
       {/* <Button label="download_app" /> */}
-      <User />
+      <a href="/signin">
+        <User />
+        {/* //todo : switch to link & check auth */}
+      </a>
     </RightWrapper>
   </MenuWrapper>
 )
