@@ -15,10 +15,10 @@ const NavigationLinks = ({ align, closePanel, column, burger }) => (
     <Link href={{ pathname: '/', query: { target: 'getInvolved' } }}>
       <span>Contribute</span>
     </Link>
-    <Link href="/data">
+    {/* <Link href="/data">
       <span>Data</span>
     </Link>
-    <span>About us</span>
+    <span>About us</span> */}
   </Links>
 )
 
