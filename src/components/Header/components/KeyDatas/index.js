@@ -24,10 +24,6 @@ const KeyDatas = () => {
 
   return (
     <KeysDataWrapper>
-      {/* {stats[0] && <Data label="contributors" value={stats[0]} timing={4} />}
-      {stats[1] && <Data label="km" value={stats[1]} timing={5} />}
-      {stats[2] && <Data label="trash_per_km" value={stats[2]} timing={3} />} */}
-      {/* change back when the api is cleaned */}
       {contributors && <Data label="contributors" value={contributors} timing={4} />}
       {coveredKm && <Data label="km" value={coveredKm} timing={5} />}
       {trashPerKm && <Data label="trash_per_km" value={trashPerKm} timing={3} />}

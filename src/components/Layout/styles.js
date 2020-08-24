@@ -8,9 +8,15 @@ const GlobalStyle = createGlobalStyle`
   ::-moz-selection {
     background: ${props => props.theme.white};
   }
+
   *{
     line-height: 1.3;
   }
+
+  a{
+    text-decoration: none;
+  }
+
   body {
     background-color:${props => props.theme.white};
     color: ${props => props.black};

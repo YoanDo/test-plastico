@@ -12,9 +12,9 @@ const GetInvolved = () => (
       <FormattedMessage id="get_involved_2" />
     </Title>
     <CartWrapper>
-      <Cart label="get_involved_collect" />
-      <Cart label="get_involved_label" />
-      <Cart label="get_involved_donate" marginBottom={false} />
+      <Cart label="get_involved_collect" link="mailto:abruge@surfrider.eu" />
+      <Cart label="get_involved_label" link="mailto:abruge@surfrider.eu" />
+      <Cart label="get_involved_donate" marginBottom={false} link="https://donate.surfrider.eu/b/mon-don" />
     </CartWrapper>
   </Wrapper>
 )

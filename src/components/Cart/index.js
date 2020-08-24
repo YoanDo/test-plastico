@@ -6,14 +6,16 @@ import { FormattedMessage } from 'react-intl'
 import { CartWrapper, Title, Content, ButtonWrapper } from './styles'
 import Button from '../Button'
 
-const Cart = ({ label, displayTitle, marginBottom }) => (
+const Cart = ({ label, displayTitle, marginBottom, link }) => (
   <Fade bottom>
     <CartWrapper displayTitle={displayTitle} marginBottom={marginBottom}>
       <Title>{label && displayTitle && <FormattedMessage id={`${label}_title`} />}</Title>
       <Content>{label && <FormattedMessage id={`${label}_content`} />}</Content>
-      <ButtonWrapper>
-        <Button negative fullWidth label={`${label}_cta`} />
-      </ButtonWrapper>
+      <a href="https://donate.surfrider.eu/b/mon-don" target="_blank" rel="noopener noreferrer">
+        <ButtonWrapper>
+          <Button negative fullWidth label={`${label}_cta`} />
+        </ButtonWrapper>
+      </a>
     </CartWrapper>
   </Fade>
 )
@@ -22,12 +24,14 @@ Cart.propTypes = {
   label: string,
   displayTitle: bool,
   marginBottom: bool,
+  link: string,
 }
 
 Cart.defaultProps = {
   label: null,
   displayTitle: true,
   marginBottom: true,
+  link: null,
 }
 
 export default Cart
