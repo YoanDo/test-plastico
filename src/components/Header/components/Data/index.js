@@ -3,7 +3,7 @@ import CountUp from 'react-countup'
 import { FormattedMessage } from 'react-intl'
 
 import { number, string } from 'prop-types'
-import { DataWrapper, Count, Key } from './styles.js'
+import { DataWrapper, Count, Key } from './styles'
 
 const Data = ({ label, value, timing }) => (
   <DataWrapper>

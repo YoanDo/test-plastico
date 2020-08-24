@@ -1,26 +1,37 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Data from './Data'
+import Data from '../Data'
 
-import { Datas } from './styles.js'
+import { KeysDataWrapper } from './styles'
 
 const KeyDatas = () => {
+  const [stats, setStats] = useState([])
   const getDatas = () => {
     axios
       .get('https://plasticostorageprod.blob.core.windows.net/public/data_home_page.json')
-      .then(res => console.log('api:', res))
-      .catch(er => console.log('api:', er))
+      .then(res => setStats(res.data))
+      // todo remove
+      .catch(er => console.log('api error:', er))
   }
 
-  // useEffect(() => console.log(getDatas()))
-  getDatas()
+  useEffect(() => {
+    getDatas()
+  })
+
+  if (!stats) return null
+
+  const { contributors, coveredKm, trashPerKm } = stats
 
   return (
-    <Datas>
-      <Data label="contributor" value={870} timing={4} />
-      <Data label="km" value={3456} timing={5} />
-      <Data label="trash_per_km" value={20} timing={3} />
-    </Datas>
+    <KeysDataWrapper>
+      {/* {stats[0] && <Data label="contributors" value={stats[0]} timing={4} />}
+      {stats[1] && <Data label="km" value={stats[1]} timing={5} />}
+      {stats[2] && <Data label="trash_per_km" value={stats[2]} timing={3} />} */}
+      {/* change back when the api is cleaned */}
+      {contributors && <Data label="contributors" value={contributors} timing={4} />}
+      {coveredKm && <Data label="km" value={coveredKm} timing={5} />}
+      {trashPerKm && <Data label="trash_per_km" value={trashPerKm} timing={3} />}
+    </KeysDataWrapper>
   )
 }
 
