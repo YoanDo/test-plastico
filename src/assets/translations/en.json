@@ -42,5 +42,7 @@
   "signup_error_password_match": "Passwords should match",
   "confirm": "Join",
   "not_registered": "Not registered yet ?",
-  "already_registered": "Already registered ?"
+  "already_registered": "Already registered ?",
+  "our_project": "Our project",
+  "contribute": "Contribute"
 }

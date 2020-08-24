@@ -12,7 +12,17 @@ const translations = {
 }
 
 // const language = navigator.language.split(/[-_]/)[0] === 'fr' || 'en' //todo set detection
-const language = 'en'
+
+let language = 'fr'
+
+if (
+  typeof window !== 'undefined' &&
+  typeof window.navigator !== 'undefined' &&
+  navigator.language &&
+  navigator.language.split(/[-_]/)[0] !== 'fr'
+) {
+  language = 'en'
+}
 
 function MyApp({ Component, pageProps }) {
   return (
