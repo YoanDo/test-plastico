@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { FormattedMessage } from 'react-intl'
 
 import { func, bool, string } from 'prop-types'
 import { Links } from './styles'
@@ -10,10 +11,14 @@ const NavigationLinks = ({ align, closePanel, column, burger }) => (
       <span>Plastic origins</span>
     </Link>
     <Link href={{ pathname: '/', query: { target: 'project' } }}>
-      <span>Our project</span>
+      <span>
+        <FormattedMessage id="our_project" />
+      </span>
     </Link>
     <Link href={{ pathname: '/', query: { target: 'getInvolved' } }}>
-      <span>Contribute</span>
+      <span>
+        <FormattedMessage id="contribute" />
+      </span>
     </Link>
     {/* <Link href="/data">
       <span>Data</span>
