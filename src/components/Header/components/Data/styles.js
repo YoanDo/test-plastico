@@ -5,7 +5,7 @@ export const DataWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  flex: 0.33;
+  flex: 1 1 0px;
   @media (max-width: 900px) {
     flex: 1;
     flex-direction: column;
