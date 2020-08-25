@@ -1,8 +1,8 @@
 import React from 'react'
 import { string } from 'prop-types'
 
-import LogoSurfRider from '../Logo'
-import { BotRibbon, SurfRiderRibbon, TopRibbon } from './styles'
+// import LogoSurfRider from '../Logo'
+import { BotRibbon, Logo, SurfRiderRibbon, TopRibbon } from './styles'
 
 const Ribbon = ({ top, left, right }) => (
   <SurfRiderRibbon top={top} right={right} left={left}>
@@ -13,7 +13,7 @@ const Ribbon = ({ top, left, right }) => (
       </span>
     </TopRibbon>
     <BotRibbon>
-      <LogoSurfRider />
+      <Logo />
     </BotRibbon>
   </SurfRiderRibbon>
 )
