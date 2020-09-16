@@ -35,7 +35,7 @@ export const WaveContent = styled.div`
   align-items: center;
   justify-content: space-between;
   max-width: ${props => props.theme.maxWidth};
-  margin: auto;
+  margin: ${props => props.theme.spacing(2)} auto;
   width: 100%;
   span,
   p,
