@@ -11,8 +11,6 @@ const translations = {
   en: translationEn,
 }
 
-// const language = navigator.language.split(/[-_]/)[0] === 'fr' || 'en' //todo set detection
-
 let language = 'fr'
 
 if (
