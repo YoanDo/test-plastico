@@ -5,7 +5,7 @@ import Data from '../Data'
 import { KeysDataWrapper } from './styles'
 
 const KeyDatas = () => {
-  const [stats, setStats] = useState([])
+  const [stats, setStats] = useState({})
   const getDatas = () => {
     axios
       .get('https://plasticostorageprod.blob.core.windows.net/public/data_home_page.json')
@@ -16,7 +16,7 @@ const KeyDatas = () => {
 
   useEffect(() => {
     getDatas()
-  })
+  }, [])
 
   if (!stats) return null
 
