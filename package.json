@@ -4,7 +4,7 @@
   "description": "",
   "main": "package.js",
   "engines": {
-    "node": "12.8.0"
+    "node": "12.11.0"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -43,7 +43,7 @@
     "prettier": "^1.19.1"
   },
   "scripts": {
-    "build": "next build",
+    "build": "next build && next export",
     "commit": "npx git-cz",
     "dev": "next",
     "heroku-postbuild": "npm run build",
