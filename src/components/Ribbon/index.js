@@ -1,7 +1,7 @@
 import React from 'react'
 import { string } from 'prop-types'
+import Link from 'next/link'
 
-// import LogoSurfRider from '../Logo'
 import { BotRibbon, Logo, SurfRiderRibbon, TopRibbon } from './styles'
 
 const Ribbon = ({ top, left, right }) => (
@@ -13,7 +13,9 @@ const Ribbon = ({ top, left, right }) => (
       </span>
     </TopRibbon>
     <BotRibbon>
-      <Logo />
+      <Link href='https://www.surfrider.eu'>
+        <Logo />
+      </Link>
     </BotRibbon>
   </SurfRiderRibbon>
 )
