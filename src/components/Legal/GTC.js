@@ -100,7 +100,7 @@ return(
       <br/><br/>
       plasticorigins@surfrider.eu
       <br/><br/>
-      ou
+      or
       <br/><br/>
       Surfrider Foundation Europe<br/>
       33, allée du Moura<br/>
