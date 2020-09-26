@@ -107,6 +107,12 @@ return(
       64200 Biarritz<br/>
       France<br/>
     </Text>
+    <Text isBold>
+      Applicable lawLoi Applicable
+    </Text>
+    <Text>
+      Les Sites et l’Application sont régis par le droit français. Les présentes conditions seront interprétées conformément à la loi française. Les visiteurs ayant accès aux Sites et à l’Application de l’étranger, doivent s'assurer du respect des lois localement applicables.
+    </Text>
   </Wrapper>  )
 }
 

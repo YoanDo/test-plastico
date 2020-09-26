@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 
-import CGU from '../src/components/Legal/CGU'
+import GTC from '../src/components/Legal/GTC'
 import Footer from '../src/components/Footer'
 import withLayout from '../src/components/Layout'
 
-const CGUPage = () => (
+const GTCPage = () => (
   <Fragment>
-    <CGU/>
+    <GTC/>
     <Footer/>
   </Fragment>
 )
-export default withLayout(CGUPage)
+export default withLayout(GTCPage)
