@@ -8,7 +8,7 @@ import { Links } from './styles'
 const NavigationLinks = ({ align, closePanel, column, burger }) => (
   <Links column={column} burger={burger} align={align} onClick={() => closePanel()}>
     <Link href={{ pathname: '/' }}>
-      <span>Plastic origins</span>
+      <span>Plastic Origins</span>
     </Link>
     <Link href={{ pathname: '/', query: { target: 'project' } }}>
       <span>

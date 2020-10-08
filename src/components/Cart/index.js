@@ -11,7 +11,7 @@ const Cart = ({ label, displayTitle, marginBottom, link }) => (
     <CartWrapper displayTitle={displayTitle} marginBottom={marginBottom}>
       <Title>{label && displayTitle && <FormattedMessage id={`${label}_title`} />}</Title>
       <Content>{label && <FormattedMessage id={`${label}_content`} />}</Content>
-      <a href="https://donate.surfrider.eu/b/mon-don" target="_blank" rel="noopener noreferrer">
+      <a href={link} target="_blank" rel="noopener noreferrer">
         <ButtonWrapper>
           <Button negative fullWidth label={`${label}_cta`} />
         </ButtonWrapper>
