@@ -25,7 +25,6 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat:300,400&display=swap"
             rel="stylesheet"
           />
-          <title>Plastic Origins</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link rel="canonical" href="www.plastic-origins.eu" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />

@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components'
 import { IntlProvider } from 'react-intl'
+import Head from 'next/head'
 
 import translationFr from '../src/assets/translations/fr'
 import translationEn from '../src/assets/translations/en'
@@ -24,14 +25,19 @@ if (
 
 function MyApp({ Component, pageProps }) {
   return (
-    <IntlProvider locale={language} messages={translations[language]}>
-      <ThemeProvider theme={theme}>
-        <BurgerMenu pageWrapId="page-wrap" />
-        <main id="page-wrap">
-          <Component {...pageProps} />
-        </main>
-      </ThemeProvider>
-    </IntlProvider>
+    <>
+      <Head>
+        <title>Plastic Origins</title>
+      </Head>
+      <IntlProvider locale={language} messages={translations[language]}>
+        <ThemeProvider theme={theme}>
+          <BurgerMenu pageWrapId="page-wrap" />
+          <main id="page-wrap">
+            <Component {...pageProps} />
+          </main>
+        </ThemeProvider>
+      </IntlProvider>
+    </>
   )
 }
 
