@@ -5,7 +5,7 @@ import Header from '../src/components/Header'
 import Project from '../src/components/Project'
 import Video from '../src/components/Video'
 import Wave from '../src/components/Wave'
-import withLayout from '../src/components/Layout'
+import withLayout from '../src/hoc/layout'
 
 const HomePage = () => (
   <Fragment>

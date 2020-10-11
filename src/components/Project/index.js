@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl'
 import Fade from 'react-reveal/Fade'
 import { useMediaQuery } from 'react-responsive'
 
-import { Wrapper } from '../Layout/styles'
+import { Wrapper } from '../../hoc/layout/styles'
 import { About, AboutImage, Left, Section } from './styles'
 import Title from '../Title'
 import Goals from './components/Goals'

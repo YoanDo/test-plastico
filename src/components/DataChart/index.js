@@ -1,5 +1,5 @@
 import React from 'react'
-import { Wrapper } from '../Layout/styles'
+import { Wrapper } from '../../hoc/layout/styles'
 
 const DataChart = () => (
   <Wrapper>
