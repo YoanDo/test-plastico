@@ -16,10 +16,10 @@ export default class MyDocument extends Document {
     // Step 4: Pass styleTags as a prop
     return { ...page, styleTags }
   }
-
+  
   render() {
     return (
-      <html lang="en">
+      <html>
         <Head>
           <link
             href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat:300,400&display=swap"

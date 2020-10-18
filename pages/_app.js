@@ -6,11 +6,11 @@ import Head from 'next/head'
 import React from 'react'
 import withRedux from 'next-redux-wrapper'
 
-import translationFr from '../src/assets/translations/fr'
-import translationEn from '../src/assets/translations/en'
-import theme from '../src/assets/theme'
 import BurgerMenu from '../src/components/Menu/BurgerMenu'
 import store from '../src/redux/store'
+import theme from '../src/assets/theme'
+import translationEn from '../src/assets/translations/en'
+import translationFr from '../src/assets/translations/fr'
 
 const translations = {
   fr: translationFr,
