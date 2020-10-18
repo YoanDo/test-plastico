@@ -1,11 +1,16 @@
-import { ThemeProvider } from 'styled-components'
 import { IntlProvider } from 'react-intl'
+import { Provider } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
+import App from 'next/app'
 import Head from 'next/head'
+import React from 'react'
+import withRedux from 'next-redux-wrapper'
 
 import translationFr from '../src/assets/translations/fr'
 import translationEn from '../src/assets/translations/en'
 import theme from '../src/assets/theme'
 import BurgerMenu from '../src/components/Menu/BurgerMenu'
+import store from '../src/redux/store'
 
 const translations = {
   fr: translationFr,
@@ -23,22 +28,39 @@ if (
   language = 'en'
 }
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Head>
-        <title>Plastic Origins</title>
-      </Head>
-      <IntlProvider locale={language} messages={translations[language]}>
-        <ThemeProvider theme={theme}>
-          <BurgerMenu pageWrapId="page-wrap" />
-          <main id="page-wrap">
-            <Component {...pageProps} />
-          </main>
-        </ThemeProvider>
-      </IntlProvider>
-    </>
-  )
+class MyApp extends App {
+  static async getInitialProps({ Component, ctx }) {
+    // load app props if their is any or return an empty one
+    const appProps = Component.getInitialProps
+      ? await Component.getInitialProps(ctx)
+      : {}
+
+    console.log(appProps)
+    return { appProps: appProps }
+  }
+  render() {
+    const { Component, appProps } = this.props
+
+    return (
+      <>
+        <Provider store={store}>
+          <Head>
+            <title>Plastic Origins</title>
+          </Head>
+          <IntlProvider locale={language} messages={translations[language]}>
+            <ThemeProvider theme={theme}>
+              <BurgerMenu pageWrapId="page-wrap" />
+              <main id="page-wrap">
+                <Component {...appProps} />
+              </main>
+            </ThemeProvider>
+          </IntlProvider>
+        </Provider>
+      </>
+    )
+  }
 }
 
-export default MyApp
+const makeStore = () => store
+
+export default withRedux(makeStore)(MyApp)
