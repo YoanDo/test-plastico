@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 
-import Breaker from '../Breaker'
+import Breaker from '../UI/Breaker'
 import KeyDatas from './components/KeyDatas'
 import { Banner, Title, MobileBanner } from './styles'
 

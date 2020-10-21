@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade'
 import { FormattedMessage } from 'react-intl'
 
 import { CartWrapper, Title, Content, ButtonWrapper } from './styles'
-import Button from '../Button'
+import Button from '../UI/Button'
 
 const Cart = ({ label, displayTitle, marginBottom, link }) => (
   <Fade bottom>

@@ -2,7 +2,8 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import BaseModal from '.'
-import { ModalHeader, ModalBody, ModalText, ModalFooter } from './components'
+import { ModalHeader, ModalBody, ModalText } from './components'
+import DownloadAppModal from '../../Modals/DownloadAppModal'
 
 export default {
   title: 'UI/BaseModal',
@@ -10,7 +11,12 @@ export default {
   decorators: [withKnobs],
 }
 
-const baseProps = { isOpen: true, isLoading: false, closeModal: action('Close modal'), title: 'This is a modal' }
+const baseProps = {
+  isOpen: true,
+  isLoading: false,
+  closeModal: action('Close modal'),
+  title: 'This is a modal',
+}
 
 export const withStaticProps = () => (
   <BaseModal {...baseProps}>
@@ -33,6 +39,21 @@ export const withDynamicVariables = () => {
       <ModalBody>
         modal body
         <ModalText>This is a modal text generic component</ModalText>
+      </ModalBody>
+    </BaseModal>
+  )
+}
+
+export const WithDownloadAppModal = () => {
+  const dynamicProps = {
+    ...baseProps,
+    isLoading: boolean('isLoading', false),
+  }
+  return (
+    <BaseModal {...dynamicProps}>
+      <ModalHeader title={null} />
+      <ModalBody>
+        <DownloadAppModal />
       </ModalBody>
     </BaseModal>
   )

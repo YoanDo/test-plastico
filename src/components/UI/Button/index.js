@@ -4,8 +4,8 @@ import { FormattedMessage } from 'react-intl'
 
 import { ButtonWrapper } from './styles'
 
-const Button = ({ label, negative, fullWidth }) => (
-  <ButtonWrapper negative={negative} fullWidth={fullWidth}>
+const Button = ({ label, negative, fullWidth, onClick }) => (
+  <ButtonWrapper negative={negative} fullWidth={fullWidth} onClick={onClick}>
     <FormattedMessage id={label} />
   </ButtonWrapper>
 )

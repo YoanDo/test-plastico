@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes, { string } from 'prop-types'
 
 import { TextTitle, TitleWrapper } from './styles'
-import Breaker from '../Breaker'
+import Breaker from '../UI/Breaker'
 
 const Title = ({ children, color }) => (
   <TitleWrapper>

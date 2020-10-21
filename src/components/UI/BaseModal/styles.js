@@ -126,31 +126,6 @@ export const Text = styled.span`
   }
 `
 
-export const FooterWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding-top: 0;
-
-  @media ${({ theme }) => theme.device.laptop} {
-    padding: ${({ theme }) => `${theme.spacing(4)} ${theme.spacing(4.5)}`};
-  }
-
-  @media ${({ theme }) => theme.device.belowLaptop} {
-    width: 100%;
-    padding: ${({ theme }) => `${theme.spacing(3)} 0`};
-  }
-`
-
-export const InnerFooter = styled.div`
-  border-top: 1px solid ${(props) => props.theme.grey8};
-  padding-top: ${(props) => props.theme.spacing(3)};
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-`
-
 export const WrapperBody = styled.div`
   padding: ${({ theme }) => `${theme.spacing(3.5)} ${theme.spacing(7)}`};
   width: 100%;
