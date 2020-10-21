@@ -14,6 +14,9 @@ const theme = {
   secondaryFS: "3.869rem", // 61.9px
   thirdFS: "3.099rem", // 49.959px
   fourthFS: "1.269rem", // 20.31px
+  // font-family -   
+    defaultFF: "'Montserrat', sans-serif",
+    secondaryFF: "'Bebas Neue', sans-serif",
 
   // menu
   menuHeight: "50px",

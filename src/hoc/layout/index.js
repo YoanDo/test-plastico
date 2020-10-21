@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { isNil } from 'ramda'
 import { animateScroll as scroll } from 'react-scroll'
 
-import Menu from '../../components/Menu/DesktopMenu'
+import Menu from '../../containers/DesktopMenu'
 import GlobalStyle, { Wrapper } from './styles'
 
 const withLayout = Page => () => {

@@ -31,13 +31,13 @@ export const Title = styled.h1`
 
 export const MobileBanner = styled.div`
   @media (max-width: 900px) {
-    display: flex;
-    justify-content: center;
     align-items: center;
     background-image: url(${background});
     background-position: center;
     background-size: cover;
-    height: 100%;
-    height: calc(100vh);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100%
   }
 `

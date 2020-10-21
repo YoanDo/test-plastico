@@ -1,20 +1,15 @@
 import { connect } from 'react-redux'
 
 import { downloadAppModal } from '../redux/actions'
+import DesktopMenu from '../components/Menu/DesktopMenu'
 
-
-
-const TestButton = ({onClick}) => {
-    return(<div onClick={onClick }><h1>HERE</h1></div>)
-
-}
 
 function mapDispatchToProps(dispatch) {
   return {
-    onClick: (data) => {
+    openDownloadAppModal: (data) => {
       dispatch(downloadAppModal(data))
     },
   }
 }
 
-export default connect(null, mapDispatchToProps)(TestButton)
+export default connect(null, mapDispatchToProps)(DesktopMenu)
