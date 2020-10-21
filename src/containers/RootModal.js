@@ -9,11 +9,13 @@ import BaseModal from '../components/UI/BaseModal'
 
 // declare components
 // import Example from '../components/Modal/ExampleModal';
+import downloadAppDesktopModal from '../components/Modals/DownloadAppModal'
 
 
 const MODAL_COMPONENTS = {
   // to use a modal, just add it below with its corresponding type
   // e.g.: [modalTypes.TEST_MODAL]: TestModal,
+  [modalTypes.DOWNLOAD_APP_MODAL]: downloadAppDesktopModal,
 }
 
 function RootModal({ modalType, modalProps, hideModal, toggleCanCloseModal, isOpen, canClose }) {
@@ -22,6 +24,7 @@ function RootModal({ modalType, modalProps, hideModal, toggleCanCloseModal, isOp
   }
 
   const SpecificModal = MODAL_COMPONENTS[modalType]
+
   return (
     <BaseModal isOpen={isOpen} closeModal={hideModal} canClose={canClose}>
       {SpecificModal && (

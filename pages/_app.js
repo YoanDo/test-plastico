@@ -11,6 +11,7 @@ import store from '../src/redux/store'
 import theme from '../src/assets/theme'
 import translationEn from '../src/assets/translations/en'
 import translationFr from '../src/assets/translations/fr'
+import RootModal from '../src/containers/RootModal'
 
 const translations = {
   fr: translationFr,
@@ -34,8 +35,6 @@ class MyApp extends App {
     const appProps = Component.getInitialProps
       ? await Component.getInitialProps(ctx)
       : {}
-
-    console.log(appProps)
     return { appProps: appProps }
   }
   render() {
@@ -51,6 +50,7 @@ class MyApp extends App {
             <ThemeProvider theme={theme}>
               <BurgerMenu pageWrapId="page-wrap" />
               <main id="page-wrap">
+              <RootModal/>
                 <Component {...appProps} />
               </main>
             </ThemeProvider>
