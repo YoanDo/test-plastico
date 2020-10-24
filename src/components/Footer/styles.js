@@ -14,11 +14,12 @@ export const FooterWrapper = styled.div`
 `
 
 export const SocialWrapper = styled.div`
+  max-width: 120px;
   display: flex;
   flex-direction: column;
   p {
     margin-top: 0;
-    line-height: 1.6;
+
     color: ${props => props.theme.black};
   }
 `
