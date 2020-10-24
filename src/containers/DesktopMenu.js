@@ -6,8 +6,8 @@ import DesktopMenu from '../components/Menu/DesktopMenu'
 
 function mapDispatchToProps(dispatch) {
   return {
-    openDownloadAppModal: (data) => {
-      dispatch(downloadAppModal(data))
+    openDownloadAppModal: () => {
+      dispatch(downloadAppModal({title: 'test'}))
     },
   }
 }

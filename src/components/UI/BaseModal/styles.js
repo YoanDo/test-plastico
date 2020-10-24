@@ -92,16 +92,12 @@ export const ContentWrapper = styled.div`
 `
 
 export const Title = styled.h1`
-  font-family: ${(props) => props.theme.secondaryFF};
-  font-family: Montserrat;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
+  font-family: ${({theme}) => theme.secondaryFF};
+  font-size: ${props => props.theme.thirdFS};
   letter-spacing: 1px;
-  line-height: 39px;
   text-align: center;
   margin: 0;
-  color: ${({ theme }) => theme.grey2};
+  color: ${({ theme }) => theme.black};
 
   @media ${({ theme }) => theme.device.belowLaptop} {
     font-size: 18px;

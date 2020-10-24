@@ -1,11 +1,12 @@
 import React from 'react'
 import { string, node } from 'prop-types'
+import { FormattedMessage } from 'react-intl'
 
-import { Title, Text, FooterWrapper, InnerFooter, WrapperBody } from '../styles'
+import { Title, Text, WrapperBody } from '../styles'
 
 export const ModalHeader = ({ title }) => (
   <div center>
-    <Title>{title}</Title>
+    <Title><FormattedMessage id={title}/></Title>
   </div>
 )
 

@@ -8,9 +8,9 @@ export const AppleDownloadBadge = styled.div`
   background-size: cover;
   height: 47px;
   width: 140px;
-  opacity: 50%;
   margin-top: ${({ theme }) => theme.spacing(1)};
 `
+
 export const GooglePlayBadgeWrapper = styled.div`
   background-image: url(${GooglePlayBadge});
   background-position: center;
@@ -25,9 +25,4 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: ${({ theme }) => theme.spacing(3)};
-`
-
-export const Text = styled.span`
-  margin-top: ${({ theme }) => theme.spacing(0.5)};
-  color: ${({ theme }) => theme.surfRiderBlue};
 `
