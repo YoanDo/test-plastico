@@ -5,40 +5,63 @@ import { FormattedMessage } from 'react-intl'
 import { func, bool, string } from 'prop-types'
 import { Links } from './styles'
 
-const NavigationLinks = ({ align, closePanel, column, burger }) => (
-  <Links column={column} burger={burger} align={align} onClick={() => closePanel()}>
-    <Link href={{ pathname: '/' }}>
-      <span>Plastic Origins</span>
-    </Link>
-    <Link href={{ pathname: '/', query: { target: 'project' } }}>
-      <span>
-        <FormattedMessage id="our_project" />
-      </span>
-    </Link>
-    <Link href={{ pathname: '/', query: { target: 'getInvolved' } }}>
-      <span>
-        <FormattedMessage id="contribute" />
-      </span>
-    </Link>
-    {/* <Link href="/data">
+const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
+  const isUserFrench =
+    typeof window !== 'undefined' &&
+    typeof window.navigator !== 'undefined' &&
+    navigator.language &&
+    navigator.language.split(/[-_]/)[0] === 'fr'
+  const conditions = isUserFrench ? 'CGU' : 'GTC'
+
+  return (
+    <Links
+      column={column}
+      burger={burger}
+      align={align}
+      onClick={() => closePanel()}
+    >
+      <Link href={{ pathname: '/' }}>
+        <span>Plastic Origins</span>
+      </Link>
+      <Link href={{ pathname: '/', query: { target: 'project' } }}>
+        <span>
+          <FormattedMessage id="our_project" />
+        </span>
+      </Link>
+      <Link href={{ pathname: '/', query: { target: 'getInvolved' } }}>
+        <span>
+          <FormattedMessage id="contribute" />
+        </span>
+      </Link>
+      {isFooter && (
+        <Link href={{ pathname: `/${conditions}` }}>
+          <span>
+            <FormattedMessage id={conditions} />
+          </span>
+        </Link>
+      )}
+      {/* <Link href="/data">
       <span>Data</span>
     </Link>
     <span>About us</span> */}
-  </Links>
-)
+    </Links>
+  )
+}
 
 NavigationLinks.propTypes = {
+  align: string,
+  burger: bool,
   closePanel: func,
   column: bool,
-  burger: bool,
-  align: string,
+  isFooter: bool,
 }
 
 NavigationLinks.defaultProps = {
   align: 'center',
+  burger: false,
   closePanel: Function.prototype,
   column: false,
-  burger: false,
+  isFooter: false,
 }
 
 export default NavigationLinks

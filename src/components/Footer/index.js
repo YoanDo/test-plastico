@@ -9,7 +9,7 @@ import Navigation from '../Navigation'
 const Footer = () => (
   <FooterWrapper>
     <SurfRiderLink />
-    <Navigation column align="flex-start" />
+    <Navigation column align="flex-start" isFooter={true} />
     <SocialWrapper>
       <p>
         <FormattedMessage id="follow_us" />
