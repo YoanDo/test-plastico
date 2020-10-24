@@ -3,7 +3,9 @@ import Link from 'next/link'
 import { FormattedMessage } from 'react-intl'
 
 import { func, bool, string } from 'prop-types'
+import { IOS_APP_LINK, ANDROID_APP_LINK } from '../../constants/appLinks'
 import { Links } from './styles'
+import getMobileOperatingSystem from '../../helpers/getMobileOperatingSystem'
 
 const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
   const isUserFrench =
@@ -11,7 +13,13 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
     typeof window.navigator !== 'undefined' &&
     navigator.language &&
     navigator.language.split(/[-_]/)[0] === 'fr'
+
   const conditions = isUserFrench ? 'CGU' : 'GTC'
+  const isIOs =
+    typeof window !== 'undefined' &&
+    typeof window.navigator !== 'undefined' &&
+    getMobileOperatingSystem() === 'iOS'
+  const appLink = isIOs ? IOS_APP_LINK : ANDROID_APP_LINK
 
   return (
     <Links
@@ -33,6 +41,13 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
           <FormattedMessage id="contribute" />
         </span>
       </Link>
+      {burger && (
+        <a href={appLink} target="_blank">
+          <span>
+            <FormattedMessage id="download_app" />
+          </span>
+        </a>
+      )}
       {isFooter && (
         <Link href={{ pathname: `/${conditions}` }}>
           <span>
