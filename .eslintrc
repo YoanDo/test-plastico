@@ -1,18 +1,61 @@
 {
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest/globals": true
+  },
   "extends": [
-    "wesbos"
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/react"
   ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["eslint-plugin-prettier", "react", "jsx-a11y", "jest", "import"],
   "rules": {
-    "no-console": 2,
+    "no-unused-vars": "warn",
+    "object-curly-newline": "off",
+    "react/jsx-curly-newline": "off", 
+    "padding-line-between-statements": [
+      "error",
+      { 
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return" }
+    ],
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "react/prop-types": 1,
+    "react/display-name": 1,
     "prettier/prettier": [
       "error",
       {
+        "endOfLine": "auto",
         "trailingComma": "es5",
         "singleQuote": true,
         "printWidth": 120,
         "tabWidth": 2,
         "semi": false,
-        "sort-keys": true
+        "sort-keys": true,
+        "useTabs": false
       }
     ]
   }
