@@ -7,14 +7,15 @@ import { Field, Form, Input, ValidationInput } from './styles'
 
 const SignIn = ({ switchToSignUp }) => {
   const { register, handleSubmit, errors } = useForm()
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     axios
       .post('https://func-plasticorigins-backend-dev.azurewebsites.net/login', data)
       // eslint-disable-next-line no-console
-      .then(response => console.log(response))
+      .then((response) => console.log(response))
       // eslint-disable-next-line no-console
-      .catch(e => console.log(e))
+      .catch((e) => console.log(e))
   }
+
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Field>

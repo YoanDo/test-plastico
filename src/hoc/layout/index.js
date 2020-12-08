@@ -6,7 +6,7 @@ import { animateScroll as scroll } from 'react-scroll'
 import Menu from '../../containers/DesktopMenu'
 import GlobalStyle, { Wrapper } from './styles'
 
-const withLayout = Page => () => {
+const withLayout = (Page) => () => {
   const { target } = useRouter().query
   const smoothScroll = () => {
     if (isNil(target)) return null

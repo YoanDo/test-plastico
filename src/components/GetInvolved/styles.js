@@ -7,10 +7,10 @@ export const CartWrapper = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
-  max-width: ${props => props.theme.maxWidth};
+  max-width: ${(props) => props.theme.maxWidth};
   align-items: center;
   @media (max-width: 900px) {
     flex-direction: column;
-    padding: 0 ${props => props.theme.spacing(1)};
+    padding: 0 ${(props) => props.theme.spacing(1)};
   }
 `

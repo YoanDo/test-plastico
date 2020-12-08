@@ -9,9 +9,9 @@ const KeyDatas = () => {
   const getDatas = () => {
     axios
       .get('https://plasticostorageprod.blob.core.windows.net/public/data_home_page.json')
-      .then(res => setStats(res.data))
+      .then((res) => setStats(res.data))
       // todo remove
-      .catch(er => console.log('api error:', er))
+      .catch((er) => console.log('api error:', er))
   }
 
   useEffect(() => {

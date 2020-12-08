@@ -7,12 +7,12 @@ export const CartWrapper = styled.div`
   align-items: center;
   border-radius: 6px;
   border: solid white 1px;
-  color: ${props => props.theme.white};
+  color: ${(props) => props.theme.white};
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  margin: ${props => props.theme.spacing(1)} 0;
-  padding: ${props => props.theme.spacing(2)};
+  margin: ${(props) => props.theme.spacing(1)} 0;
+  padding: ${(props) => props.theme.spacing(2)};
   transition: all 0.2s ease-in-out;
   @media (max-width: 900px) {
     align-items: center;
@@ -23,14 +23,14 @@ export const CartWrapper = styled.div`
 export const Title = styled.h2`
   flex-basis: 23%;
   font-family: 'Bebas Neue';
-  font-size: ${props => props.theme.thirdFS};
+  font-size: ${(props) => props.theme.thirdFS};
 `
 
 export const Content = styled.span`
-  font-size: ${props => props.theme.biggerFS};
+  font-size: ${(props) => props.theme.biggerFS};
   flex-basis: 45%;
   @media (max-width: 900px) {
-    margin-bottom: ${props => props.theme.spacing(1)};
+    margin-bottom: ${(props) => props.theme.spacing(1)};
   }
 `
 export const ButtonWrapper = styled.div`

@@ -9,7 +9,7 @@ import NavigationLinks from '../../Navigation'
 import Ribbon from '../../Ribbon'
 import { func } from 'prop-types'
 
-const Menu = ({openDownloadAppModal}) => (
+const Menu = ({ openDownloadAppModal }) => (
   <MenuWrapper>
     <Ribbon />
     <NavigationLinks />
@@ -17,7 +17,7 @@ const Menu = ({openDownloadAppModal}) => (
       <SocialWrapper>
         <Social />
       </SocialWrapper>
-      <Button label="download_app" onClick={openDownloadAppModal}/>
+      <Button label="download_app" onClick={openDownloadAppModal} />
       {/* <a href="/sign-in">
         <User /> */}
       {/* //todo : switch to link & check auth */}
@@ -32,6 +32,5 @@ Menu.propTypes = {
 Menu.defaultProps = {
   openDownloadAppModal: Function.prototype,
 }
-
 
 export default Menu

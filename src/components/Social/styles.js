@@ -21,14 +21,14 @@ export const Link = styled.a`
 export const Icon = styled.svg`
   cursor: pointer;
   flex: none;
-  fill: ${props => props.theme.black};
+  fill: ${(props) => props.theme.black};
   transition: fill 0.25s;
   height: auto;
   width: 12px;
   opacity: 0.8;
 
   ${Link}:hover & {
-    fill: ${props => props.theme.surfRiderBlue};
+    fill: ${(props) => props.theme.surfRiderBlue};
     opacity: 1;
   }
 `

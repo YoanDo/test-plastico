@@ -5,7 +5,6 @@ import { StyledModal, CloseButton, ContentWrapper } from './styles'
 import ExitIcon from '../../../assets/svg/x.svg'
 
 function BaseModal({ children, closeModal, isOpen, canClose }) {
-  
   return (
     <StyledModal
       isOpen={isOpen}
@@ -14,7 +13,6 @@ function BaseModal({ children, closeModal, isOpen, canClose }) {
       ariaHideApp={false}
       canClose={canClose}
     >
-    
       <CloseButton type="button" onClick={canClose && closeModal} disabled={!canClose}>
         <ExitIcon />
       </CloseButton>

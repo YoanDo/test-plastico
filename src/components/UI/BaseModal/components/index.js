@@ -6,7 +6,9 @@ import { Title, Text, WrapperBody } from '../styles'
 
 export const ModalHeader = ({ title }) => (
   <div center>
-    <Title><FormattedMessage id={title}/></Title>
+    <Title>
+      <FormattedMessage id={title} />
+    </Title>
   </div>
 )
 
@@ -34,5 +36,3 @@ ModalText.defaultProps = {
 ModalText.propTypes = {
   children: node,
 }
-
-

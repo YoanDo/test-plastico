@@ -10,7 +10,7 @@ import NavigationLinks from '../../Navigation'
 const BurgerMenu = ({ pageWrapId }) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const isMenuOpen = function(state) {
+  const isMenuOpen = function (state) {
     setIsOpen(state.isOpen)
   }
 

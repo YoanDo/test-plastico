@@ -9,16 +9,10 @@ const DownloadAppDesktopModal = () => {
     <Wrapper>
       <ModalHeader title={'download_app'} />
       <ModalBody>
-        <a
-          href={ANDROID_APP_LINK}
-          target="_blank"
-        >
+        <a href={ANDROID_APP_LINK} target="_blank">
           <GooglePlayBadgeWrapper />
         </a>
-        <a
-          href={IOS_APP_LINK}
-          target="_blank"
-        >
+        <a href={IOS_APP_LINK} target="_blank">
           <AppleDownloadBadge />
         </a>
       </ModalBody>

@@ -16,18 +16,11 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
 
   const conditions = isUserFrench ? 'CGU' : 'GTC'
   const isIOs =
-    typeof window !== 'undefined' &&
-    typeof window.navigator !== 'undefined' &&
-    getMobileOperatingSystem() === 'iOS'
+    typeof window !== 'undefined' && typeof window.navigator !== 'undefined' && getMobileOperatingSystem() === 'iOS'
   const appLink = isIOs ? IOS_APP_LINK : ANDROID_APP_LINK
 
   return (
-    <Links
-      column={column}
-      burger={burger}
-      align={align}
-      onClick={() => closePanel()}
-    >
+    <Links column={column} burger={burger} align={align} onClick={() => closePanel()}>
       <Link href={{ pathname: '/' }}>
         <span>Plastic Origins</span>
       </Link>

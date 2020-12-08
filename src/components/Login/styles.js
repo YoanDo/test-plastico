@@ -26,7 +26,7 @@ export const Left = styled.div`
 `
 export const InnerSpace = styled.div`
   display: flex;
-  width: calc(${props => props.theme.maxWidth} / 2);
+  width: calc(${(props) => props.theme.maxWidth} / 2);
   height: 100vh;
   align-items: center;
   justify-content: center;
@@ -35,10 +35,10 @@ export const InnerSpace = styled.div`
 `
 
 export const Claim = styled.span`
-  color: ${props => props.theme.white};
+  color: ${(props) => props.theme.white};
   font-family: 'Bebas Neue';
-  font-size: ${props => props.theme.mainTitleFS};
-  max-height: ${props => props.theme.mainTitleFS};
+  font-size: ${(props) => props.theme.mainTitleFS};
+  max-height: ${(props) => props.theme.mainTitleFS};
   line-height: 1;
   opacity: 1;
   overflow: hidden;
@@ -53,7 +53,7 @@ export const ClaimWrapper = styled.div`
 
 export const Right = styled.div`
   display: flex;
-  width: calc(${props => props.theme.maxWidth} / 2);
+  width: calc(${(props) => props.theme.maxWidth} / 2);
   height: 100vh;
   align-items: center;
   justify-content: center;

@@ -25,9 +25,9 @@ export const About = styled.div`
   max-width: 50vw;
   font-weight: 300;
   font-family: 'Montserrat';
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
   span {
-    font-size: ${props => props.theme.fourthFS};
+    font-size: ${(props) => props.theme.fourthFS};
     position: relative;
     &:first-of-type:after {
       z-index: -1;
@@ -36,7 +36,7 @@ export const About = styled.div`
       width: 104%;
       position: absolute;
       height: 20px;
-      background-color: ${props => props.theme.secondaryColor};
+      background-color: ${(props) => props.theme.secondaryColor};
       content: '';
       transform: rotate(1deg);
     }
@@ -52,5 +52,5 @@ export const AboutImage = styled.div`
   background-image: url(${background});
   background-position: center;
   background-size: cover;
-  margin-top: ${props => props.theme.spacing(2)};
+  margin-top: ${(props) => props.theme.spacing(2)};
 `

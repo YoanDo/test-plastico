@@ -11,6 +11,7 @@ export const initialState = {
 const modalReducer = createReducer(initialState, {
   [showModal]: (state, action) => {
     const { modalType, modalProps } = action.payload
+
     return {
       ...state,
       modalType,

@@ -92,8 +92,8 @@ export const ContentWrapper = styled.div`
 `
 
 export const Title = styled.h1`
-  font-family: ${({theme}) => theme.secondaryFF};
-  font-size: ${props => props.theme.thirdFS};
+  font-family: ${({ theme }) => theme.secondaryFF};
+  font-size: ${(props) => props.theme.thirdFS};
   letter-spacing: 1px;
   text-align: center;
   margin: 0;

@@ -6,8 +6,8 @@ import withLayout from '../src/hoc/layout'
 
 const CGUPage = () => (
   <Fragment>
-    <CGU/>
-    <Footer/>
+    <CGU />
+    <Footer />
   </Fragment>
 )
 export default withLayout(CGUPage)

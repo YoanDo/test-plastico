@@ -6,8 +6,8 @@ import withLayout from '../src/hoc/layout'
 
 const GTCPage = () => (
   <Fragment>
-    <GTC/>
-    <Footer/>
+    <GTC />
+    <Footer />
   </Fragment>
 )
 export default withLayout(GTCPage)

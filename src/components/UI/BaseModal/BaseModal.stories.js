@@ -33,6 +33,7 @@ export const withDynamicVariables = () => {
     ...baseProps,
     isLoading: boolean('isLoading', false),
   }
+
   return (
     <BaseModal {...dynamicProps}>
       <ModalHeader title={'modal header component'} />
@@ -49,6 +50,7 @@ export const WithDownloadAppModal = () => {
     ...baseProps,
     isLoading: boolean('isLoading', false),
   }
+
   return (
     <BaseModal {...dynamicProps}>
       <ModalHeader title={null} />

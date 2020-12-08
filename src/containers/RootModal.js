@@ -11,7 +11,6 @@ import BaseModal from '../components/UI/BaseModal'
 // import Example from '../components/Modal/ExampleModal';
 import downloadAppDesktopModal from '../components/Modals/DownloadAppModal'
 
-
 const MODAL_COMPONENTS = {
   // to use a modal, just add it below with its corresponding type
   // e.g.: [modalTypes.TEST_MODAL]: TestModal,
@@ -52,6 +51,7 @@ RootModal.propTypes = {
 
 function mapStateToProps(state) {
   const modalData = modalDataSelector(state)
+
   return { ...modalData }
 }
 

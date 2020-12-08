@@ -32,9 +32,8 @@ if (
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     // load app props if their is any or return an empty one
-    const appProps = Component.getInitialProps
-      ? await Component.getInitialProps(ctx)
-      : {}
+    const appProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {}
+
     return { appProps: appProps }
   }
   render() {
@@ -50,7 +49,7 @@ class MyApp extends App {
             <ThemeProvider theme={theme}>
               <BurgerMenu pageWrapId="page-wrap" />
               <main id="page-wrap">
-              <RootModal/>
+                <RootModal />
                 <Component {...appProps} />
               </main>
             </ThemeProvider>

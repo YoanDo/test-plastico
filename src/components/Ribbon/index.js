@@ -13,7 +13,7 @@ const Ribbon = ({ top, left, right }) => (
       </span>
     </TopRibbon>
     <BotRibbon>
-      <a target="_blank" href='https://www.surfrider.eu'>
+      <a target="_blank" href="https://www.surfrider.eu">
         <Logo />
       </a>
     </BotRibbon>

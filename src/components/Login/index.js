@@ -10,6 +10,7 @@ import { Wrapper, Claim, ClaimWrapper, InnerSpace, Left, Right } from './styles'
 
 const Login = ({ signUp }) => {
   const [showSignUp, setSignUp] = useState(signUp)
+
   return (
     <Wrapper>
       <Left>
