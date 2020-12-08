@@ -1,5 +1,13 @@
 import styled from 'styled-components'
 
+export const Wrapper = styled.div`
+  background: ${({ theme }) => theme.white};
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  z-index: 99;
+`
+
 export const MenuWrapper = styled.div`
   margin: auto;
   height: ${(props) => props.theme.menuHeight};

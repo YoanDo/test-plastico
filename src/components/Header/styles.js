@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import background from '../../assets/images/headerBg.jpg'
 
 export const Banner = styled.div`
-  height: calc(100vh - 50px);
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-image: url(${background});
@@ -29,6 +29,18 @@ export const Title = styled.h1`
   }
 `
 
+export const Claim = styled.h2`
+  display: flex;
+  color: ${(props) => props.theme.white};
+  text-transform: uppercase;
+  font-size: ${(props) => props.theme.secondaryFS};
+  letter-spacing: 1.93px;
+  @media (max-width: 900px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+`
 export const MobileBanner = styled.div`
   @media (max-width: 900px) {
     align-items: center;
