@@ -6,6 +6,8 @@ export const Wrapper = styled.div`
   position: fixed;
   width: 100vw;
   z-index: 99;
+  opacity: ${({ disappearOnOffsetTop }) => (disappearOnOffsetTop ? 0 : 100)};
+  transition: 1s;
 `
 
 export const MenuWrapper = styled.div`
