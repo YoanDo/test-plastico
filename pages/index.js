@@ -6,10 +6,12 @@ import Project from '../src/components/Project'
 import Video from '../src/components/Video'
 import Wave from '../src/components/Wave'
 import withLayout from '../src/hoc/layout'
+import KeyDatas from '../src/components/KeyDatas'
 
 const HomePage = () => (
   <Fragment>
     <Header />
+    <KeyDatas/>
     <Project />
     <Video />
     <Wave />

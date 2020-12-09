@@ -31,8 +31,8 @@ const Header = () => {
       <MobileBanner>
         {/* //todo fix ribbon position on mobile  {isTabletOrMobile && <div><Ribbon right="20px" top="0" left="auto" /></div>} */}
         <TitleWrapper>
-          <div>
-            <Title id={'title'} label={'Plastic'} />
+          <div id={'title'}>
+            <Title label={'Plastic'} />
           </div>
           <div id={'title2'}>
             <Title label={'Origins'} />
