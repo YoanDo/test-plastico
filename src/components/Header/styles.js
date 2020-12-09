@@ -16,17 +16,9 @@ export const Banner = styled.div`
     background-image: none;
   }
 `
-export const Title = styled.h1`
+export const TitleWrapper = styled.div`
   display: flex;
-  color: ${(props) => props.theme.white};
-  text-transform: uppercase;
-  font-size: ${(props) => props.theme.mainTitleFS};
-  letter-spacing: 1.93px;
-  @media (max-width: 900px) {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+  flex-direction: column;
 `
 export const MobileBanner = styled.div`
   @media (max-width: 900px) {

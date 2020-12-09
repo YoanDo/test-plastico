@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react'
-import { useMediaQuery } from 'react-responsive'
-import { Banner, MobileBanner, Title } from './styles'
-import gsap from 'gsap'
 import { animateScroll as scroll } from 'react-scroll'
+import { Banner, MobileBanner, TitleWrapper } from './styles'
+import Title from './components/Title'
+import { useMediaQuery } from 'react-responsive'
+import gsap from 'gsap'
+import React, { useEffect, useRef } from 'react'
 
 import Ribbon from '../Ribbon'
 
@@ -18,7 +19,8 @@ const Header = () => {
   useEffect(() => {
     const tl = gsap.timeline()
     tl.from('#banner', { autoAlpha: '0', duration: 2, ease: 'power3.in' })
-    tl.from('#title', { autoAlpha: '0', duration: 1 })
+    tl.from('#title', { autoAlpha: '0', duration: 1, ease: 'power3.in' })
+    tl.from('#title2', { autoAlpha: '0', x: -10, duration: 1, ease: 'power3.in' })
     tl.add(function () {
       scrollMoreDown300()
     }, '+=1')
@@ -27,8 +29,15 @@ const Header = () => {
   return (
     <Banner id={'banner'} ref={ref}>
       <MobileBanner>
-        {isTabletOrMobile && <Ribbon right="20px" top="0" left="auto" />}
-        <Title id={'title'}>Plastic Origins</Title>
+        {/* //todo fix ribbon position on mobile  {isTabletOrMobile && <div><Ribbon right="20px" top="0" left="auto" /></div>} */}
+        <TitleWrapper>
+          <div>
+            <Title id={'title'} label={'Plastic'} />
+          </div>
+          <div id={'title2'}>
+            <Title label={'Origins'} />
+          </div>
+        </TitleWrapper>
       </MobileBanner>
     </Banner>
   )
