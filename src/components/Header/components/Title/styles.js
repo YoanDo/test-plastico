@@ -26,7 +26,7 @@ export const TitleSecondary = styled(TitlePrimary)`
   left: 50%;
   overflow: hidden;
   position: absolute;
-  top: 53%;
+  top: 52%;
   transform: translate(-49%, -50%);
   white-space: nowrap;
   z-index: 0;

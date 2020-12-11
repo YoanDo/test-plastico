@@ -1,14 +1,15 @@
 import { animateScroll as scroll } from 'react-scroll'
-import { Banner, MobileBanner, TitleWrapper } from './styles'
-import Title from './components/Title'
-import { useMediaQuery } from 'react-responsive'
+// import { useMediaQuery } from 'react-responsive'
 import gsap from 'gsap'
 import React, { useEffect, useRef } from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import Ribbon from '../Ribbon'
+import { Banner, MobileBanner, TagLine, TitleWrapper } from './styles'
+import Title from './components/Title'
+// import Ribbon from '../Ribbon'
 
 const Header = () => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' })
+  // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' })
   const ref = useRef(null)
 
   function scrollMoreDown300() {
@@ -20,10 +21,11 @@ const Header = () => {
     const tl = gsap.timeline()
     tl.from('#banner', { autoAlpha: '0', duration: 2, ease: 'power3.in' })
     tl.from('#title', { autoAlpha: '0', duration: 1, ease: 'power3.in' })
-    tl.from('#title2', { autoAlpha: '0', x: -10, duration: 1, ease: 'power3.in' })
+    tl.from('#title2', { autoAlpha: '0', x: -10, duration: 1, ease: 'back.out(1.7)' })
+    tl.from('#tag-line', { autoAlpha: '0', duration: 1, ease: 'power3.in' }, '-=.7')
     tl.add(function () {
       scrollMoreDown300()
-    }, '+=1')
+    }, '+=1.4')
   }, [])
 
   return (
@@ -37,6 +39,9 @@ const Header = () => {
           <div id={'title2'}>
             <Title label={'Origins'} />
           </div>
+          <TagLine id={'tag-line'}>
+            <FormattedMessage id="tagline" />
+          </TagLine>
         </TitleWrapper>
       </MobileBanner>
     </Banner>

@@ -19,7 +19,17 @@ export const Banner = styled.div`
 export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  text-align: center;
 `
+export const TagLine = styled.span`
+  color: ${({ theme }) => theme.white};
+  font-family: ${({ theme }) => theme.primaryFF};
+  font-size: ${({ theme }) => theme.fourthFS};
+  margin-top: ${({ theme }) => theme.fourthFS};
+  text-align: center;
+  text-transform: uppercase;
+`
+
 export const MobileBanner = styled.div`
   @media (max-width: 900px) {
     align-items: center;

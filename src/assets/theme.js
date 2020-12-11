@@ -5,8 +5,6 @@ const theme = {
   surfRiderBlue: '#0073be',
   secondaryColor: '#70F9C5',
 
-  // sizes
-  maxWidth: '1042px',
   // font-sizes - scale: 1.250
   defaultFS: '0.813rem', // 13px
   biggerFS: '1rem', // 16xp
