@@ -1,10 +1,15 @@
 import React, { Fragment } from 'react'
 import withLayout from '../src/hoc/layout'
-import DataChart from '../src/components/DataChart'
+
+import DataHeader from '../src/components/DataHeader'
+import DataMap from '../src/components/DataMap'
+import Footer from '../src/components/Footer'
 
 const Data = () => (
   <Fragment>
-    <DataChart />
+    <DataHeader />
+    <DataMap />
+    <Footer />
   </Fragment>
 )
 export default withLayout(Data)

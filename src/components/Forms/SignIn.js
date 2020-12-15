@@ -60,8 +60,6 @@ const SignIn = ({ switchToSignUp }) => {
   )
 }
 
-export default SignIn
-
 SignIn.propTypes = {
   switchToSignUp: Function.prototype,
 }
@@ -69,3 +67,5 @@ SignIn.propTypes = {
 SignIn.defaultProps = {
   switchToSignUp: false,
 }
+
+export default SignIn

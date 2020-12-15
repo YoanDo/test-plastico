@@ -12,7 +12,7 @@ const Header = () => {
   // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' })
   const ref = useRef(null)
 
-  function scrollMoreDown300() {
+  function scrollDown() {
     const isUserTop = window && window.pageYOffset === 0
     isUserTop && scroll.scrollMore(ref.current.clientHeight)
   }
@@ -24,7 +24,7 @@ const Header = () => {
     tl.from('#title2', { autoAlpha: '0', x: -10, duration: 1, ease: 'back.out(1.7)' })
     tl.from('#tag-line', { autoAlpha: '0', duration: 1, ease: 'power3.in' }, '-=.7')
     tl.add(function () {
-      scrollMoreDown300()
+      scrollDown()
     }, '+=1.4')
   }, [])
 
