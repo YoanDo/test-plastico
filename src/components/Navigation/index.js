@@ -35,7 +35,7 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
         </span>
       </Link>
       {burger && (
-        <a href={appLink} target="_blank">
+        <a href={appLink} target="_blank" rel="noreferrer">
           <span>
             <FormattedMessage id="download_app" />
           </span>
@@ -48,10 +48,10 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
           </span>
         </Link>
       )}
-      {/* <Link href="/data">
-      <span>Data</span>
-    </Link>
-    <span>About us</span> */}
+      <Link href="/data">
+        <span>Data</span>
+      </Link>
+      {/* <span>About us</span> */}
     </Links>
   )
 }

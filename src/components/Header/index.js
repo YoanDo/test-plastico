@@ -14,7 +14,7 @@ const Header = () => {
 
   function scrollDown() {
     const isUserTop = window && window.pageYOffset === 0
-    isUserTop && scroll.scrollMore(ref.current.clientHeight)
+    isUserTop && ref.current && scroll.scrollMore(ref.current.clientHeight)
   }
 
   useEffect(() => {

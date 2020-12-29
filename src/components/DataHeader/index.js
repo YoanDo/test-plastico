@@ -37,8 +37,7 @@ const DataHeader = () => {
         </Count>
         <About id="about">
           <span>
-            <FormattedMessage id="about_us_2" />
-            <FormattedMessage id="about_us_2" />
+            <FormattedMessage id="data_intro" />
           </span>
         </About>
       </RightSide>
