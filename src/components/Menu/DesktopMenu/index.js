@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { MenuWrapper, RightWrapper, SocialWrapper, Wrapper } from './styles'
+import { MenuWrapper, NavigationLinksWrapper, RightWrapper, SocialWrapper, Wrapper } from './styles'
 import Button from '../../UI/Button'
 import Social from '../../Social'
 import NavigationLinks from '../../Navigation'
@@ -28,7 +28,9 @@ const Menu = ({ openDownloadAppModal }) => {
     <Wrapper disappearOnOffsetTop={scrollTop === 0 && isHome}>
       <MenuWrapper>
         <Ribbon />
-        <NavigationLinks />
+        <NavigationLinksWrapper>
+          <NavigationLinks />
+        </NavigationLinksWrapper>
         <RightWrapper>
           <SocialWrapper>
             <Social />
