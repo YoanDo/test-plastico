@@ -26,9 +26,12 @@ const KeyDatas = () => {
   return (
     <Wrapper>
       <KeysDataWrapper>
-        {contributors && <Data label="contributors" value={contributors} timing={4} />}
+        {/* {contributors && <Data label="contributors" value={contributors} timing={4} />}
         {coveredKm && <Data label="km" value={coveredKm} timing={5} />}
-        {trashPerKm && <Data label="trash_per_km" value={trashPerKm} timing={3} />}
+        {trashPerKm && <Data label="trash_per_km" value={trashPerKm} timing={3} />} */}
+        <Data label="contributors" value={12} timing={4} />
+        <Data label="km" value={20} timing={5} />
+        <Data label="trash_per_km" value={30} timing={3} />
       </KeysDataWrapper>
     </Wrapper>
   )
