@@ -11,7 +11,7 @@ import KeyDatas from '../src/components/KeyDatas'
 const HomePage = () => (
   <Fragment>
     <Header />
-    <KeyDatas/>
+    <KeyDatas />
     <Project />
     <Video />
     <Wave />

@@ -67,4 +67,9 @@ export const Wrapper = styled.div`
   }
 `
 
+export const PreventAnimationFlashWrapper = styled.div`
+  opacity: 1;
+  transition: 0.2s;
+`
+
 export default GlobalStyle
