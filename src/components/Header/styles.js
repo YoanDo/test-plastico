@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import background from '../../assets/images/headerBg.jpg'
+import background from '../../assets/images/headerbg_1900x1200.jpg'
 
 export const Banner = styled.div`
   align-items: center;

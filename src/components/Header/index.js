@@ -1,6 +1,6 @@
 import { animateScroll as scroll } from 'react-scroll'
 // import { useMediaQuery } from 'react-responsive'
-import gsap from 'gsap'
+import gsap, { TweenMax } from 'gsap'
 import React, { useEffect, useRef } from 'react'
 import { FormattedMessage } from 'react-intl'
 
@@ -18,9 +18,9 @@ const Header = () => {
   }
 
   useEffect(() => {
+    TweenMax.set('#banner', { opacity: 1 })
     const tl = gsap.timeline()
-    tl.to('#banner', { opacity: '1', duration: 0, ease: 'power3.in' })
-      .to('#titleWrapper', { opacity: '1', duration: 1, ease: 'power3.in' })
+    tl.to('#titleWrapper', { opacity: '1', duration: 1, ease: 'power3.in' })
       .to('#title', { autoAlpha: '1', duration: 1, ease: 'power3.in' })
       .from('#title2', { autoAlpha: '0', x: -10, duration: 1, ease: 'back.out(1.7)' })
       .from('#tag-line', { autoAlpha: '0', duration: 1, ease: 'power3.in' }, '-=.7')
@@ -30,17 +30,17 @@ const Header = () => {
   }, [])
 
   return (
-    <Banner id={'banner'} ref={ref}>
+    <Banner id="banner" ref={ref}>
       <MobileBanner>
         {/* //todo fix ribbon position on mobile  {isTabletOrMobile && <div><Ribbon right="20px" top="0" left="auto" /></div>} */}
         <TitleWrapper id="titleWrapper">
-          <div id={'title'}>
+          <div id="title">
             <Title label={'Plastic'} />
           </div>
-          <div id={'title2'}>
+          <div id="title2">
             <Title label={'Origins'} />
           </div>
-          <TagLine id={'tag-line'}>
+          <TagLine id="tag-line">
             <FormattedMessage id="tagline" />
           </TagLine>
         </TitleWrapper>
