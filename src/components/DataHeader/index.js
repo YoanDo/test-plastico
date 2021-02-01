@@ -12,12 +12,13 @@ const DataHeader = () => {
   const isBelowLaptop = useMediaQuery({ query: `(max-width: ${theme.size.laptop})` })
   useEffect(() => {
     const tl = gsap.timeline()
-    tl.from('#count', { autoAlpha: '0', duration: 1, ease: 'back.out(1.7)' })
-    tl.from('#title', { autoAlpha: '0', duration: 1, ease: 'back.out(1.7)' }, '+=1')
-    tl.from('#illustration', { x: isBelowLaptop ? '-100vw' : '-60vw', duration: 2, ease: 'power1.inOut' }, '-=2')
-    tl.from('#lime-line', { width: '0', duration: 3, ease: 'slow(0.7, 0.7, false)' }, '-=2')
-    tl.from('#about', { autoAlpha: '0', duration: 1, ease: 'power1.inOut' })
-    tl.from('#icon', { autoAlpha: '0', y: '30px', duration: 1, ease: 'slow(0.7, 0.7, false)' }, '+=1')
+    tl.to('#wrapper', { opacity: 1, duration: 1, ease: 'power1.out' })
+      .from('#count', { autoAlpha: '0', duration: 1, ease: 'back.out(1.7)' })
+      .from('#title', { autoAlpha: '0', duration: 1, ease: 'back.out(1.7)' }, '+=1')
+      .from('#illustration', { x: isBelowLaptop ? '-100vw' : '-60vw', duration: 2.5, ease: 'power1.inOut' }, '-=2')
+      .from('#lime-line', { width: '0', duration: 3, ease: 'slow(0.7, 0.7, false)' }, '-=2')
+      .from('#about', { autoAlpha: '0', duration: 1, ease: 'power1.inOut' })
+      .from('#icon', { autoAlpha: '0', y: '30px', duration: 1, ease: 'slow(0.7, 0.7, false)' }, '+=1')
   }, [])
   const ref = useRef(null)
 
@@ -27,7 +28,7 @@ const DataHeader = () => {
   }
 
   return (
-    <Wrapper ref={ref}>
+    <Wrapper ref={ref} id="wrapper">
       <LeftImage id="illustration" />
       <Title id="title">data</Title>
       <LimeLine id="lime-line" />
