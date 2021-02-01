@@ -1,12 +1,10 @@
-/* eslint-disable react/display-name */
-import React, { useEffect } from 'react'
+import { Fragment, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { isNil } from 'ramda'
 import { animateScroll as scroll } from 'react-scroll'
-import { TweenMax } from 'gsap'
 
 import Menu from '../../containers/DesktopMenu'
-import GlobalStyle, { Wrapper, PreventAnimationFlashWrapper } from './styles'
+import GlobalStyle, { Wrapper } from './styles'
 
 const withLayout = (Page) => () => {
   const { target } = useRouter().query
@@ -22,18 +20,17 @@ const withLayout = (Page) => () => {
   }
 
   useEffect(() => {
-    TweenMax.set('#preventAnimationFlashWrapper', { opacity: 1 })
     smoothScroll()
   })
 
   return (
-    <PreventAnimationFlashWrapper id='preventAnimationFlashWrapper'>
+    <Fragment>
       <Wrapper menu>
         <Menu />
       </Wrapper>
       <Page />
       <GlobalStyle whiteColor />
-    </PreventAnimationFlashWrapper>
+    </Fragment>
   )
 }
 
