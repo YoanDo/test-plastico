@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle `
+const GlobalStyle = createGlobalStyle`
   ::selection {
     background: ${(props) => props.theme.white};
     opacity: .15;
@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle `
   }
 `
 
-export const Wrapper = styled.div `
+export const Wrapper = styled.div`
   max-width: ${(props) => props.theme.maxWidth};
   margin: auto;
   padding: ${(props) => (props.menu ? 0 : `${props.theme.spacing(6)} 0 0 0`)};
