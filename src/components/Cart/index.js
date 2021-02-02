@@ -11,11 +11,11 @@ const Cart = ({ label, displayTitle, marginBottom, link }) => (
     <CartWrapper displayTitle={displayTitle} marginBottom={marginBottom}>
       <Title>{label && displayTitle && <FormattedMessage id={`${label}_title`} />}</Title>
       <Content>{label && <FormattedMessage id={`${label}_content`} />}</Content>
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <ButtonWrapper>
+      <ButtonWrapper>
+        <a href={link} target="_blank" rel="noopener noreferrer">
           <Button negative fullWidth label={`${label}_cta`} />
-        </ButtonWrapper>
-      </a>
+        </a>
+      </ButtonWrapper>
     </CartWrapper>
   </Fade>
 )
