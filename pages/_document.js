@@ -1,4 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document'
+import React from 'react'
 // Import styled components ServerStyleSheet
 import { ServerStyleSheet } from 'styled-components'
 
@@ -37,7 +38,9 @@ export default class MyDocument extends Document {
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
         </Head>
-        <body>
+        {/* TO FIX NEXTJS FOUC IN PROD */}
+        <body style={{ opacity: 0 }}>
+          <script>0</script>
           <Main />
           <NextScript />
         </body>

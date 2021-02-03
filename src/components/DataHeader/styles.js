@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import BgTrash from '../../assets/images/dataTrash.png'
 
 export const Wrapper = styled.div`
+  opacity: 0;
   width: 100%;
   height: 100vh;
   display: flex;

@@ -19,27 +19,28 @@ const Header = () => {
 
   useEffect(() => {
     const tl = gsap.timeline()
-    tl.from('#banner', { autoAlpha: '0', duration: 2, ease: 'power3.in' })
-    tl.from('#title', { autoAlpha: '0', duration: 1, ease: 'power3.in' })
-    tl.from('#title2', { autoAlpha: '0', x: -10, duration: 1, ease: 'back.out(1.7)' })
-    tl.from('#tag-line', { autoAlpha: '0', duration: 1, ease: 'power3.in' }, '-=.7')
-    tl.add(function () {
-      scrollDown()
-    }, '+=1.4')
+    tl.to('#banner', { opacity: 1, duration: 1, ease: 'power3.in' })
+      .to('#titleWrapper', { opacity: '1', duration: 1, ease: 'power3.in' })
+      .to('#title', { autoAlpha: '1', duration: 1, ease: 'power3.in' })
+      .from('#title2', { autoAlpha: '0', x: -10, duration: 1, ease: 'back.out(1.7)' })
+      .from('#tag-line', { autoAlpha: '0', duration: 1, ease: 'power3.in' }, '-=.7')
+      .add(function () {
+        scrollDown()
+      }, '+=1.4')
   }, [])
 
   return (
-    <Banner id={'banner'} ref={ref}>
+    <Banner id="banner" ref={ref}>
       <MobileBanner>
         {/* //todo fix ribbon position on mobile  {isTabletOrMobile && <div><Ribbon right="20px" top="0" left="auto" /></div>} */}
-        <TitleWrapper>
-          <div id={'title'}>
+        <TitleWrapper id="titleWrapper">
+          <div id="title">
             <Title label={'Plastic'} />
           </div>
-          <div id={'title2'}>
+          <div id="title2">
             <Title label={'Origins'} />
           </div>
-          <TagLine id={'tag-line'}>
+          <TagLine id="tag-line">
             <FormattedMessage id="tagline" />
           </TagLine>
         </TitleWrapper>

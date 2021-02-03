@@ -26,6 +26,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
     font-size: 62.5%;
+    /* TO FIX FOUC */
+    opacity: 1 !important;
   }
 
   ul {
@@ -65,6 +67,10 @@ export const Wrapper = styled.div`
     padding: 0 ${(props) => props.theme.spacing(1)};
     margin-top: ${(props) => (props.menu ? 0 : '20vh')};
   }
+`
+
+export const PreventAnimationFlashWrapper = styled.div`
+  opacity: 0;
 `
 
 export default GlobalStyle

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import background from '../../assets/images/headerBg.jpg'
+import background from '../../assets/images/headerbg_1900x1200.jpg'
 
 export const Banner = styled.div`
   align-items: center;
@@ -11,6 +11,7 @@ export const Banner = styled.div`
   flex-direction: column;
   height: 100vh;
   justify-content: center;
+  opacity: 0;
   @media (max-width: 900px) {
     height: 100%;
     background-image: none;
@@ -20,6 +21,7 @@ export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  opacity: 0;
 `
 export const TagLine = styled.span`
   color: ${({ theme }) => theme.white};
