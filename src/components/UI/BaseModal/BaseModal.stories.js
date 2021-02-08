@@ -1,6 +1,5 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
-import { withKnobs, boolean } from '@storybook/addon-knobs'
 import BaseModal from '.'
 import { ModalHeader, ModalBody, ModalText } from './components'
 import DownloadAppModal from '../../Modals/DownloadAppModal'
@@ -8,7 +7,6 @@ import DownloadAppModal from '../../Modals/DownloadAppModal'
 export default {
   title: 'UI/BaseModal',
   component: BaseModal,
-  decorators: [withKnobs],
 }
 
 const baseProps = {
@@ -31,7 +29,6 @@ export const withStaticProps = () => (
 export const withDynamicVariables = () => {
   const dynamicProps = {
     ...baseProps,
-    isLoading: boolean('isLoading', false),
   }
 
   return (
@@ -48,7 +45,6 @@ export const withDynamicVariables = () => {
 export const WithDownloadAppModal = () => {
   const dynamicProps = {
     ...baseProps,
-    isLoading: boolean('isLoading', false),
   }
 
   return (
