@@ -48,5 +48,10 @@
   "soon_available": "Soon available 😉",
   "tagline": "Map river plastic pollution",
   "data_intro": "The goal of the Plastic Origins project is to map river plastic pollution to localize hotspots and urge our decision makers to take action where it’s the most urgent. Discover our first results",
-  "get_involve_zoom_link": "https://us02web.zoom.us/meeting/register/tZ0rcOCqqDkqHtP_hcUF0lI3avfpi10DuTNq"
+  "get_involve_zoom_link": "https://us02web.zoom.us/meeting/register/tZ0rcOCqqDkqHtP_hcUF0lI3avfpi10DuTNq",
+  "pm": "Project management",
+  "founder": "Founder",
+  "dev": "Developer",
+  "dev_ux": "Developer & UX",
+  "db": "Data base"
 }
