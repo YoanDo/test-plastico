@@ -53,5 +53,13 @@
   "founder": "Fondateur",
   "dev": "Développeur",
   "dev_ux": "Développeur & UX",
-  "db": "Base de donnée"
+  "db": "Base de donnée",
+  "team_title_1": "Derrière",
+  "team_title_2": "le projet",
+  "team_intro_1": "Nous sommes des citoyens, des associations, des scientifiques et des entreprises responsables luttant pour des océans plus propres et en bonne santé.",
+  "team_intro_2": "Tous les outils numériques utilisés dans le cadre de ce projet (hors app mobile) ont été développés par des bénévoles. Ce projet n’existerait pas sans leur soutien. ",
+  "team_intro_3": "Merci à tout ceux qui ont contribué et à ceux qui le feront demain.",
+  "join_team_cta": "Rejoindre l'équipe",
+  "join_team_1": "Vous avez des compétences en analyse de donnée ou en développement web?",
+  "join_team_2": "Nous sommes toujours à la recherche de bénévoles pour nous aider à améliorer et à maintenir nos outils."
 }

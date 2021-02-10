@@ -53,5 +53,11 @@
   "founder": "Founder",
   "dev": "Developer",
   "dev_ux": "Developer & UX",
-  "db": "Data base"
+  "db": "Data base",
+  "team_title_1": "Behind",
+  "team_title_2": "the project",
+  "team_intro_1": "We are citizens, associations, scientists and responsible companies fighting for a cleaner and healthier Ocean.",
+  "team_intro_2": "All  tech tools  used  for  the  project  (except  the app)  have  been  developed by  volunteers. The  project would not exist without their support. ",
+  "team_intro_3": "Thank you to all who contributed and to those who will do it tomorrow.",
+  "join_team_cta": "Join the team"
 }
