@@ -9,6 +9,9 @@ export const SponsorsWrapper = styled.div`
   padding: calc(${({ theme }) => theme.fourthFS}*2);
   position: relative;
   z-index: 2;
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    background: ${({ theme }) => theme.surfRiderBlue};
+  }
 
   span {
     color: ${({ theme }) => theme.white};
@@ -30,6 +33,9 @@ export const SponsorsWrapper = styled.div`
     padding: 0;
     position: relative;
     z-index: 3;
+    @media ${({ theme }) => theme.device.belowLaptop} {
+      margin-top: 0;
+    }
   }
 
   &:before {
@@ -42,5 +48,8 @@ export const SponsorsWrapper = styled.div`
     transform: translate(-50%, -50%) rotate(-2deg);
     width: 200vw;
     z-index: 0;
+    @media ${({ theme }) => theme.device.belowLaptop} {
+      display: none;
+    }
   }
 `

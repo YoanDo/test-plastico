@@ -11,6 +11,11 @@ export const HeaderWrapper = styled(Wrapper)`
   justify-content: space-around;
   align-items: center;
   min-height: 50vh;
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `
 export const HeaderIntroWrapper = styled.div`
   flex-basis: 50%;
@@ -21,6 +26,10 @@ export const HeaderIntroWrapper = styled.div`
     position: relative;
     display: block;
   }
+
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    flex-basis: auto;
+  }
 `
 
 export const Sponsors = styled(Wrapper)`
@@ -29,6 +38,10 @@ export const Sponsors = styled(Wrapper)`
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    min-height: 25vh;
+    padding: 0;
+  }
 `
 
 export const Title = styled.h1`
@@ -40,5 +53,7 @@ export const Title = styled.h1`
   z-index: 1;
   @media ${({ theme }) => theme.device.belowLaptop} {
     top: 50vh;
+    font-size: ${(props) => props.theme.mainTitleFS};
+    margin-bottom: ${(props) => props.theme.mainTitleFS};
   }
 `

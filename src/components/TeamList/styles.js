@@ -16,4 +16,13 @@ export const CardWrapper = styled.div`
   &:last-of-type {
     margin-right: 0;
   }
+
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    &:nth-child(1) {
+      margin-left: auto;
+    }
+    &:last-of-type {
+      margin-right: auto;
+    }
+  }
 `

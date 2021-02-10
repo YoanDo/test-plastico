@@ -16,7 +16,8 @@ const Team = () => (
       <HeaderIntroWrapper>
         <span>
           <FormattedMessage id="team_intro_1" />
-          <br /><br />
+          <br />
+          <br />
           <FormattedMessage id="team_intro_2" />
           <br />
           <FormattedMessage id="team_intro_3" />
