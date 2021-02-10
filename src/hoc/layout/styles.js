@@ -26,6 +26,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
     font-size: 62.5%;
+    max-width: 100vw;
+    overflow-x: hidden;
     /* TO FIX FOUC */
     opacity: 1 !important;
   }

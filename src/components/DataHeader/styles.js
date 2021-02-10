@@ -42,6 +42,7 @@ export const Title = styled.h1`
   z-index: 1;
   @media ${({ theme }) => theme.device.belowLaptop} {
     top: 50vh;
+    font-size: ${({ theme }) => theme.mainTitleFS};
   }
 `
 

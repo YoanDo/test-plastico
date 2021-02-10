@@ -1,11 +1,9 @@
 import React from 'react'
-import { withKnobs, string } from '@storybook/addon-knobs'
 import Title from '.'
 
 export default {
   title: 'UI/Title',
   component: Title,
-  decorators: [withKnobs],
 }
 
 const baseProps = {

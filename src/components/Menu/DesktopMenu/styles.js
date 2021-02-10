@@ -15,7 +15,6 @@ export const MenuWrapper = styled.div`
   height: ${(props) => props.theme.menuHeight};
   position: relative;
   display: flex;
-  padding-left: calc(${(props) => props.theme.ribbonWidth} + 16px * 2);
   justify-content: space-between;
   align-items: center;
   max-width: ${(props) => props.theme.maxWidth};
@@ -23,6 +22,11 @@ export const MenuWrapper = styled.div`
     display: none;
   }
 `
+
+export const NavigationLinksWrapper = styled.div`
+  margin-left: calc(${({ theme }) => theme.ribbonWidth} + 16px);
+`
+
 export const Links = styled.div`
   display: flex;
   align-items: center;

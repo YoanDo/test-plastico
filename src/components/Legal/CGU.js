@@ -49,7 +49,7 @@ const CGU = () => {
         <br />
         <br />
         L’équipe en charge du projet Plastic Origins de l’association Surfrider Foundation Europe, peut-être contactée
-        par email à l’adresse : <a href="plasticorigins@surfrider.eu">plasticorigins@surfrider.eu</a>
+        par email à l’adresse : <a href="mailto:plasticorigins@surfrider.eu">plasticorigins@surfrider.eu</a>
         <br />
         <br />
         Le directeur de publication du Site est Monsieur Florent Marcoux, Directeur de l’association.
