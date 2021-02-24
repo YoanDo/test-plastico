@@ -1,11 +1,8 @@
 import styled from 'styled-components'
 import { Wrapper } from '../../hoc/layout/styles'
 
-import sponsorImage from '../../assets/images/sponsors.png'
-
 export const HeaderWrapper = styled(Wrapper)`
   padding-top: 170px;
-  padding-bottom: 170px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -32,19 +29,7 @@ export const HeaderIntroWrapper = styled.div`
   }
 `
 
-export const Sponsors = styled(Wrapper)`
-  background: url(${sponsorImage});
-  min-height: 500px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  @media ${({ theme }) => theme.device.belowLaptop} {
-    min-height: 25vh;
-    padding: 0;
-  }
-`
-
-export const Title = styled.h1`
+export const PageTitle = styled.h1`
   color: ${(props) => props.theme.secondaryColor};
   font-size: ${(props) => props.theme.landingTitle};
   letter-spacing: 1.93px;
@@ -55,5 +40,49 @@ export const Title = styled.h1`
     top: 50vh;
     font-size: ${(props) => props.theme.mainTitleFS};
     margin-bottom: ${(props) => props.theme.mainTitleFS};
+  }
+`
+export const SponsorsWrapper = styled.div`
+  display: flex;
+  flex-direction: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: ${({ theme }) => theme.secondaryFS};
+  span {
+    margin-right: ${({ theme }) => theme.secondaryFS};
+  }
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    flex-direction: column;
+    span {
+      margin-bottom: ${({ theme }) => theme.secondaryFS};
+      margin-top: calc(${({ theme }) => theme.secondaryFS}*2);
+      margin-right: 0;
+    }
+  }
+`
+export const SponsorRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    flex-direction: column;
+  }
+`
+
+export const SponsorLogo = styled.div`
+  background: url(${({ url }) => url});
+  flex-grow: 1;
+  flex-basis: 0;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  max-width: 200px;
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    min-height: 200px;
+    min-width: 200px;
   }
 `

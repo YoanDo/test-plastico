@@ -65,7 +65,7 @@ export const Wrapper = styled.div`
   max-width: ${(props) => props.theme.maxWidth};
   margin: auto;
   padding: ${(props) => (props.menu ? 0 : `${props.theme.spacing(6)} 0 0 0`)};
-  @media (max-width: 900px) {
+  @media (max-width: 1280px) {
     padding: 0 ${(props) => props.theme.spacing(1)};
     margin-top: ${(props) => (props.menu ? 0 : '20vh')};
   }

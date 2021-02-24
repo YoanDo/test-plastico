@@ -4,7 +4,7 @@ import waveTop from '../../assets/svg/waveTop.svg'
 import waveBot from '../../assets/svg/waveBot.svg'
 
 export const WaveWrapper = styled.div`
-  padding: ${props => (props.menu ? 0 : `calc(${props.theme.mainTitleFS}*2) 0 0 0`)};
+  padding: ${(props) => (props.menu ? 0 : `calc(${props.theme.mainTitleFS}*2) 0 0 0`)};
   width: 100vw;
   overflow: hidden;
 `
@@ -25,8 +25,8 @@ export const WaveImgBot = styled.img`
 export const PlainBlue = styled.div`
   margin: -20px 0;
   width: 100%;
-  background-color: ${props => props.theme.surfRiderBlue};
-  border: ${props => props.theme.surfRiderBlue} 2px solid;
+  background-color: ${(props) => props.theme.surfRiderBlue};
+  border: ${(props) => props.theme.surfRiderBlue} 2px solid;
 `
 
 export const WaveContent = styled.div`
@@ -34,8 +34,8 @@ export const WaveContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: ${props => props.theme.maxWidth};
-  margin: ${props => props.theme.spacing(2)} auto;
+  max-width: ${(props) => props.theme.maxWidth};
+  margin: ${(props) => props.theme.spacing(2)} auto;
   width: 100%;
   span,
   p,

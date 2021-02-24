@@ -3,6 +3,7 @@ import PropTypes, { boolean, string } from 'prop-types'
 
 import { TextTitle, TitleWrapper } from './styles'
 import Breaker from '../UI/Breaker'
+import theme from '../../assets/theme'
 
 const Title = ({ children, color, isBreakerDisplayed }) => (
   <TitleWrapper>
@@ -19,7 +20,7 @@ Title.propTypes = {
 
 Title.defaultProps = {
   children: null,
-  color: null,
+  color: theme.black,
   isBreakerDisplayed: true,
 }
 export default Title
