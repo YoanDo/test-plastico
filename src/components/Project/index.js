@@ -16,8 +16,10 @@ const Project = () => {
       {isTabletOrMobile && <span name="project" />}
       <Section>
         <Title>
-          <FormattedMessage id="our_mission_1" /> <br />
-          <FormattedMessage id="our_mission_2" />
+          <>
+            <FormattedMessage id="our_mission_1" /> <br />
+            <FormattedMessage id="our_mission_2" />
+          </>
         </Title>
         <Left>
           {!isTabletOrMobile && <span name="project" />}

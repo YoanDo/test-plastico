@@ -10,9 +10,11 @@ const GetInvolved = () => {
   return (
     <BlueWrapper>
       <Title color="white">
-        <FormattedMessage id="get_involved_1" />
-        <br />
-        <FormattedMessage id="get_involved_2" />
+        <>
+          <FormattedMessage id="get_involved_1" />
+          <br />
+          <FormattedMessage id="get_involved_2" />
+        </>
       </Title>
       <CartWrapper>
         <Cart label="get_involved_collect" link={zoomLink} />
