@@ -51,9 +51,7 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
       )}
       {isFooter && (
         <Link href={{ pathname: `/${conditions}` }}>
-          <span>
-            <FormattedMessage id={conditions} />
-          </span>
+          <span>{conditions}</span>
         </Link>
       )}
       {/* <span>About us</span> */}
