@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import PropTypes, { arrayOf, shape } from 'prop-types'
+import { arrayOf, number, shape, string } from 'prop-types'
 
 import { SolutionsWrapper, ListWrapper, ListTitle, SolutionCardWrapper, ListSelectBar } from './styles'
 
@@ -11,8 +11,6 @@ const index = ({ solutionsList }) => {
   useEffect(() => {
     lineRefs.current && setSelectedRef(lineRefs.current[selectedSolution.index])
   }, [selectedSolution])
-
-  console.log('yo', selectedRef?.scrollHeight)
 
   return (
     <SolutionsWrapper>
@@ -34,6 +32,19 @@ const index = ({ solutionsList }) => {
   )
 }
 
-index.propTypes = {}
+index.propTypes = {
+  lang: string,
+  solutionsList: arrayOf(
+    shape({
+      id: number,
+      title_fr: string,
+      title_en: string,
+    })
+  ),
+}
+
+index.defaultProps = {
+  lang: 'fr',
+}
 
 export default index
