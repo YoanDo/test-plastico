@@ -2,11 +2,16 @@ import React, { useState, useRef, useEffect } from 'react'
 import { arrayOf, number, shape, string } from 'prop-types'
 
 import { SolutionsWrapper, ListWrapper, ListTitle, SolutionCardWrapper, ListSelectBar } from './styles'
+import SolutionCard from '../../containers/SolutionCard'
 
 const index = ({ solutionsList }) => {
-  const [selectedSolution, selectSolution] = useState([null])
+  const [selectedSolution, selectSolution] = useState({})
   const [selectedRef, setSelectedRef] = useState([null])
   const lineRefs = useRef([])
+
+  useEffect(() => {
+    selectSolution({ id: parseInt(solutionsList[0]?.id), index: null })
+  }, [solutionsList])
 
   useEffect(() => {
     lineRefs.current && setSelectedRef(lineRefs.current[selectedSolution.index])
@@ -27,7 +32,10 @@ const index = ({ solutionsList }) => {
           </ListTitle>
         ))}
       </ListWrapper>
-      <SolutionCardWrapper>solutions card n° {selectedSolution.id}</SolutionCardWrapper>
+      <SolutionCardWrapper>
+        solutions card n° {selectedSolution.id}
+        {selectedSolution.id && <SolutionCard selectedSolutionId={selectedSolution.id} />}
+      </SolutionCardWrapper>
     </SolutionsWrapper>
   )
 }
@@ -36,7 +44,7 @@ index.propTypes = {
   lang: string,
   solutionsList: arrayOf(
     shape({
-      id: number,
+      id: string,
       title_fr: string,
       title_en: string,
     })

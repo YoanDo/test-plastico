@@ -1,8 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const index = () => {
-  return <div>Solution Card</div>
+const index = ({ data }) => {
+  return (
+    <div>
+      <pre>
+        <code>
+          {JSON.stringify(
+            {
+              data,
+            },
+            null,
+            2
+          )}
+        </code>
+      </pre>
+    </div>
+  )
 }
 
 index.propTypes = {}

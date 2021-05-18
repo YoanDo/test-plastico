@@ -48,4 +48,5 @@ export const SolutionCardWrapper = styled.div`
   flex-basis: 100%;
   height: 100%;
   background: #7c9dac;
+  overflow: scroll;
 `
