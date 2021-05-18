@@ -46,6 +46,8 @@ export async function getSolutionCardById(selectedId) {
           pdf_fr {
             url
           }
+          pdf_content_fr
+          pdf_content_en
         }
       }
     `,
@@ -71,6 +73,8 @@ export async function getSolutionCardById(selectedId) {
     food_packaging_label,
     cigarette_butts_label,
     agricultural_label,
+    pdf_content_fr,
+    pdf_content_en,
   } = data.solutionCard
 
   return {
@@ -80,11 +84,13 @@ export async function getSolutionCardById(selectedId) {
       intro: intro,
       description: description_fr,
       pdf: pdf_fr?.url,
+      pdfContent: pdf_content_fr,
     },
     en: {
       title: title_en,
       description: description_en,
       pdf: pdf_en?.url,
+      pdfContent: pdf_content_en,
     },
     label: {
       sanitation: sanitation_label,
