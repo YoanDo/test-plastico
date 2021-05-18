@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import { getSolutionCardById } from '../graphql/queries/index'
 import SolutionCard from '../components/SolutionCard'
-import { string } from 'prop-types'
+import { number, oneOfType, string } from 'prop-types'
 
 const SolutionCardContainer = ({ selectedSolutionId }) => {
   const [data, setData] = useState([])
@@ -19,7 +19,7 @@ const SolutionCardContainer = ({ selectedSolutionId }) => {
 }
 
 SolutionCardContainer.propTypes = {
-  selectedSolutionId: string,
+  selectedSolutionId: oneOfType([string, number]),
 }
 
 export default SolutionCardContainer
