@@ -8,6 +8,14 @@ const SolutionCardContainer = ({ selectedSolutionId }) => {
   const [data, setData] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
+  const isUserFrench =
+    typeof window !== 'undefined' &&
+    typeof window.navigator !== 'undefined' &&
+    navigator.language &&
+    navigator.language.split(/[-_]/)[0] === 'fr'
+
+  const lang = isUserFrench ? 'fr' : 'en'
+
   useEffect(() => {
     getSolutionCardById(selectedSolutionId).then((res) => {
       setIsLoading(false)
@@ -15,7 +23,25 @@ const SolutionCardContainer = ({ selectedSolutionId }) => {
     })
   }, [selectedSolutionId])
 
-  return <SolutionCard data={data} isLoading={isLoading} />
+  if (!data || !lang) return 'empty'
+
+  if (data?.[lang]) {
+    const { title, description, intro, pdf, pdfContent } = data[lang]
+
+    return (
+      <SolutionCard
+        title={title}
+        intro={intro}
+        description={description}
+        conclusion={pdfContent}
+        pdf={pdf}
+        isLoading={isLoading}
+      />
+    )
+  }
+
+  // todo replace & display loading
+  return null
 }
 
 SolutionCardContainer.propTypes = {

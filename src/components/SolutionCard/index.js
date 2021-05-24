@@ -1,24 +1,36 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { bool, string } from 'prop-types'
+import { Text, SolutionCardWrapper, PreConclusion } from './styles'
+import Title from '../Title'
+import theme from '../../assets/theme'
+import Button from '../UI/Button'
+import { FormattedMessage } from 'react-intl'
 
-const index = ({ data }) => {
+const SolutionCard = ({ description, intro, title, conclusion }) => {
   return (
-    <div>
-      <pre>
-        <code>
-          {JSON.stringify(
-            {
-              data,
-            },
-            null,
-            2
-          )}
-        </code>
-      </pre>
-    </div>
+    <SolutionCardWrapper>
+      <Title color={theme.surfRiderBlue}>{title}</Title>
+      {intro && <Text isIntro>{intro}</Text>}
+      {description && <Text>{description}</Text>}
+      {conclusion && (
+        <PreConclusion>
+          <FormattedMessage id="what_you_learn" />
+        </PreConclusion>
+      )}
+      {conclusion && <Text>{conclusion}</Text>}
+      {/* //todo condition  */}
+      <Button label={'download_solution'} />
+    </SolutionCardWrapper>
   )
 }
 
-index.propTypes = {}
+SolutionCard.propTypes = {
+  conclusion: string,
+  description: string,
+  intro: string,
+  isLoading: bool,
+  pdf: string,
+  title: string,
+}
 
-export default index
+export default SolutionCard

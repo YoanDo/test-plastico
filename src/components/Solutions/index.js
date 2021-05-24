@@ -33,7 +33,6 @@ const index = ({ solutionsList }) => {
         ))}
       </ListWrapper>
       <SolutionCardWrapper>
-        solutions card n° {selectedSolution.id}
         {selectedSolution.id && <SolutionCard selectedSolutionId={selectedSolution.id} />}
       </SolutionCardWrapper>
     </SolutionsWrapper>

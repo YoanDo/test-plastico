@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { About, HeaderWrapper, Illustration, Wrapper, Title } from './styles'
 import { FormattedMessage } from 'react-intl'
 

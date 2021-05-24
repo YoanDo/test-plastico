@@ -17,5 +17,5 @@ export const TextTitle = styled.h1`
   letter-spacing: 2.28px;
   line-height: 90px;
   margin-bottom: 0;
-  color: ${(props) => props.theme.black};
+  color: ${({ theme, color }) => (color ? color : theme.black)};
 `

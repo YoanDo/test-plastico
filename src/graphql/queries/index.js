@@ -61,10 +61,11 @@ export async function getSolutionCardById(selectedId) {
   const {
     id,
     title_fr,
-    intro,
+    intro_fr,
     description_fr,
     pdf_fr,
     title_en,
+    intro_en,
     description_en,
     pdf_en,
     sanitation_label,
@@ -81,13 +82,14 @@ export async function getSolutionCardById(selectedId) {
     id: id,
     fr: {
       title: title_fr,
-      intro: intro,
+      intro: intro_fr,
       description: description_fr,
       pdf: pdf_fr?.url,
       pdfContent: pdf_content_fr,
     },
     en: {
       title: title_en,
+      intro: intro_en,
       description: description_en,
       pdf: pdf_en?.url,
       pdfContent: pdf_content_en,
