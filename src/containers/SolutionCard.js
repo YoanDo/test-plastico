@@ -26,14 +26,14 @@ const SolutionCardContainer = ({ selectedSolutionId }) => {
   if (!data || !lang) return 'empty'
 
   if (data?.[lang]) {
-    const { title, description, intro, pdf, pdfContent } = data[lang]
+    const { title, description, intro, pdf, whatYouWillFind } = data[lang]
 
     return (
       <SolutionCard
         title={title}
         intro={intro}
         description={description}
-        conclusion={pdfContent}
+        conclusion={whatYouWillFind}
         pdf={pdf}
         isLoading={isLoading}
       />

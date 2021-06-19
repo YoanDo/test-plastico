@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client'
 import client from '../../../apollo-client'
+import capitalize from '../../helpers/CapitalizeFirstLetterOfSentence'
 
 export async function getSolutionsList() {
   const { data } = await client.query({
@@ -35,7 +36,7 @@ export async function getSolutionCardById(selectedId) {
           description_en
           sanitation_label
           wild_landfill_label
-          wind_label
+          other_label
           food_packaging_label
           cigarette_butts_label
           agricultural_label
@@ -46,8 +47,8 @@ export async function getSolutionCardById(selectedId) {
           pdf_fr {
             url
           }
-          pdf_content_fr
-          pdf_content_en
+          what_you_will_find_fr
+          what_you_will_find_en
         }
       }
     `,
@@ -59,45 +60,45 @@ export async function getSolutionCardById(selectedId) {
   }
 
   const {
-    id,
-    title_fr,
-    intro_fr,
-    description_fr,
-    pdf_fr,
-    title_en,
-    intro_en,
-    description_en,
-    pdf_en,
-    sanitation_label,
-    wild_landfill_label,
-    wind_label,
-    food_packaging_label,
-    cigarette_butts_label,
     agricultural_label,
-    pdf_content_fr,
-    pdf_content_en,
+    cigarette_butts_label,
+    description_en,
+    description_fr,
+    food_packaging_label,
+    id,
+    intro_en,
+    intro_fr,
+    other_label,
+    what_you_will_find_en,
+    what_you_will_find_fr,
+    pdf_en,
+    pdf_fr,
+    sanitation_label,
+    title_en,
+    title_fr,
+    wild_landfill_label,
   } = data.solutionCard
 
   return {
     id: id,
     fr: {
-      title: title_fr,
-      intro: intro_fr,
+      title: capitalize(title_fr),
+      intro: capitalize(intro_fr),
       description: description_fr,
       pdf: pdf_fr?.url,
-      pdfContent: pdf_content_fr,
+      whatYouWillFind: what_you_will_find_fr,
     },
     en: {
-      title: title_en,
-      intro: intro_en,
+      title: capitalize(title_en),
+      intro: capitalize(intro_en),
       description: description_en,
       pdf: pdf_en?.url,
-      pdfContent: pdf_content_en,
+      whatYouWillFind: what_you_will_find_en,
     },
     label: {
       sanitation: sanitation_label,
       wildLandfill: wild_landfill_label,
-      wind: wind_label,
+      else: other_label,
       foodPackaging: food_packaging_label,
       cigaretteButts: cigarette_butts_label,
       agricultural: agricultural_label,
