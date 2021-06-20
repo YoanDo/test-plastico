@@ -1,5 +1,6 @@
 import React from 'react'
 import { bool, string } from 'prop-types'
+
 import { Text, SolutionCardWrapper, PreConclusion, LoaderWrapper } from './styles'
 import Title from '../Title'
 import theme from '../../assets/theme'
@@ -7,7 +8,7 @@ import Button from '../UI/Button'
 import { FormattedMessage } from 'react-intl'
 import Loader from '../UI/Loader'
 
-const SolutionCard = ({ description, intro, title, conclusion, isLoading }) => {
+const SolutionCard = ({ description, intro, title, conclusion, isLoading, pdfLink }) => {
   return (
     <SolutionCardWrapper>
       {isLoading ? (
@@ -25,7 +26,11 @@ const SolutionCard = ({ description, intro, title, conclusion, isLoading }) => {
             </PreConclusion>
           )}
           {conclusion && <Text>{conclusion}</Text>}
-          <Button label={'download_solution'} />
+          {pdfLink && (
+            <a target="_blank" href={pdfLink} rel="noreferrer">
+              <Button label={'download_solution'} />
+            </a>
+          )}
         </>
       )}
     </SolutionCardWrapper>
@@ -37,7 +42,7 @@ SolutionCard.propTypes = {
   description: string,
   intro: string,
   isLoading: bool,
-  pdf: string,
+  pdfLink: string,
   title: string,
 }
 

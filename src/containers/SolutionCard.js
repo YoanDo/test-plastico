@@ -13,7 +13,7 @@ const SolutionCardContainer = ({ selectedSolutionId, lang }) => {
     if (!isFullyLoaded) return setSolutionsDetails(selectedSolutionId)
   }, [selectedSolutionId])
 
-  const { title, intro } = solution[lang]
+  const { title, intro, pdfLink } = solution[lang]
   const description = solution[lang].description || ''
   const whatYouWillFind = solution[lang].whatYouWillFind || ''
 
@@ -24,7 +24,7 @@ const SolutionCardContainer = ({ selectedSolutionId, lang }) => {
       description={description}
       conclusion={whatYouWillFind}
       isLoading={!isFullyLoaded}
-      // pdf={pdf}
+      pdfLink={pdfLink}
     />
   )
 }
