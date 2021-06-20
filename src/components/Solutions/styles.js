@@ -5,6 +5,9 @@ export const SolutionsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    flex-direction: column;
+  }
 `
 
 export const ListWrapper = styled.ul`
@@ -16,6 +19,10 @@ export const ListWrapper = styled.ul`
   overflow: scroll;
   position: relative;
   padding-left: 6px;
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    flex-basis: 100%;
+    margin-bottom: 10vh;
+  }
 `
 export const ListSelectBar = styled.div`
   height: ${({ height }) => height}px;
@@ -41,11 +48,13 @@ export const ListTitle = styled.li`
   &:hover {
     opacity: 1;
   }
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    font-size: ${({ theme }) => theme.fourthFS};
+  }
 `
 
 export const SolutionCardWrapper = styled.div`
   flex-basis: 100%;
   height: 100%;
-  background: #7c9dac;
   overflow: scroll;
 `

@@ -1,20 +1,22 @@
 import styled from 'styled-components'
+import { TextTitle } from '../Title/styles'
 
 export const SolutionCardWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
   background: ${({ theme }) => theme.white};
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  width: 100%;
+  justify-content: flex-start;
   overflow: scroll;
-`
-
-export const Title = styled.h2`
-  margin: 0;
-  padding: 0;
-  color: ${({ theme }) => theme.primaryColor};
+  padding-left: ${({ theme }) => theme.spacing(1)};
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    padding-left: 0;
+    ${TextTitle} {
+      font-size: ${({ theme }) => theme.thirdFS};
+      line-height: ${({ theme }) => theme.thirdFS};
+    }
+  }
 `
 
 export const Text = styled.span`

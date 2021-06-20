@@ -1,14 +1,26 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { arrayOf, shape, string } from 'prop-types'
+import { useMediaQuery } from 'react-responsive'
 
 import { SolutionsWrapper, ListWrapper, ListTitle, SolutionCardWrapper, ListSelectBar } from './styles'
 import SolutionCard from '../../containers/SolutionCard'
+import theme from '../../assets/theme'
 
 const index = ({ solutionsList, lang }) => {
   const [selectedSolution, selectSolution] = useState({})
   const [selectedRef, setSelectedRef] = useState([null])
   const lineRefs = useRef([])
+  const solutionRef = useRef(null)
 
+  const isBelowLaptop = useMediaQuery({ query: `(max-width: ${theme.size.laptop})` })
+  const scrollToSolution = () => {
+    solutionRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const handleSolutionSelection = (id, index) => {
+    selectSolution({ id: id, index: index })
+    isBelowLaptop && scrollToSolution()
+  }
   useEffect(() => {
     lineRefs.current && setSelectedRef(lineRefs.current[selectedSolution.index])
   }, [selectedSolution])
@@ -30,14 +42,14 @@ const index = ({ solutionsList, lang }) => {
               isSelected={selectedSolution.id === id}
               ref={(element) => (lineRefs.current[index] = element)}
               key={id}
-              onClick={() => selectSolution({ id: id, index: index })}
+              onClick={() => handleSolutionSelection(id, index)}
             >
               {title}
             </ListTitle>
           )
         })}
       </ListWrapper>
-      <SolutionCardWrapper>
+      <SolutionCardWrapper ref={solutionRef}>
         {selectedSolution.id && <SolutionCard lang={lang} selectedSolutionId={selectedSolution.id} />}
       </SolutionCardWrapper>
     </SolutionsWrapper>

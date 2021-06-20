@@ -12,6 +12,9 @@ export const Wrapper = styled.div`
   position: relative;
   width: 100%;
   width: 100%;
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    padding-top: 0;
+  }
 `
 export const HeaderWrapper = styled.div`
   margin: 0 auto;
@@ -40,8 +43,8 @@ export const Title = styled.h1`
   font-size: 220px;
   margin-right: auto;
   @media ${({ theme }) => theme.device.belowLaptop} {
-    top: 50vh;
     font-size: ${({ theme }) => theme.mainTitleFS};
+    position: inherit;
   }
 `
 
@@ -69,7 +72,7 @@ export const About = styled.div`
   @media ${({ theme }) => theme.device.belowLaptop} {
     height: auto;
     max-width: 100vw;
-    padding: 0 20px;
+    padding: 0px;
     margin-top: ${({ theme }) => theme.mainTitleFS};
   }
 `
@@ -85,4 +88,7 @@ export const Illustration = styled.div`
   bottom: 0px;
   right: -320px;
   z-index: 1;
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    display: none;
+  }
 `

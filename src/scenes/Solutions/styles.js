@@ -10,4 +10,7 @@ export const Schema = styled.div`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    min-height: 34vh;
+  }
 `

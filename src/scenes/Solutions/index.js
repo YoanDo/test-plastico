@@ -13,7 +13,9 @@ const SolutionsPage = () => {
 
   return (
     <>
-      <SolutionsHeader />
+      <Wrapper>
+        <SolutionsHeader />
+      </Wrapper>
       <Wrapper>
         <Schema />
       </Wrapper>
