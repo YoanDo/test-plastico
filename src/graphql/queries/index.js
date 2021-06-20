@@ -14,10 +14,11 @@ export async function getSolutionsList() {
       }
     `,
   })
+  const newArrayOfData = data.solutionCards.map(({ id, title_fr, title_en }) => {
+    return { en: { title: title_en }, fr: { title: title_fr }, id, isFullyLoaded: false }
+  })
 
-  return {
-    solutionsList: data.solutionCards,
-  }
+  return Object.fromEntries(newArrayOfData.map((o) => [o.id, o]))
 }
 
 export async function getSolutionCardById(selectedId) {
@@ -103,5 +104,6 @@ export async function getSolutionCardById(selectedId) {
       cigaretteButts: cigarette_butts_label,
       agricultural: agricultural_label,
     },
+    isFullyLoaded: true,
   }
 }
