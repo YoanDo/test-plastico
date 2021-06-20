@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes, { bool, string } from 'prop-types'
+import { any, bool, string } from 'prop-types'
 
 import { TextTitle, TitleWrapper } from './styles'
 import Breaker from '../UI/Breaker'
@@ -12,7 +12,7 @@ const Title = ({ children, color, isBreakerDisplayed }) => (
 )
 
 Title.propTypes = {
-  children: PropTypes.element,
+  children: any,
   color: string,
   isBreakerDisplayed: bool,
 }

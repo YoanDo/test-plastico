@@ -6,7 +6,9 @@ import theme from '../../assets/theme'
 import Button from '../UI/Button'
 import { FormattedMessage } from 'react-intl'
 
-const SolutionCard = ({ description, intro, title, conclusion }) => {
+const SolutionCard = ({ description, intro, title, conclusion, isLoading }) => {
+  if (isLoading) return 'loading'
+
   return (
     <SolutionCardWrapper>
       <Title color={theme.surfRiderBlue}>{title}</Title>
@@ -18,7 +20,6 @@ const SolutionCard = ({ description, intro, title, conclusion }) => {
         </PreConclusion>
       )}
       {conclusion && <Text>{conclusion}</Text>}
-      {/* //todo condition  */}
       <Button label={'download_solution'} />
     </SolutionCardWrapper>
   )

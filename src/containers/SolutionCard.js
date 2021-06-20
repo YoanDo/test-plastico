@@ -1,51 +1,37 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
-import { getSolutionCardById } from '../graphql/queries/index'
+import { setSolutionsDetails } from '../services/solutions'
 import SolutionCard from '../components/SolutionCard'
 import { number, oneOfType, string } from 'prop-types'
+import { useSelector } from 'react-redux'
+import { getSolutionById } from '../redux/selectors/solutions'
 
-const SolutionCardContainer = ({ selectedSolutionId }) => {
-  const [data, setData] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-
-  const isUserFrench =
-    typeof window !== 'undefined' &&
-    typeof window.navigator !== 'undefined' &&
-    navigator.language &&
-    navigator.language.split(/[-_]/)[0] === 'fr'
-
-  const lang = isUserFrench ? 'fr' : 'en'
-
+const SolutionCardContainer = ({ selectedSolutionId, lang }) => {
+  const solution = useSelector((state) => getSolutionById(state, selectedSolutionId))
+  const { isFullyLoaded } = solution
   useEffect(() => {
-    getSolutionCardById(selectedSolutionId).then((res) => {
-      setIsLoading(false)
-      setData(res)
-    })
+    if (!isFullyLoaded) return setSolutionsDetails(selectedSolutionId)
   }, [selectedSolutionId])
 
-  if (!data || !lang) return 'empty'
+  const { title, intro } = solution[lang]
+  const description = solution[lang].description || ''
+  const whatYouWillFind = solution[lang].whatYouWillFind || ''
 
-  if (data?.[lang]) {
-    const { title, description, intro, pdf, whatYouWillFind } = data[lang]
-
-    return (
-      <SolutionCard
-        title={title}
-        intro={intro}
-        description={description}
-        conclusion={whatYouWillFind}
-        pdf={pdf}
-        isLoading={isLoading}
-      />
-    )
-  }
-
-  // todo replace & display loading
-  return null
+  return (
+    <SolutionCard
+      title={title}
+      intro={intro}
+      description={description}
+      conclusion={whatYouWillFind}
+      isLoading={!isFullyLoaded}
+      // pdf={pdf}
+    />
+  )
 }
 
 SolutionCardContainer.propTypes = {
   selectedSolutionId: oneOfType([string, number]),
+  lang: string,
 }
 
 export default SolutionCardContainer

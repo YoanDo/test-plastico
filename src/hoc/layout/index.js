@@ -7,9 +7,12 @@ import { TweenMax } from 'gsap'
 
 import Menu from '../../containers/DesktopMenu'
 import GlobalStyle, { Wrapper, PreventAnimationFlashWrapper } from './styles'
+import { useDispatch } from 'react-redux'
+import { updateLanguage } from '../../redux/actions'
 
 const withLayout = (Page) => () => {
   const { target } = useRouter().query
+  const dispatch = useDispatch()
   const smoothScroll = () => {
     if (isNil(target)) return null
     const targetPosition = document.getElementsByName(target)[0].offsetTop
@@ -20,6 +23,17 @@ const withLayout = (Page) => () => {
       smooth: true,
     })
   }
+  useEffect(() => {
+    const isUserFrench =
+      typeof window !== 'undefined' &&
+      typeof window.navigator !== 'undefined' &&
+      navigator.language &&
+      navigator.language.split(/[-_]/)[0] === 'fr'
+
+    const lang = isUserFrench ? 'fr' : 'en'
+
+    return dispatch(updateLanguage(lang))
+  }, [])
 
   useEffect(() => {
     TweenMax.set('#preventAnimationFlashWrapper', { opacity: 1 })
