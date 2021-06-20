@@ -32,7 +32,7 @@ const withLayout = (Page) => () => {
 
     const lang = isUserFrench ? 'fr' : 'en'
 
-    return dispatch(updateLanguage(lang))
+    dispatch(updateLanguage(lang))
   }, [])
 
   useEffect(() => {

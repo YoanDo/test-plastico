@@ -14,3 +14,32 @@ export const Schema = styled.div`
     min-height: 34vh;
   }
 `
+export const GetInTouchWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.black};
+  font-family: ${({ theme }) => theme.secondaryFF};
+  font-size: ${({ theme }) => theme.fourthFS};
+  a {
+    color: inherit;
+  }
+  span {
+    position: relative;
+    &:last-of-type {
+      margin-left: ${({ theme }) => theme.spacing(0.25)};
+    }
+    &:last-of-type:after {
+      z-index: -1;
+      top: 6px;
+      left: -5px;
+      width: 104%;
+      position: absolute;
+      height: 20px;
+      background-color: ${(props) => props.theme.secondaryColor};
+      content: '';
+      transform: rotate(1deg);
+    }
+  }
+`

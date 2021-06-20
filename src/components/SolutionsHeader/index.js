@@ -10,8 +10,6 @@ const SolutionsHeader = () => {
         <About id="about">
           <span>
             <FormattedMessage id="solution_intro_1" />
-            <br />
-            <FormattedMessage id="solution_intro_2" />
           </span>
         </About>
       </HeaderWrapper>
