@@ -30,3 +30,12 @@ export const PreConclusion = styled(Text)`
   font-weight: bold;
   margin-top: ${({ theme }) => theme.spacing(2)};
 `
+
+export const LoaderWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  min-height: 400px;
+  width: 100%;
+`
