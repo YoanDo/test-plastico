@@ -6,13 +6,13 @@ const theme = {
   secondaryColor: '#70F9C5',
 
   // font-sizes - scale: 1.250
-  defaultFS: '0.813rem', // 13px
-  biggerFS: '1rem', // 16xp
-  landingTitle: '8.838rem',
-  mainTitleFS: '4.838rem', // 77.4px
-  secondaryFS: '3.869rem', // 61.9px
-  thirdFS: '3.099rem', // 49.959px
-  fourthFS: '1.269rem', // 20.31px
+  defaultFS: '14px',
+  biggerFS: '16px',
+  landingTitle: '134px',
+  mainTitleFS: '78px',
+  secondaryFS: '62px',
+  thirdFS: '50px',
+  fourthFS: '20px',
   // font-family -
   defaultFF: "'Montserrat', sans-serif",
   secondaryFF: "'Bebas Neue', sans-serif",
