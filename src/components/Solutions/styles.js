@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const SolutionsWrapper = styled.div`
   width: 100%;
+  min-height: 400px;
   display: flex;
   flex-direction: row;
   overflow: hidden;
