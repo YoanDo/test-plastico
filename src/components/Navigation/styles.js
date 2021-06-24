@@ -15,6 +15,11 @@ export const Links = styled.div`
     margin-right: 16px;
     cursor: pointer;
     color: ${(props) => props.theme.black};
+    transition: 0.6;
+    border-bottom: 2px solid transparent;
+    &:hover {
+      border-bottom: 2px solid ${({ theme }) => theme.surfRiderBlue};
+    }
     @media (max-width: 900px) {
       font-size: ${(props) => (props.burger ? props.theme.fourthFS : props.theme.defaultFS)};
       margin-bottom: ${(props) => (props.burger ? props.theme.fourthFS : 'inherit')};

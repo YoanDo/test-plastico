@@ -37,7 +37,7 @@ export async function getSolutionCardById(selectedId) {
           description_fr
           description_en
           sanitation_label
-          wild_landfill_label
+          illegal_dumping_label
           other_label
           food_packaging_label
           cigarette_butts_label
@@ -72,7 +72,7 @@ export async function getSolutionCardById(selectedId) {
     sanitation_label,
     title_en,
     title_fr,
-    wild_landfill_label,
+    illegal_dumping_label,
     pdf_link_fr,
     pdf_link_en,
   } = data.solutionCard
@@ -95,7 +95,7 @@ export async function getSolutionCardById(selectedId) {
     },
     label: {
       sanitation: sanitation_label,
-      wildLandfill: wild_landfill_label,
+      illegalDumping: illegal_dumping_label,
       else: other_label,
       foodPackaging: food_packaging_label,
       cigaretteButts: cigarette_butts_label,

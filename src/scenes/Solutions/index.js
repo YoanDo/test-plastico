@@ -17,9 +17,9 @@ const SolutionsPage = () => {
       <Wrapper>
         <SolutionsHeader />
       </Wrapper>
-      <Wrapper>
+      {/* <Wrapper>
         <Schema />
-      </Wrapper>
+      </Wrapper> */}
       <Wrapper>
         <SolutionsList />
       </Wrapper>
@@ -28,7 +28,6 @@ const SolutionsPage = () => {
           <span>
             <FormattedMessage id="solution_get_in_touch" />
           </span>
-
           <span>
             <a href="mailto:poumey@surfrider.eu?subject=Plastic origins" target="_top">
               email

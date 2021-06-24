@@ -37,6 +37,11 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
       <Link href="/data">
         <span>Data</span>
       </Link>
+      <Link href="/solutions">
+        <span>
+          <FormattedMessage id="solutions" />
+        </span>
+      </Link>
       <Link href="/team">
         <span>
           <FormattedMessage id="team" />

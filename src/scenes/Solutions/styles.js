@@ -22,6 +22,7 @@ export const GetInTouchWrapper = styled.div`
   color: ${({ theme }) => theme.black};
   font-family: ${({ theme }) => theme.secondaryFF};
   font-size: ${({ theme }) => theme.fourthFS};
+  padding-bottom: 124px;
   a {
     color: inherit;
   }
