@@ -29,7 +29,7 @@ const SolutionsPage = () => {
             <FormattedMessage id="solution_get_in_touch" />
           </span>
           <span>
-            <a href="mailto:poumey@surfrider.eu?subject=Plastic origins" target="_top">
+            <a href="mailto:jpoumey@surfrider.eu?subject=Plastic origins" target="_top">
               email
             </a>
           </span>
