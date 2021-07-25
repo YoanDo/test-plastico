@@ -43,12 +43,13 @@ export const PageTitle = styled.h1`
   }
 `
 export const SponsorsWrapper = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
   font-size: ${({ theme }) => theme.secondaryFS};
+  justify-content: flex-start;
+  margin-bottom: ${({ theme }) => theme.secondaryFS};
+  width: 100%;
   span {
     margin-right: ${({ theme }) => theme.secondaryFS};
   }
@@ -65,7 +66,7 @@ export const SponsorRow = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   @media ${({ theme }) => theme.device.belowLaptop} {
     flex-direction: column;
@@ -79,10 +80,15 @@ export const SponsorLogo = styled.div`
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 200px;
-  max-width: 200px;
+  height: 160px;
+  max-width: 160px;
+  margin-right: 32px;
+  &:last-of-type {
+    margin-right: 0;
+  }
   @media ${({ theme }) => theme.device.belowLaptop} {
-    min-height: 200px;
-    min-width: 200px;
+    min-height: 160px;
+    min-width: 160px;
+    margin-right: 0;
   }
 `

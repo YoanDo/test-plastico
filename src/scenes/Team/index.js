@@ -9,17 +9,16 @@ import { Wrapper } from '../../hoc/layout/styles'
 
 const Team = () => {
   //images
-  const gold1 = require('../../assets/images/sponsors/gold/ADEME-min.png')
-  const gold2 = require('../../assets/images/sponsors/gold/gobi-min.png')
-  const gold3 = require('../../assets/images/sponsors/gold/logo-macif-min.png')
-  const gold4 = require('../../assets/images/sponsors/gold/me-min.png')
-  const gold5 = require('../../assets/images/sponsors/gold/sogeti-min.png')
+  const gold1 = require('../../assets/images/sponsors/gold/axa-logo-solid.png')
 
-  const silver1 = require('../../assets/images/sponsors/silver/actOutdoor-min.png')
-  const silver2 = require('../../assets/images/sponsors/silver/aeroportNice-min.png')
-  const silver3 = require('../../assets/images/sponsors/silver/dirm-min.png')
+  const silver1 = require('../../assets/images/sponsors/silver/ADEME-min.png')
+  const silver2 = require('../../assets/images/sponsors/silver/gobi-min.png')
+  const silver3 = require('../../assets/images/sponsors/silver/logo-macif-min.png')
+  const silver4 = require('../../assets/images/sponsors/silver/me-min.png')
+  const silver5 = require('../../assets/images/sponsors/silver/sogeti-min.png')
 
   const bronze1 = require('../../assets/images/sponsors/bronze/natureDecouverte-min.png')
+  const bronze2 = require('../../assets/images/sponsors/bronze/dirm-min.png')
 
   const technical1 = require('../../assets/images/sponsors/technical/Ecole-IA-min.png')
   const technical2 = require('../../assets/images/sponsors/technical/Heuritech-min.png')
@@ -59,10 +58,6 @@ const Team = () => {
           <span>🥇</span>
           <SponsorRow>
             <SponsorLogo url={gold1} />
-            <SponsorLogo url={gold2} />
-            <SponsorLogo url={gold3} />
-            <SponsorLogo url={gold4} />
-            <SponsorLogo url={gold5} />
           </SponsorRow>
         </SponsorsWrapper>
         <SponsorsWrapper>
@@ -71,12 +66,15 @@ const Team = () => {
             <SponsorLogo url={silver1} />
             <SponsorLogo url={silver2} />
             <SponsorLogo url={silver3} />
+            <SponsorLogo url={silver4} />
+            <SponsorLogo url={silver5} />
           </SponsorRow>
         </SponsorsWrapper>
         <SponsorsWrapper>
           <span>🥉</span>
           <SponsorRow>
             <SponsorLogo url={bronze1} />
+            <SponsorLogo url={bronze2} />
           </SponsorRow>
         </SponsorsWrapper>
       </Wrapper>

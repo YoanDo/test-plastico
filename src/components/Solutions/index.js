@@ -23,7 +23,7 @@ const index = ({ solutionsList, lang }) => {
   }
   useEffect(() => {
     lineRefs.current && setSelectedRef(lineRefs.current[selectedSolution.index])
-  }, [selectedSolution])
+}, [selectedSolution])
 
   useEffect(() => {
     selectSolution({ id: solutionsList?.[0]?.id, index: 0 })
