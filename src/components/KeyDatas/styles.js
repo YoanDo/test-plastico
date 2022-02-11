@@ -4,7 +4,7 @@ export const KeysDataWrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 70%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
   margin: auto;
   @media (max-width: 900px) {
