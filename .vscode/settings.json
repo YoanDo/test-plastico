@@ -9,5 +9,11 @@
     "firstname",
     "lastname"
   ],
-  "appService.defaultWebAppToDeploy": "/subscriptions/ad31bdcf-3e05-41d4-857b-ae5b767fc8cd/resourceGroups/rg-publicweb-dev/providers/Microsoft.Web/sites/plasticorigins"
+  "appService.defaultWebAppToDeploy": "/subscriptions/ad31bdcf-3e05-41d4-857b-ae5b767fc8cd/resourceGroups/rg-publicweb-dev/providers/Microsoft.Web/sites/plasticorigins",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ]
 }
