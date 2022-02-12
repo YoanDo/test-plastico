@@ -24,11 +24,11 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
       <Link href={{ pathname: '/' }}>
         <span>Plastic Origins</span>
       </Link>
-      <Link href={{ pathname: '/', query: { target: 'project' } }}>
+      {/* <Link href={{ pathname: '/', query: { target: 'project' } }}>
         <span>
           <FormattedMessage id="our_project" />
         </span>
-      </Link>
+      </Link> */}
       <Link href={{ pathname: '/', query: { target: 'getInvolved' } }}>
         <span>
           <FormattedMessage id="contribute" />
