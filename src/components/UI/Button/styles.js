@@ -9,4 +9,5 @@ export const ButtonWrapper = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   width: ${(props) => (props.fullWidth ? '100%' : 'auto')};
+  padding: 0 ${({ theme }) => theme.spacing(0.5)};
 `
