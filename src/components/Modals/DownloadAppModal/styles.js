@@ -10,7 +10,7 @@ export const AppleDownloadBadge = styled.div`
 `
 
 export const GooglePlayBadgeWrapper = styled.div`
-  background-image: url('/images/appleBadge.png');
+  background-image: url('/images/googlePlayBadge.png');
   background-position: center;
   background-size: cover;
   height: 54px;
