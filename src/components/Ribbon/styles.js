@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import LogoImage from '../../assets/images/surfrider.png'
 
 export const SurfRiderRibbon = styled.div`
   align-items: flex-end;
@@ -42,7 +41,7 @@ export const BotRibbon = styled.div`
 `
 
 export const Logo = styled.div`
-  background: url(${LogoImage});
+  background: url('/images/surfrider.png');
   min-height: 100px;
   min-width: 76px;
   background-position: center;

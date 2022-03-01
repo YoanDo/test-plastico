@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from 'react'
 import { About, LeftImage, RightSide, LimeLine, Title, Wrapper, Count, IconWrapper } from './styles'
 import { FormattedMessage } from 'react-intl'
 import CountUp from 'react-countup'
-import ChevronDown from '../../assets/svg/chevron_down.svg'
 import gsap from 'gsap'
 import { useMediaQuery } from 'react-responsive'
 import theme from '../../assets/theme'
 import { animateScroll as scroll } from 'react-scroll'
+import Image from 'next/image'
 
 const DataHeader = () => {
   const isBelowLaptop = useMediaQuery({ query: `(max-width: ${theme.size.laptop})` })
@@ -43,7 +43,7 @@ const DataHeader = () => {
         </About>
       </RightSide>
       <IconWrapper id="icon">
-        <ChevronDown onClick={scrollDown} />
+        <Image src="/svg/chevron_down.svg" onClick={scrollDown} />
       </IconWrapper>
     </Wrapper>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import { bool, func, node } from 'prop-types'
 
 import { StyledModal, CloseButton, ContentWrapper } from './styles'
-import ExitIcon from '../../../assets/svg/x.svg'
+import Image from 'next/image'
 
 function BaseModal({ children, closeModal, isOpen, canClose }) {
   return (
@@ -14,7 +14,7 @@ function BaseModal({ children, closeModal, isOpen, canClose }) {
       canClose={canClose}
     >
       <CloseButton type="button" onClick={canClose && closeModal} disabled={!canClose}>
-        <ExitIcon />
+        <Image src="/svg/x.svg" />
       </CloseButton>
       <ContentWrapper>{children}</ContentWrapper>
     </StyledModal>

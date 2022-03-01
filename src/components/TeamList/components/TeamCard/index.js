@@ -5,7 +5,7 @@ import { Color, IdentityRow, Picture, PictureWrapper, Position, Wrapper } from '
 import { useIntl } from 'react-intl'
 
 const TeamCard = ({ link, name, position, surname }) => {
-  const imageLink = require(`../../../../assets/images/team_profiles/${name}${surname}.jpg`)
+  const imageLink = `/images/team_profiles/${name}${surname}.jpg`
   const positionTrad = useIntl().formatMessage({ id: position })
   if (!imageLink && !positionTrad) return null
 

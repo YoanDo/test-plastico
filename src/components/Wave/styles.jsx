@@ -1,8 +1,5 @@
 import styled from 'styled-components'
 
-import waveTop from '../../assets/svg/waveTop.svg'
-import waveBot from '../../assets/svg/waveBot.svg'
-
 export const WaveWrapper = styled.div`
   padding: ${(props) => (props.menu ? 0 : `calc(${props.theme.mainTitleFS}*2) 0 0 0`)};
   width: 100vw;
@@ -10,7 +7,7 @@ export const WaveWrapper = styled.div`
 `
 
 export const WaveImgTop = styled.img`
-  content: url(${waveTop});
+  content: url('/svg/waveTop.svg');
   width: 100%;
   @media (max-width: 900px) {
     width: 101%;
@@ -18,7 +15,7 @@ export const WaveImgTop = styled.img`
 `
 
 export const WaveImgBot = styled.img`
-  content: url(${waveBot});
+  content: url('/svg/waveBot.svg');
   width: 100%;
 `
 

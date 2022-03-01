@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-import background from '../../assets/images/headerbg_1900x1200.jpg'
+// import background from '/images/headerbg_1900x1200.jpg'
 
 export const Banner = styled.div`
   align-items: center;
-  background-image: url(${background});
+  background-image: url('/images/headerbg_1900x1200.jpg');
   background-position: center;
   background-size: cover;
   display: flex;
@@ -35,7 +35,7 @@ export const TagLine = styled.span`
 export const MobileBanner = styled.div`
   @media (max-width: 900px) {
     align-items: center;
-    background-image: url(${background});
+    background-image: url('/images/headerbg_1900x1200.jpg');
     background-position: center;
     background-size: cover;
     display: flex;

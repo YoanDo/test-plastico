@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import BgTrash from '../../assets/images/dataTrash.png'
 
 export const Wrapper = styled.div`
   opacity: 0;
@@ -16,7 +15,7 @@ export const Wrapper = styled.div`
 `
 
 export const LeftImage = styled.div`
-  background-image: url(${BgTrash});
+  background-image: url('/images/dataTrash.png');
   background-position: center;
   background-size: cover;
   height: 100vh;

@@ -1,9 +1,7 @@
 import styled from 'styled-components'
-import AppleBadge from '../../../assets/images/appleBadge.png'
-import GooglePlayBadge from '../../../assets/images/googlePlayBadge.png'
 
 export const AppleDownloadBadge = styled.div`
-  background-image: url(${AppleBadge});
+  background-image: url('/images/appleBadge.png');
   background-position: center;
   background-size: cover;
   height: 47px;
@@ -12,7 +10,7 @@ export const AppleDownloadBadge = styled.div`
 `
 
 export const GooglePlayBadgeWrapper = styled.div`
-  background-image: url(${GooglePlayBadge});
+  background-image: url('/images/appleBadge.png');
   background-position: center;
   background-size: cover;
   height: 54px;

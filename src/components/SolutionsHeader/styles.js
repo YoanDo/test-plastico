@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import background from '../../assets/images/riverBottleCropped.jpg'
-
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -77,7 +75,7 @@ export const About = styled.div`
   }
 `
 export const Illustration = styled.div`
-  background: url(${background});
+  background: url('/images/riverBottleCropped.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

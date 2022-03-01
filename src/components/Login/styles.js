@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import background from '../../assets/images/trashRiver.jpg'
-
 export const Wrapper = styled.div`
   display: flex;
   width: 100vw;
@@ -11,7 +9,7 @@ export const Wrapper = styled.div`
 
 export const Left = styled.div`
   align-items: center;
-  background-image: url(${background});
+  background-image: url('/images/trashRiver.jpg');
   background-position: center;
   background-size: cover;
   display: flex;

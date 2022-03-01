@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import background from '../../assets/images/kayaks.jpg'
-
 export const Section = styled.div`
   width: 100%;
   display: flex;
@@ -49,7 +47,7 @@ export const About = styled.div`
 export const AboutImage = styled.div`
   width: 100%;
   height: 40vh;
-  background-image: url(${background});
+  background-image: url('/images/kayaks.jpg');
   background-position: center;
   background-size: cover;
   margin-top: ${(props) => props.theme.spacing(2)};
