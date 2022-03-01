@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
             content="A citizen science project that uses AI to map river plastic pollution – powered by Surfrider Foundation Europe"
           />
           <meta property="og:title" content="Plastic Origins" key="title" />
-          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon.ico" />
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
         </Head>
