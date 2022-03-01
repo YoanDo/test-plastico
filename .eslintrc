@@ -7,14 +7,20 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
+    "next",
     "plugin:prettier/recommended",
+    "plugin:react/recommended",
     "prettier",
     "prettier/react"
   ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   },
   "parser": "babel-eslint",
   "parserOptions": {
@@ -24,17 +30,24 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["eslint-plugin-prettier", "react", "jsx-a11y", "jest", "import"],
+  "plugins": [
+    "eslint-plugin-prettier",
+    "react",
+    "jsx-a11y",
+    "jest",
+    "import"
+  ],
   "rules": {
     "no-unused-vars": "warn",
     "object-curly-newline": "off",
-    "react/jsx-curly-newline": "off", 
+    "react/jsx-curly-newline": "off",
     "padding-line-between-statements": [
       "error",
-      { 
+      {
         "blankLine": "always",
         "prev": "*",
-        "next": "return" }
+        "next": "return"
+      }
     ],
     "react/self-closing-comp": [
       "error",

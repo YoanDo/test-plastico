@@ -5,4 +5,7 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-viewport/register"
   ],
+  extends: [
+    'plugin:@next/next/recommended',
+  ],
 };

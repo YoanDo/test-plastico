@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import App from 'next/app'
 import Head from 'next/head'
 import React from 'react'
-import withRedux from 'next-redux-wrapper'
+import { createWrapper } from 'next-redux-wrapper'
 
 import BurgerMenu from '../src/components/Menu/BurgerMenu'
 import store from '../src/redux/store'
@@ -30,12 +30,6 @@ if (
 }
 
 class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
-    // load app props if their is any or return an empty one
-    const appProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {}
-
-    return { appProps: appProps }
-  }
   render() {
     const { Component, appProps } = this.props
 
@@ -61,5 +55,6 @@ class MyApp extends App {
 }
 
 const makeStore = () => store
+const wrapper = createWrapper(makeStore)
 
-export default withRedux(makeStore)(MyApp)
+export default wrapper.withRedux(MyApp)
