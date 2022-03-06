@@ -6,6 +6,7 @@ import KeyDatas from '../src/components/KeyDatas'
 import Wave from '../src/components/Wave'
 import withLayout from '../src/hoc/layout'
 import VideoHeroHeader from '../src/containers/VideoHeader'
+import Header from '../src/components/Header'
 
 const Project = dynamic(import('../src/components/Project'))
 const Video = dynamic(import('../src/components/Video'))
@@ -13,7 +14,8 @@ const Video = dynamic(import('../src/components/Video'))
 function HomePage() {
   return (
     <Fragment>
-      <VideoHeroHeader />
+      <Header />
+      {/* <VideoHeroHeader /> */}
       <KeyDatas />
       <Project />
       <Video />
