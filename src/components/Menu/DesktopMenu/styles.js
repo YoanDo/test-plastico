@@ -7,8 +7,8 @@ export const Wrapper = styled.div`
   position: fixed;
   width: 100vw;
   z-index: 99;
-  opacity: ${({ disappearOnOffsetTop }) => (disappearOnOffsetTop ? 0 : 100)};
   transition: 1s;
+  opacity: 0;
 `
 
 export const MenuWrapper = styled.div`
@@ -18,6 +18,7 @@ export const MenuWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 ${({ theme }) => theme.spacing(1)};
   max-width: ${(props) => props.theme.maxWidth};
   @media (max-width: 900px) {
     display: none;
