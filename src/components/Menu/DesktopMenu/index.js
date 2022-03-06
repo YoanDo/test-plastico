@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import gsap from 'gsap'
 
 import { MenuWrapper, NavigationLinksWrapper, RightWrapper, SocialWrapper, Wrapper } from './styles'
 import Button from '../../UI/Button'
@@ -16,6 +17,11 @@ const Menu = ({ openDownloadAppModal }) => {
   const isHome = router.pathname === '/'
 
   useEffect(() => {
+    const tl = gsap.timeline()
+    tl.fromTo('#wrapper', { marginTop: -200, opacity: 0, duration: 2, ease: 'power3.in' }, { opacity: 1, marginTop: 0 })
+  }, [])
+
+  useEffect(() => {
     const onScroll = (e) => {
       setScrollTop(e.target.documentElement.scrollTop)
     }
@@ -25,14 +31,14 @@ const Menu = ({ openDownloadAppModal }) => {
   }, [scrollTop])
 
   return (
-    <Wrapper disappearOnOffsetTop={scrollTop === 0 && isHome}>
+    <Wrapper id="wrapper">
       <MenuWrapper>
         <Ribbon />
-        <NavigationLinksWrapper>
+        <NavigationLinksWrapper className="item">
           <NavigationLinks />
         </NavigationLinksWrapper>
         <RightWrapper>
-          <SocialWrapper>
+          <SocialWrapper className="item">
             <Social />
           </SocialWrapper>
           <Button label="download_app" onClick={openDownloadAppModal} />
