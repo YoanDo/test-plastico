@@ -15,7 +15,12 @@ const VideoHeroHeader = ({ videoSrc }) => {
   return (
     <Wrapper>
       <VideoContainer fadeIn={fadeIn}>
-        <video ref={videoRef} controls={false} width="100%" loop muted
+        <video
+          ref={videoRef}
+          controls={false}
+          width="100%"
+          loop
+          muted
           disablePictureInPicture>
           <source
             src={videoSrc}

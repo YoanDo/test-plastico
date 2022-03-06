@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  margin-bottom: 20vh;
   position: relative;
   width: 100%;
   @media (min-width: 1280px) {
