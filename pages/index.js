@@ -14,8 +14,7 @@ const Video = dynamic(import('../src/components/Video'))
 function HomePage() {
   return (
     <Fragment>
-      <Header />
-      {/* <VideoHeroHeader /> */}
+      <VideoHeroHeader />
       <KeyDatas />
       <Project />
       <Video />
