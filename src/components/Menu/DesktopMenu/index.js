@@ -7,6 +7,7 @@ import Social from '../../Social'
 import NavigationLinks from '../../Navigation'
 import { useRouter } from 'next/router'
 // import User from './components/User'
+import theme from "../../../assets/theme"
 
 import Ribbon from '../../Ribbon'
 import { func } from 'prop-types'
@@ -33,7 +34,7 @@ const Menu = ({ openDownloadAppModal }) => {
   return (
     <Wrapper id="wrapper">
       <MenuWrapper>
-        <Ribbon />
+        <Ribbon left={theme.spacing(1)} />
         <NavigationLinksWrapper className="item">
           <NavigationLinks />
         </NavigationLinksWrapper>
