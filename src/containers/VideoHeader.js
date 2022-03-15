@@ -6,7 +6,7 @@ import VideoHeaderComponent from "../components/VideoHeroHeader"
 
 const VideoHeader = () => {
   const lang = useSelector((state) => getUserLanguage(state))
-  const videoSrc = `/videos/header_video_${lang === 'fr' ? 'fr' : 'en'}.mp4`
+  const videoSrc = lang === 'fr' ? 'https://res.cloudinary.com/dyub4bz6x/video/upload/v1647377496/header_video_fr_hiop1o.mp4' : 'https://res.cloudinary.com/dyub4bz6x/video/upload/v1647377500/header_video_en_cvqkcc.mp4'
   return (
     <VideoHeaderComponent videoSrc={videoSrc} />
   );
