@@ -15,12 +15,13 @@ const Video = dynamic(import('../src/components/Video'))
 function HomePage() {
   return (
     <Fragment>
-      <BrowserView>
+      {/* <BrowserView>
         <VideoHeroHeader />
       </BrowserView>
       <MobileView>
         <Header />
-      </MobileView>
+      </MobileView> */}
+      <Header />
       <KeyDatas />
       <Project />
       <Video />
