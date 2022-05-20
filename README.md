@@ -42,8 +42,8 @@ Before you begin, ensure you have met the following requirements:
 
 <!--- These are just EXAMPLE (copied from current readme file): add, duplicate or remove as required --->
 To install Frontend, use commands:
-Yarn
-Yarn dev
+* Yarn
+* Yarn dev
 
 
 ### Usage
