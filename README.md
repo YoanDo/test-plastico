@@ -41,7 +41,9 @@ Before you begin, ensure you have met the following requirements:
 <!--- TODO: It's a code block illustrating how to install. Include any system-specific information needed for installation. If there are multiple versions which the user may interface with, an updating section would be useful. Add Dependencies subsection if there are unusual dependencies or dependencies that must be manually installed.--->
 
 <!--- These are just EXAMPLE (copied from current readme file): add, duplicate or remove as required --->
-To install Frontend, follow these steps:
+To install Frontend, use commands:
+* npm
+
 
 ### Usage
 <!---TODO: It's a code block illustrating common usage that might cover basic choices that may affect usage (for instance, if JavaScript, cover promises/callbacks, ES6). If CLI importable, code block indicating both import functionality and usage (if CLI functionality exists, add CLI subsection).If relevant, point to a runnable file for the usage code.--->
