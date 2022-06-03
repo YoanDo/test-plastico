@@ -28,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
     max-width: 100vw;
     overflow-x: hidden;
+    white-space: pre-line;
     /* TO FIX FOUC */
     opacity: 1 !important;
   }
