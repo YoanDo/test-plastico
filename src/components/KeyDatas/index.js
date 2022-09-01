@@ -9,8 +9,17 @@ const KeyDatas = () => {
   const [stats, setStats] = useState({})
   const getDatas = () => {
     axios
-      .get('https://plasticostorageprod.blob.core.windows.net/public/data_home_page.json')
-      .then(({ data }) => setStats(data))
+      .get('https://plasticostorageprod.blob.core.windows.net/public/data_home_page.json', {
+        headers: {
+          'Cache-Control': 'no-cache',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+        }
+      })
+      .then(({ data }) => {
+        setStats(data)
+      }
+      )
       // todo remove
       .catch((er) => console.log('api error:', er))
   }

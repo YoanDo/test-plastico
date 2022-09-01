@@ -49,4 +49,4 @@ const DataHeader = () => {
   )
 }
 
-export default DataHeader
+export default React.memo(DataHeader)
