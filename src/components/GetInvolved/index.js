@@ -17,9 +17,9 @@ const GetInvolved = () => {
         </>
       </Title>
       <CartWrapper>
-        <Cart label="get_involved_collect" link={zoomLink} />
-        <Cart label="get_involved_label" link="http://www.trashroulette.com" />
-        <Cart label="get_involved_donate" marginBottom={false} link="https://donate.surfrider.eu/b/mon-don" />
+        <Cart isNegative label="get_involved_collect" link={zoomLink} />
+        <Cart isNegative label="get_involved_label" link="http://www.trashroulette.com" />
+        <Cart isNegative label="get_involved_donate" marginBottom={false} link="https://donate.surfrider.eu/b/mon-don" />
       </CartWrapper>
     </BlueWrapper>
   )

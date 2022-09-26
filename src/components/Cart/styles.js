@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const CartWrapper = styled.div`
-  box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   align-items: center;
+  background: ${({ isNegative, theme }) => isNegative ? theme.surfRiderBlue : 'none'};
   border-radius: 6px;
   border: solid white 1px;
+  box-sizing: border-box;
   color: ${(props) => props.theme.white};
   cursor: pointer;
   display: flex;
@@ -21,6 +22,7 @@ export const CartWrapper = styled.div`
   }
 `
 export const Title = styled.h2`
+  color: ${({isNegative, theme}) => isNegative ? theme.white : 'inherit' };
   flex-basis: 23%;
   font-family: 'Bebas Neue';
   font-size: ${(props) => props.theme.thirdFS};
