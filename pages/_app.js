@@ -38,6 +38,10 @@ class MyApp extends App {
         <Provider store={store}>
           <Head>
             <title>Plastic Origins</title>
+            <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            />
           </Head>
           <IntlProvider locale={language} messages={translations[language]}>
             <ThemeProvider theme={theme}>
