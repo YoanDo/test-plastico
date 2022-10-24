@@ -10,7 +10,7 @@ export const VideoWrapper = styled.div`
   max-width: ${(props) => props.theme.maxWidth};
   padding-bottom: 56.25%;
   position: relative;
-  width: 80%;
+  width: 70%;
   iframe {
     position: absolute;
     left: 0;
