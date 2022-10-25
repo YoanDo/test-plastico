@@ -2,14 +2,17 @@ import React, { useEffect } from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import SolutionsHeader from '../../components/SolutionsHeader'
+import BlogList from '../../containers/BlogList'
 import SolutionsList from '../../containers/Solutions'
 import { Wrapper } from '../../hoc/layout/styles'
+import { getAllPosts } from '../../services/posts'
 import { setSolutionsList } from '../../services/solutions'
 import { GetInTouchWrapper, Schema } from './styles'
 
-const SolutionsPage= () => {
+const SolutionsPage = () => {
   useEffect(() => {
     setSolutionsList()
+    getAllPosts()
   }, [])
 
   return (
@@ -17,11 +20,9 @@ const SolutionsPage= () => {
       <Wrapper>
         <SolutionsHeader />
       </Wrapper>
-      {/* <Wrapper>
-        <Schema />
-      </Wrapper> */}
       <Wrapper>
-        <SolutionsList />
+        <BlogList />
+        {/* <SolutionsList /> */}
       </Wrapper>
       <Wrapper>
         <GetInTouchWrapper>
