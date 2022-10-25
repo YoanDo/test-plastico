@@ -14,3 +14,10 @@ export const downloadAppModal = (modalProps = {}) => showModal({ modalType: moda
 export const setSolutions = createAction('setSolutions')
 export const updateSolutionsLoading = createAction('updateSolutionsLoading')
 export const addSolutionDetails = createAction('addSolutionDetails')
+
+
+// POSTS //
+export const setPosts = createAction('setPosts')
+export const setPostLoading = createAction('setPostLoading')
+
+
