@@ -6,6 +6,8 @@ const theme = {
   secondaryColor: '#70F9C5',
 
   // font-sizes - scale: 1.250
+  smallerFS: '10px',
+  smallFS: '12px',
   defaultFS: '14px',
   biggerFS: '16px',
   landingTitle: '134px',

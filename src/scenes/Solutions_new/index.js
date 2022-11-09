@@ -2,8 +2,7 @@ import React, { useEffect } from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import SolutionsHeader from '../../components/SolutionsHeader'
-import BlogList from '../../containers/BlogList'
-import SolutionsList from '../../containers/Solutions'
+import ArticleThumbnails from '../../containers/ArticleThumbnails'
 import { Wrapper } from '../../hoc/layout/styles'
 import { getAllPosts } from '../../services/posts'
 import { setSolutionsList } from '../../services/solutions'
@@ -21,8 +20,7 @@ const SolutionsPage = () => {
         <SolutionsHeader />
       </Wrapper>
       <Wrapper>
-        <BlogList />
-        {/* <SolutionsList /> */}
+        <ArticleThumbnails />
       </Wrapper>
       <Wrapper>
         <GetInTouchWrapper>
