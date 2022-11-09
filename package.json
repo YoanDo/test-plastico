@@ -10,6 +10,7 @@
     "@apollo/client": "^3.3.18",
     "@reduxjs/toolkit": "^1.4.0",
     "@sanity/client": "^3.4.1",
+    "@sanity/image-url": "^1.0.1",
     "axios": "^0.19.2",
     "bootstrap": "^5.2.1",
     "core-js": "^3.6.5",
