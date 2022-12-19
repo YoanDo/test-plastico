@@ -11,3 +11,12 @@ export async function getAllPosts() {
     }
   };
 }
+
+export async function getPostBySlug(slug) {
+  const post = await sanityClient.fetch(`*[slug.current == "${slug}"]`)
+  return {
+    props: {
+      post
+    }
+  };
+}
