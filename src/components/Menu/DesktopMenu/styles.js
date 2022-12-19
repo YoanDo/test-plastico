@@ -1,14 +1,15 @@
 import styled from 'styled-components';
+import { ButtonWrapper } from '../../UI/Button/styles';
 
 export const Wrapper = styled.div`
   background: ${({ theme }) => theme.white};
   left: 0;
-  top: 0;
+  opacity: 0;
   position: fixed;
+  top: 0;
+  transition: 1s;
   width: 100vw;
   z-index: 99;
-  transition: 1s;
-  opacity: 0;
 `;
 
 export const MenuWrapper = styled.div`
@@ -22,6 +23,11 @@ export const MenuWrapper = styled.div`
   max-width: ${(props) => props.theme.maxWidth};
   @media (max-width: 900px) {
     display: none;
+  }
+  ${ButtonWrapper}:hover {
+    background: ${({ theme }) => theme.surfRiderBlue};
+    color: ${({ theme }) => theme.white};
+    border: 0;
   }
 `;
 
