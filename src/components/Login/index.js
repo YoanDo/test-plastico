@@ -38,11 +38,12 @@ const Login = ({ signUp }) => {
       </Left>
       <Right>
         <InnerSpace>
-          {showSignUp ? (
+          {/* error with react-form */}
+          {/* {showSignUp ? (
             <SignUpForm switchToSignIn={() => setSignUp(false)} />
           ) : (
             <SignInForm switchToSignUp={() => setSignUp(true)} />
-          )}
+          )} */}
         </InnerSpace>
       </Right>
     </Wrapper>
