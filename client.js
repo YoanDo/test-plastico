@@ -1,9 +1,8 @@
-import { createClient } from "next-sanity";
+import sanityClient from '@sanity/client'
 
-const sanityClient = createClient({
+export default sanityClient({
   projectId: "uxy4ji2d",
   dataset: "production",
-  useCdn: false
+  useCdn: false,
+  apiVersion: '2022-12-17'
 });
-
-export default sanityClient
