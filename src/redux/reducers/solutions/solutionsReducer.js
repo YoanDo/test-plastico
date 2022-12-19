@@ -1,20 +1,20 @@
-import { createReducer } from '@reduxjs/toolkit'
-import { addSolutionDetails, setSolutions } from '../../actions'
+import { createReducer } from '@reduxjs/toolkit';
+import { addSolutionDetails, setSolutions } from '../../actions';
 
-const initialState = {}
+const initialState = {};
 
 const isLoading = createReducer(initialState, {
   [setSolutions]: (state, actions) => actions.payload,
   [addSolutionDetails]: (state, actions) => {
-    const { solutionId, solutionDetails } = actions.payload
+    const { solutionId, solutionDetails } = actions.payload;
 
     return {
       ...state,
       [solutionId]: {
-        ...solutionDetails,
-      },
-    }
-  },
-})
+        ...solutionDetails
+      }
+    };
+  }
+});
 
-export default isLoading
+export default isLoading;

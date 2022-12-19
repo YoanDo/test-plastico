@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const GoalsWrapper = styled.div`
   margin-top: ${(props) => props.theme.mainTitleFS};
@@ -11,4 +11,4 @@ export const GoalsWrapper = styled.div`
     width: 100%;
     align-items: center;
   }
-`
+`;

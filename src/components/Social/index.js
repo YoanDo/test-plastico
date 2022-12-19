@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import { SocialWrapper } from './styles'
-import FacebookLink from './components/Facebook'
-import InstagramLink from './components/Instagram'
-import TwitterLink from './components/Twitter'
+import { SocialWrapper } from './styles';
+import FacebookLink from './components/Facebook';
+import InstagramLink from './components/Instagram';
+import TwitterLink from './components/Twitter';
 
 const Social = () => (
   <SocialWrapper>
@@ -11,6 +11,6 @@ const Social = () => (
     <InstagramLink />
     <FacebookLink />
   </SocialWrapper>
-)
+);
 
-export default Social
+export default Social;

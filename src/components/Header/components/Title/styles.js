@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: inline-block;
   position: relative;
-`
+`;
 
 export const TitlePrimary = styled.h1`
   color: ${(props) => props.theme.white};
@@ -19,7 +19,7 @@ export const TitlePrimary = styled.h1`
     align-items: center;
     text-align: center;
   }
-`
+`;
 
 export const TitleSecondary = styled(TitlePrimary)`
   color: ${(props) => props.theme.secondaryColor};
@@ -35,4 +35,4 @@ export const TitleSecondary = styled(TitlePrimary)`
     align-items: center;
     text-align: center;
   }
-`
+`;

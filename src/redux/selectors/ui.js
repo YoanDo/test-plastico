@@ -1,3 +1,3 @@
-export const modalDataSelector = (state) => state.ui.modal
+export const modalDataSelector = (state) => state.ui.modal;
 
-export const getUserLanguage = (state) => state.ui.lang
+export const getUserLanguage = (state) => state.ui.lang;

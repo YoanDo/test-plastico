@@ -1,16 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { VideoContainer, Wrapper } from './styles'
+import React, { useEffect, useRef, useState } from 'react';
+import { VideoContainer, Wrapper } from './styles';
 
 const VideoHeroHeader = ({ videoSrc }) => {
-  const videoRef = useRef()
-  const [fadeIn, setFadeIn] = useState(true)
+  const videoRef = useRef();
+  const [fadeIn, setFadeIn] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      videoRef.current.play()
-      setFadeIn(true)
-    }, 500)
-  }, [])
+      videoRef.current.play();
+      setFadeIn(true);
+    }, 500);
+  }, []);
 
   return (
     <Wrapper>
@@ -21,18 +21,16 @@ const VideoHeroHeader = ({ videoSrc }) => {
           width="100%"
           loop
           muted
-          disablePictureInPicture>
-          <source
-            src={videoSrc}
-            type="video/mp4"
-          />
+          disablePictureInPicture
+        >
+          <source src={videoSrc} type="video/mp4" />
           <img src="/images/headerBg.jpg" title="background header" />
         </video>
       </VideoContainer>
     </Wrapper>
-  )
-}
+  );
+};
 
-VideoHeroHeader.propTypes = {}
+VideoHeroHeader.propTypes = {};
 
-export default VideoHeroHeader
+export default VideoHeroHeader;

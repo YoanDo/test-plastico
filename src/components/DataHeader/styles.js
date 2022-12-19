@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   opacity: 0;
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   @media ${({ theme }) => theme.device.belowLaptop} {
     height: auto;
   }
-`
+`;
 
 export const LeftImage = styled.div`
   background-image: url('/images/dataTrash.png');
@@ -28,7 +28,7 @@ export const LeftImage = styled.div`
     width: 100vw;
     height: 100vh;
   }
-`
+`;
 
 export const Title = styled.h1`
   color: ${(props) => props.theme.secondaryColor};
@@ -43,7 +43,7 @@ export const Title = styled.h1`
     top: 50vh;
     font-size: ${({ theme }) => theme.mainTitleFS};
   }
-`
+`;
 
 export const LimeLine = styled.div`
   width: 40vw;
@@ -51,7 +51,7 @@ export const LimeLine = styled.div`
   background-color: ${(props) => props.theme.secondaryColor};
   height: 3px;
   right: 0;
-`
+`;
 
 export const About = styled.div`
   display: flex;
@@ -74,7 +74,7 @@ export const About = styled.div`
     padding: 0 20px;
     margin-top: ${({ theme }) => theme.mainTitleFS};
   }
-`
+`;
 export const RightSide = styled.div`
   display: flex;
   height: 100%;
@@ -88,7 +88,7 @@ export const RightSide = styled.div`
     height: 100%;
     width: 100vw;
   }
-`
+`;
 
 export const Count = styled.div`
   color: ${(props) => props.theme.secondaryColor};
@@ -101,7 +101,7 @@ export const Count = styled.div`
     top: -90vh;
     right: 20px;
   }
-`
+`;
 
 export const IconWrapper = styled.div`
   position: absolute;
@@ -112,4 +112,4 @@ export const IconWrapper = styled.div`
   @media ${({ theme }) => theme.device.belowLaptop} {
     display: none;
   }
-`
+`;

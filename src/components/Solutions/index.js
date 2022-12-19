@@ -1,41 +1,53 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { arrayOf, shape, string } from 'prop-types'
-import { useMediaQuery } from 'react-responsive'
+import React, { useState, useRef, useEffect } from 'react';
+import { arrayOf, shape, string } from 'prop-types';
+import { useMediaQuery } from 'react-responsive';
 
-import { SolutionsWrapper, ListWrapper, ListTitle, SolutionCardWrapper, ListSelectBar } from './styles'
-import SolutionCard from '../../containers/SolutionCard'
-import theme from '../../assets/theme'
+import {
+  SolutionsWrapper,
+  ListWrapper,
+  ListTitle,
+  SolutionCardWrapper,
+  ListSelectBar
+} from './styles';
+import SolutionCard from '../../containers/SolutionCard';
+import theme from '../../assets/theme';
 
 const index = ({ solutionsList, lang }) => {
-  const [selectedSolution, selectSolution] = useState({})
-  const [selectedRef, setSelectedRef] = useState([null])
-  const lineRefs = useRef([])
-  const solutionRef = useRef(null)
+  const [selectedSolution, selectSolution] = useState({});
+  const [selectedRef, setSelectedRef] = useState([null]);
+  const lineRefs = useRef([]);
+  const solutionRef = useRef(null);
 
-  const isBelowLaptop = useMediaQuery({ query: `(max-width: ${theme.size.laptop})` })
+  const isBelowLaptop = useMediaQuery({
+    query: `(max-width: ${theme.size.laptop})`
+  });
   const scrollToSolution = () => {
-    solutionRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+    solutionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const handleSolutionSelection = (id, index) => {
-    selectSolution({ id: id, index: index })
-    isBelowLaptop && scrollToSolution()
-  }
+    selectSolution({ id, index });
+    isBelowLaptop && scrollToSolution();
+  };
   useEffect(() => {
-    lineRefs.current && setSelectedRef(lineRefs.current[selectedSolution.index])
-}, [selectedSolution])
+    lineRefs.current &&
+      setSelectedRef(lineRefs.current[selectedSolution.index]);
+  }, [selectedSolution]);
 
   useEffect(() => {
-    selectSolution({ id: solutionsList?.[0]?.id, index: 0 })
-  }, [solutionsList.length])
+    selectSolution({ id: solutionsList?.[0]?.id, index: 0 });
+  }, [solutionsList.length]);
 
   return (
     <SolutionsWrapper>
       <ListWrapper>
-        <ListSelectBar offsetTop={selectedRef?.offsetTop} height={selectedRef?.scrollHeight} />
+        <ListSelectBar
+          offsetTop={selectedRef?.offsetTop}
+          height={selectedRef?.scrollHeight}
+        />
         {solutionsList.map((solution, index) => {
-          const { title } = solution[lang]
-          const { id } = solution
+          const { title } = solution[lang];
+          const { id } = solution;
 
           return (
             <ListTitle
@@ -46,15 +58,17 @@ const index = ({ solutionsList, lang }) => {
             >
               {title}
             </ListTitle>
-          )
+          );
         })}
       </ListWrapper>
       <SolutionCardWrapper ref={solutionRef}>
-        {selectedSolution.id && <SolutionCard lang={lang} selectedSolutionId={selectedSolution.id} />}
+        {selectedSolution.id && (
+          <SolutionCard lang={lang} selectedSolutionId={selectedSolution.id} />
+        )}
       </SolutionCardWrapper>
     </SolutionsWrapper>
-  )
-}
+  );
+};
 
 index.propTypes = {
   lang: string,
@@ -62,13 +76,13 @@ index.propTypes = {
     shape({
       id: string,
       en: shape(),
-      fr: shape(),
+      fr: shape()
     })
-  ),
-}
+  )
+};
 
 index.defaultProps = {
-  lang: 'fr',
-}
+  lang: 'fr'
+};
 
-export default index
+export default index;

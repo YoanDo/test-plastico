@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import { Icon, Link } from '../styles'
+import { Icon, Link } from '../styles';
 
 const Twitter = () => (
   <Link href="https://twitter.com/surfridereurope/" target="blank">
@@ -11,6 +11,6 @@ const Twitter = () => (
       />
     </Icon>
   </Link>
-)
+);
 
-export default Twitter
+export default Twitter;

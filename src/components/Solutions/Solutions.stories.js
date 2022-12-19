@@ -1,18 +1,16 @@
-import React from 'react'
-import Solutions from '.'
-import { Wrapper } from '../../hoc/layout/styles'
-import { solutionsList } from './fixtures'
+import React from 'react';
+import Solutions from '.';
+import { Wrapper } from '../../hoc/layout/styles';
+import { solutionsList } from './fixtures';
 
 export default {
   title: 'Component/Solutions',
   component: Solutions,
-  argTypes: {},
-}
+  argTypes: {}
+};
 
-export const defaultSolution = () => {
-  return (
-    <Wrapper>
-      <Solutions solutionsList={solutionsList} />
-    </Wrapper>
-  )
-}
+export const defaultSolution = () => (
+  <Wrapper>
+    <Solutions solutionsList={solutionsList} />
+  </Wrapper>
+);

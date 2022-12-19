@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import { Icon, Link } from '../styles'
+import { Icon, Link } from '../styles';
 
 const Facebook = () => (
   <Link href="https://www.facebook.com/surfridereurope" target="blank">
@@ -11,6 +11,6 @@ const Facebook = () => (
       />
     </Icon>
   </Link>
-)
+);
 
-export default Facebook
+export default Facebook;

@@ -1,13 +1,13 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
-import { Wrapper } from '../../hoc/layout/styles'
-import { LeftSide, RightSide, Row, VideoWrapper } from './styles'
+import { Wrapper } from '../../hoc/layout/styles';
+import { LeftSide, RightSide, Row, VideoWrapper } from './styles';
 
 const Goals = () => (
   <Wrapper>
     <Row>
-    <LeftSide>
+      <LeftSide>
         <VideoWrapper>
           <iframe
             title="plastic origins"
@@ -22,11 +22,10 @@ const Goals = () => (
       </LeftSide>
       <RightSide>
         <span>
-        <FormattedMessage id="video_antoine" />
+          <FormattedMessage id="video_antoine" />
         </span>
       </RightSide>
-      
     </Row>
   </Wrapper>
-)
-export default Goals
+);
+export default Goals;

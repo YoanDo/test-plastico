@@ -8,7 +8,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 9,
@@ -96,7 +96,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 10,
@@ -107,7 +107,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 11,
@@ -118,7 +118,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 12,
@@ -129,7 +129,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 13,
@@ -140,7 +140,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 14,
@@ -151,7 +151,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 15,
@@ -162,7 +162,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 16,
@@ -173,7 +173,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 17,
@@ -184,7 +184,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 18,
@@ -195,7 +195,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 19,
@@ -206,7 +206,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 20,
@@ -217,7 +217,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 21,
@@ -228,7 +228,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 22,
@@ -239,7 +239,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 23,
@@ -250,7 +250,7 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
+    cigarette_butts_label: null
   },
   {
     id: 24,
@@ -261,6 +261,6 @@ export const solutionsList = [
     agricultural_label: false,
     other_label: false,
     food_packaging_label: false,
-    cigarette_butts_label: null,
-  },
-]
+    cigarette_butts_label: null
+  }
+];

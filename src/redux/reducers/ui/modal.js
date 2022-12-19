@@ -1,29 +1,29 @@
-import { createReducer } from '@reduxjs/toolkit'
-import { showModal, hideModal, toggleCanCloseModal } from '../../actions'
+import { createReducer } from '@reduxjs/toolkit';
+import { showModal, hideModal, toggleCanCloseModal } from '../../actions';
 
 export const initialState = {
   modalType: '',
   modalProps: {},
   isOpen: false,
-  canClose: true,
-}
+  canClose: true
+};
 
 const modalReducer = createReducer(initialState, {
   [showModal]: (state, action) => {
-    const { modalType, modalProps } = action.payload
+    const { modalType, modalProps } = action.payload;
 
     return {
       ...state,
       modalType,
       modalProps,
-      isOpen: true,
-    }
+      isOpen: true
+    };
   },
   [hideModal]: () => initialState,
   [toggleCanCloseModal]: (state, action) => ({
     ...state,
-    canClose: action.payload,
-  }),
-})
+    canClose: action.payload
+  })
+});
 
-export default modalReducer
+export default modalReducer;

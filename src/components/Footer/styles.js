@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const FooterWrapper = styled.div`
   align-items: flex-start;
@@ -11,7 +11,7 @@ export const FooterWrapper = styled.div`
   padding: ${(props) => `${props.theme.spacing(3)} ${props.theme.spacing(1)} `};
   @media (max-width: 900px) {
   }
-`
+`;
 
 export const SocialWrapper = styled.div`
   max-width: 120px;
@@ -22,12 +22,12 @@ export const SocialWrapper = styled.div`
 
     color: ${(props) => props.theme.black};
   }
-`
+`;
 
 export const Link = styled.a`
   margin: 0;
   max-width: 70px;
-`
+`;
 
 export const SurfRiderLogo = styled.svg`
   flex: none;
@@ -35,4 +35,4 @@ export const SurfRiderLogo = styled.svg`
   transition: fill 0.25s;
   height: 100px;
   width: auto;
-`
+`;

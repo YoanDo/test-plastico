@@ -1,10 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
-import ReactModal from 'react-modal'
+import React from 'react';
+import styled from 'styled-components';
+import ReactModal from 'react-modal';
 
 // we have to create an adapter in order to use styled-components here
 function ReactModalAdapter({ className, modalClassName, ...props }) {
-  return <ReactModal className={modalClassName} portalClassName={className} {...props} />
+  return (
+    <ReactModal
+      className={modalClassName}
+      portalClassName={className}
+      {...props}
+    />
+  );
 }
 
 export const CloseButton = styled.button`
@@ -30,11 +36,11 @@ export const CloseButton = styled.button`
     top: 18px;
     right: 18px;
   }
-`
+`;
 
 export const StyledModal = styled(ReactModalAdapter).attrs({
   overlayClassName: { base: 'Overlay', afterOpen: 'Overlay--open' },
-  modalClassName: { base: 'Modal', afterOpen: 'Modal--open' },
+  modalClassName: { base: 'Modal', afterOpen: 'Modal--open' }
 })`
   .Modal {
     position: relative;
@@ -80,7 +86,7 @@ export const StyledModal = styled(ReactModalAdapter).attrs({
       opacity: 1;
     }
   }
-`
+`;
 
 export const ContentWrapper = styled.div`
   width: 100%;
@@ -89,7 +95,7 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const Title = styled.h1`
   font-family: ${({ theme }) => theme.secondaryFF};
@@ -103,7 +109,7 @@ export const Title = styled.h1`
     font-size: 18px;
     margin: 0 auto;
   }
-`
+`;
 
 export const Text = styled.span`
   font-family: ${(props) => props.theme.primaryFF};
@@ -120,7 +126,7 @@ export const Text = styled.span`
     width: 50%;
     margin: ${(props) => props.theme.spacing(3.5)} auto;
   }
-`
+`;
 
 export const WrapperBody = styled.div`
   padding: ${({ theme }) => `${theme.spacing(3.5)} ${theme.spacing(7)}`};
@@ -133,4 +139,4 @@ export const WrapperBody = styled.div`
   @media ${({ theme }) => theme.device.belowLaptop} {
     flex: 1;
   }
-`
+`;

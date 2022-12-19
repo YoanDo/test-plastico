@@ -1,8 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const ButtonWrapper = styled.button`
-  background: ${(props) => (props.negative ? 'none' : props.theme.surfRiderBlue)};
-  border: ${(props) => (props.negative ? `${props.theme.white}  solid 1px` : 'none')};
+  background: ${(props) =>
+    props.negative ? 'none' : props.theme.surfRiderBlue};
+  border: ${(props) =>
+    props.negative ? `${props.theme.white}  solid 1px` : 'none'};
   border-radius: 3px;
   color: ${(props) => props.theme.white};
   height: 32px;
@@ -10,10 +12,12 @@ export const ButtonWrapper = styled.button`
   cursor: pointer;
   width: ${(props) => (props.fullWidth ? '100%' : 'auto')};
   padding: 0 ${({ theme }) => theme.spacing(0.5)};
-  &:hover{
-    background: ${({ theme, negative }) => (!negative ? theme.surfRiderBlue : theme.white)};
-    border: ${(props) => (!props.negative ? `${props.theme.white}  solid 1px` : 'none')};
+  &:hover {
+    background: ${({ theme, negative }) =>
+      !negative ? theme.surfRiderBlue : theme.white};
+    border: ${(props) =>
+      !props.negative ? `${props.theme.white}  solid 1px` : 'none'};
     color: ${(props) => props.theme.surfRiderBlue};
-    transition: .4s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
-`
+`;

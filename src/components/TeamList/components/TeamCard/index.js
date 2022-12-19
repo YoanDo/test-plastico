@@ -1,13 +1,20 @@
-import React from 'react'
-import { string } from 'prop-types'
+import React from 'react';
+import { string } from 'prop-types';
 
-import { Color, IdentityRow, Picture, PictureWrapper, Position, Wrapper } from './styles'
-import { useIntl } from 'react-intl'
+import { useIntl } from 'react-intl';
+import {
+  Color,
+  IdentityRow,
+  Picture,
+  PictureWrapper,
+  Position,
+  Wrapper
+} from './styles';
 
 const TeamCard = ({ link, name, position, surname }) => {
-  const imageLink = `/images/team_profiles/${name}${surname}.jpg`
-  const positionTrad = useIntl().formatMessage({ id: position })
-  if (!imageLink && !positionTrad) return null
+  const imageLink = `/images/team_profiles/${name}${surname}.jpg`;
+  const positionTrad = useIntl().formatMessage({ id: position });
+  if (!imageLink && !positionTrad) return null;
 
   return (
     <Wrapper href={link} target="_blank" rel="noopener noreferrer">
@@ -21,19 +28,19 @@ const TeamCard = ({ link, name, position, surname }) => {
       </IdentityRow>
       <Position>{positionTrad}</Position>
     </Wrapper>
-  )
-}
+  );
+};
 TeamCard.propTypes = {
   link: string.isRequired,
   name: string.isRequired,
   position: string.isRequired,
-  surname: string.isRequired,
-}
+  surname: string.isRequired
+};
 
 TeamCard.defaultProps = {
   link: null,
   name: null,
   position: null,
-  surname: null,
-}
-export default TeamCard
+  surname: null
+};
+export default TeamCard;

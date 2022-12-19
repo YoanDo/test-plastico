@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   ::selection {
@@ -60,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
   ::selection {
     background-color: ${(props) => props.theme.secondaryColor};
   }
-`
+`;
 
 export const Wrapper = styled.div`
   max-width: ${(props) => props.theme.maxWidth};
@@ -70,10 +70,10 @@ export const Wrapper = styled.div`
     padding: 0 ${(props) => props.theme.spacing(1)};
     margin-top: ${(props) => (props.menu ? 0 : '20vh')};
   }
-`
+`;
 
 export const PreventAnimationFlashWrapper = styled.div`
   opacity: 0;
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

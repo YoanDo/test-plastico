@@ -1,14 +1,14 @@
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
-import { downloadAppModal } from '../redux/actions'
-import DesktopMenu from '../components/Menu/DesktopMenu'
+import { downloadAppModal } from '../redux/actions';
+import DesktopMenu from '../components/Menu/DesktopMenu';
 
 function mapDispatchToProps(dispatch) {
   return {
     openDownloadAppModal: () => {
-      dispatch(downloadAppModal())
-    },
-  }
+      dispatch(downloadAppModal());
+    }
+  };
 }
 
-export default connect(null, mapDispatchToProps)(DesktopMenu)
+export default connect(null, mapDispatchToProps)(DesktopMenu);

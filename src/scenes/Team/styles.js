@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Wrapper } from '../../hoc/layout/styles'
+import styled from 'styled-components';
+import { Wrapper } from '../../hoc/layout/styles';
 
 export const HeaderWrapper = styled(Wrapper)`
   padding-top: 170px;
@@ -13,7 +13,7 @@ export const HeaderWrapper = styled(Wrapper)`
     justify-content: flex-start;
     align-items: flex-start;
   }
-`
+`;
 export const HeaderIntroWrapper = styled.div`
   flex-basis: 50%;
 
@@ -27,7 +27,7 @@ export const HeaderIntroWrapper = styled.div`
   @media ${({ theme }) => theme.device.belowLaptop} {
     flex-basis: auto;
   }
-`
+`;
 
 export const PageTitle = styled.h1`
   color: ${(props) => props.theme.secondaryColor};
@@ -41,7 +41,7 @@ export const PageTitle = styled.h1`
     font-size: ${(props) => props.theme.mainTitleFS};
     margin-bottom: ${(props) => props.theme.mainTitleFS};
   }
-`
+`;
 export const SponsorsWrapper = styled.div`
   align-items: center;
   display: flex;
@@ -61,7 +61,7 @@ export const SponsorsWrapper = styled.div`
       margin-right: 0;
     }
   }
-`
+`;
 export const SponsorRow = styled.div`
   display: flex;
   flex-direction: row;
@@ -71,7 +71,7 @@ export const SponsorRow = styled.div`
   @media ${({ theme }) => theme.device.belowLaptop} {
     flex-direction: column;
   }
-`
+`;
 
 export const SponsorLogo = styled.div`
   background: url(${({ url }) => url});
@@ -91,4 +91,4 @@ export const SponsorLogo = styled.div`
     min-width: 160px;
     margin-right: 0;
   }
-`
+`;

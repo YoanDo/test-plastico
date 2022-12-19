@@ -1,12 +1,10 @@
-import React from 'react'
-import JoinUs from '.'
+import React from 'react';
+import JoinUs from '.';
 
 export default {
   title: 'Component/JoinUs',
   component: JoinUs,
-  argTypes: {},
-}
+  argTypes: {}
+};
 
-export const defaultJoinUs = () => {
-  return <JoinUs />
-}
+export const defaultJoinUs = () => <JoinUs />;

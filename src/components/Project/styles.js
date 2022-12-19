@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Section = styled.div`
   width: 100%;
@@ -8,7 +8,7 @@ export const Section = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
-`
+`;
 
 export const Left = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ export const Left = styled.div`
   @media (max-width: 900px) {
     align-items: center;
   }
-`
+`;
 
 export const About = styled.div`
   max-width: 50vw;
@@ -42,7 +42,7 @@ export const About = styled.div`
   @media (max-width: 900px) {
     max-width: 100%;
   }
-`
+`;
 
 export const AboutImage = styled.div`
   width: 100%;
@@ -51,4 +51,4 @@ export const AboutImage = styled.div`
   background-position: center;
   background-size: cover;
   margin-top: ${(props) => props.theme.spacing(2)};
-`
+`;

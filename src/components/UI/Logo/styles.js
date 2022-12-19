@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import surfRider from '../../assets/images/surfrider.png'
+import surfRider from '../../assets/images/surfrider.png';
 
 export const LogoImage = styled.img`
   content: url('/images/surfrider.png');
@@ -8,4 +8,4 @@ export const LogoImage = styled.img`
   width: 100%;
   max-width: 76px;
   margin: auto;
-`
+`;

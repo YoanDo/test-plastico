@@ -1,12 +1,11 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
-import isLoadingReducer from './isLoadingReducer'
-import allPostsReducer from './postsReducer'
-
+import isLoadingReducer from './isLoadingReducer';
+import allPostsReducer from './postsReducer';
 
 const postsReducer = combineReducers({
   isLoading: isLoadingReducer,
-  allPosts: allPostsReducer,
-})
+  allPosts: allPostsReducer
+});
 
-export default postsReducer
+export default postsReducer;

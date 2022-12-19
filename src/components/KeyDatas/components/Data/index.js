@@ -1,9 +1,9 @@
-import React from 'react'
-import CountUp from 'react-countup'
-import { FormattedMessage } from 'react-intl'
+import React from 'react';
+import CountUp from 'react-countup';
+import { FormattedMessage } from 'react-intl';
 
-import { number, string } from 'prop-types'
-import { DataWrapper, Count, Key } from './styles'
+import { number, string } from 'prop-types';
+import { DataWrapper, Count, Key } from './styles';
 
 const Data = ({ label, value, timing }) => (
   <DataWrapper>
@@ -14,18 +14,18 @@ const Data = ({ label, value, timing }) => (
       <FormattedMessage id={label} />
     </Key>
   </DataWrapper>
-)
+);
 
 Data.propTypes = {
   label: string,
   value: number,
-  timing: number,
-}
+  timing: number
+};
 
 Data.defaultProps = {
   label: null,
   value: 0,
-  timing: 0,
-}
+  timing: 0
+};
 
-export default Data
+export default Data;

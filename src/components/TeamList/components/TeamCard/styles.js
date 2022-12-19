@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Picture = styled.div`
   display: block;
@@ -12,7 +12,7 @@ export const Picture = styled.div`
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
   right: 0;
-`
+`;
 export const Color = styled.div`
   background: ${({ theme }) => theme.surfRiderBlue};
   border-radius: 100%;
@@ -23,13 +23,13 @@ export const Color = styled.div`
   top: 50%;
   transform: translate(-50%, -50%);
   width: ${({ theme }) => theme.mainTitleFS};
-`
+`;
 
 export const PictureWrapper = styled.div`
   position: relative;
   transition-duration: 2s;
   margin-bottom: calc(${({ theme }) => theme.biggerFS} / 2);
-`
+`;
 
 export const IdentityRow = styled.div`
   display: flex;
@@ -44,12 +44,12 @@ export const IdentityRow = styled.div`
   span:nth-child(1) {
     margin-right: 4px;
   }
-`
+`;
 
 export const Position = styled.span`
   color: ${({ theme }) => theme.surfRiderBlue};
   letter-spacing: 1px;
-`
+`;
 
 export const Wrapper = styled.a`
   display: flex;
@@ -74,4 +74,4 @@ export const Wrapper = styled.a`
       transform: translate(-40%, -50%);
     }
   }
-`
+`;

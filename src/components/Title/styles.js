@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const TitleWrapper = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const TitleWrapper = styled.div`
   @media (max-width: 900px) {
     margin-right: auto;
   }
-`
+`;
 
 export const TextTitle = styled.h1`
   font-family: 'Bebas Neue';
@@ -17,5 +17,5 @@ export const TextTitle = styled.h1`
   letter-spacing: 2.28px;
   line-height: 90px;
   margin-bottom: 0;
-  color: ${({ theme, color }) => (color ? color : theme.black)};
-`
+  color: ${({ theme, color }) => color || theme.black};
+`;

@@ -1,11 +1,11 @@
-import React from 'react'
-import { FormattedMessage, useIntl } from 'react-intl'
-import Title from '../Title'
-import Cart from '../Cart'
-import { CartWrapper, BlueWrapper } from './styles'
+import React from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
+import Title from '../Title';
+import Cart from '../Cart';
+import { CartWrapper, BlueWrapper } from './styles';
 
 const GetInvolved = () => {
-  const zoomLink = useIntl().formatMessage({ id: 'get_involve_zoom_link' })
+  const zoomLink = useIntl().formatMessage({ id: 'get_involve_zoom_link' });
 
   return (
     <BlueWrapper>
@@ -18,11 +18,20 @@ const GetInvolved = () => {
       </Title>
       <CartWrapper>
         <Cart isNegative label="get_involved_collect" link={zoomLink} />
-        <Cart isNegative label="get_involved_label" link="http://www.trashroulette.com" />
-        <Cart isNegative label="get_involved_donate" marginBottom={false} link="https://donate.surfrider.eu/b/mon-don" />
+        <Cart
+          isNegative
+          label="get_involved_label"
+          link="http://www.trashroulette.com"
+        />
+        <Cart
+          isNegative
+          label="get_involved_donate"
+          marginBottom={false}
+          link="https://donate.surfrider.eu/b/mon-don"
+        />
       </CartWrapper>
     </BlueWrapper>
-  )
-}
+  );
+};
 
-export default GetInvolved
+export default GetInvolved;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const KeysDataWrapper = styled.div`
   display: flex;
@@ -11,4 +11,4 @@ export const KeysDataWrapper = styled.div`
     flex-direction: column;
     width: 100%;
   }
-`
+`;

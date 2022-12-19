@@ -1,8 +1,8 @@
-import React from 'react'
-import { string, node } from 'prop-types'
-import { FormattedMessage } from 'react-intl'
+import React from 'react';
+import { string, node } from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 
-import { Title, Text, WrapperBody } from '../styles'
+import { Title, Text, WrapperBody } from '../styles';
 
 export const ModalHeader = ({ title }) => (
   <div center>
@@ -10,29 +10,31 @@ export const ModalHeader = ({ title }) => (
       <FormattedMessage id={title} />
     </Title>
   </div>
-)
+);
 
 ModalHeader.defaultProps = {
-  title: null,
-}
+  title: null
+};
 ModalHeader.propTypes = {
-  title: string,
-}
+  title: string
+};
 
-export const ModalBody = ({ children }) => <WrapperBody>{children}</WrapperBody>
+export const ModalBody = ({ children }) => (
+  <WrapperBody>{children}</WrapperBody>
+);
 
 ModalBody.defaultProps = {
-  children: null,
-}
+  children: null
+};
 ModalBody.propTypes = {
-  children: node,
-}
+  children: node
+};
 
-export const ModalText = ({ children }) => <Text>{children}</Text>
+export const ModalText = ({ children }) => <Text>{children}</Text>;
 
 ModalText.defaultProps = {
-  children: null,
-}
+  children: null
+};
 ModalText.propTypes = {
-  children: node,
-}
+  children: node
+};

@@ -1,21 +1,23 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 
-import { setSolutionsDetails } from '../services/solutions'
-import SolutionCard from '../components/SolutionCard'
-import { number, oneOfType, string } from 'prop-types'
-import { useSelector } from 'react-redux'
-import { getSolutionById } from '../redux/selectors/solutions'
+import { number, oneOfType, string } from 'prop-types';
+import { useSelector } from 'react-redux';
+import { setSolutionsDetails } from '../services/solutions';
+import SolutionCard from '../components/SolutionCard';
+import { getSolutionById } from '../redux/selectors/solutions';
 
 const SolutionCardContainer = ({ selectedSolutionId, lang }) => {
-  const solution = useSelector((state) => getSolutionById(state, selectedSolutionId))
-  const { isFullyLoaded } = solution
+  const solution = useSelector((state) =>
+    getSolutionById(state, selectedSolutionId)
+  );
+  const { isFullyLoaded } = solution;
   useEffect(() => {
-    if (!isFullyLoaded) return setSolutionsDetails(selectedSolutionId)
-  }, [selectedSolutionId])
+    if (!isFullyLoaded) return setSolutionsDetails(selectedSolutionId);
+  }, [selectedSolutionId]);
 
-  const { title, intro, pdfLink } = solution[lang]
-  const description = solution[lang].description || ''
-  const whatYouWillFind = solution[lang].whatYouWillFind || ''
+  const { title, intro, pdfLink } = solution[lang];
+  const description = solution[lang].description || '';
+  const whatYouWillFind = solution[lang].whatYouWillFind || '';
 
   return (
     <SolutionCard
@@ -26,12 +28,12 @@ const SolutionCardContainer = ({ selectedSolutionId, lang }) => {
       isLoading={!isFullyLoaded}
       pdfLink={pdfLink}
     />
-  )
-}
+  );
+};
 
 SolutionCardContainer.propTypes = {
   selectedSolutionId: oneOfType([string, number]),
-  lang: string,
-}
+  lang: string
+};
 
-export default SolutionCardContainer
+export default SolutionCardContainer;

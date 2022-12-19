@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { LogoImage } from './styles'
+import { LogoImage } from './styles';
 
-const Logo = () => <LogoImage />
+const Logo = () => <LogoImage />;
 
-export default Logo
+export default Logo;

@@ -1,4 +1,4 @@
-import theme from '../../../assets/theme'
+import theme from '../../../assets/theme';
 
 const styles = {
   bmBurgerButton: {
@@ -6,34 +6,34 @@ const styles = {
     width: '36px',
     height: '30px',
     left: '20px',
-    top: '36px',
+    top: '36px'
   },
   bmBurgerBars: {
-    background: theme.black,
+    background: theme.black
   },
   bmBurgerBarsHover: {
-    background: '#a90000',
+    background: '#a90000'
   },
   bmCrossButton: {
     height: '24px',
     width: '24px',
-    color: theme.black,
+    color: theme.black
   },
   bmCross: {
-    background: theme.black,
+    background: theme.black
   },
   bmMenuWrap: {
     top: 0,
     position: 'fixed',
-    height: '100%',
+    height: '100%'
   },
   bmMenu: {
     background: theme.white,
     padding: '2rem',
-    fontSize: '1.15em',
+    fontSize: '1.15em'
   },
   bmMorphShape: {
-    fill: theme.black,
+    fill: theme.black
   },
   bmItemList: {
     color: theme.black,
@@ -41,14 +41,14 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-around',
-    padding: '0',
+    padding: '0'
   },
   bmItem: {
-    display: 'inline-block',
+    display: 'inline-block'
   },
   bmOverlay: {
-    background: 'rgba(0, 0, 0, 0.3)',
-  },
-}
+    background: 'rgba(0, 0, 0, 0.3)'
+  }
+};
 
-export default styles
+export default styles;

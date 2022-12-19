@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const SolutionsWrapper = styled.div`
   width: 100%;
@@ -9,7 +9,7 @@ export const SolutionsWrapper = styled.div`
   @media ${({ theme }) => theme.device.belowLaptop} {
     flex-direction: column;
   }
-`
+`;
 
 export const ListWrapper = styled.ul`
   margin: 0;
@@ -24,18 +24,18 @@ export const ListWrapper = styled.ul`
     flex-basis: 100%;
     margin-bottom: 10vh;
   }
-`
+`;
 export const ListSelectBar = styled.div`
   height: ${({ height }) => height}px;
   width: 4px;
   position: absolute;
   background: ${({ theme }) => theme.secondaryColor};
-  top: ${({ offsetTop }) => (offsetTop ? offsetTop : 0)}px;
+  top: ${({ offsetTop }) => offsetTop || 0}px;
   left: 4px;
   content: '';
   transition: 0.4s;
   transition-timing-function: ease-out;
-`
+`;
 
 export const ListTitle = styled.li`
   color: ${({ theme }) => theme.surfRiderBlue};
@@ -52,10 +52,10 @@ export const ListTitle = styled.li`
   @media ${({ theme }) => theme.device.belowLaptop} {
     font-size: ${({ theme }) => theme.fourthFS};
   }
-`
+`;
 
 export const SolutionCardWrapper = styled.div`
   flex-basis: 100%;
   height: 100%;
   overflow: scroll;
-`
+`;

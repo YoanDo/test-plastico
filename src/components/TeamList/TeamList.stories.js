@@ -1,12 +1,10 @@
-import React from 'react'
-import TeamList from '.'
+import React from 'react';
+import TeamList from '.';
 
 export default {
   title: 'Component/TeamList',
   component: TeamList,
-  argTypes: {},
-}
+  argTypes: {}
+};
 
-export const defaultTeamList = () => {
-  return <TeamList />
-}
+export const defaultTeamList = () => <TeamList />;

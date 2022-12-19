@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
   width: 100vw;
   max-height: calc(100vh - 50px);
   overflow: hidden;
-`
+`;
 
 export const Left = styled.div`
   align-items: center;
@@ -21,7 +21,7 @@ export const Left = styled.div`
   @media (max-width: 900px) {
     display: none;
   }
-`
+`;
 export const InnerSpace = styled.div`
   display: flex;
   width: calc(${(props) => props.theme.maxWidth} / 2);
@@ -30,7 +30,7 @@ export const InnerSpace = styled.div`
   justify-content: center;
   margin-left: auto;
   flex-direction: column;
-`
+`;
 
 export const Claim = styled.span`
   color: ${(props) => props.theme.white};
@@ -41,13 +41,13 @@ export const Claim = styled.span`
   opacity: 1;
   overflow: hidden;
   text-align: left;
-`
+`;
 
 export const ClaimWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
-`
+`;
 
 export const Right = styled.div`
   display: flex;
@@ -59,4 +59,4 @@ export const Right = styled.div`
   @media (max-width: 900px) {
     width: 100%;
   }
-`
+`;

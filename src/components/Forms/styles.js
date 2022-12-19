@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Form = styled.form`
   display: flex;
@@ -9,7 +9,7 @@ export const Form = styled.form`
     margin-bottom: 0;
     margin-top: 25px;
   }
-`
+`;
 
 export const Field = styled.div`
   width: 100%;
@@ -34,7 +34,7 @@ export const Field = styled.div`
       text-decoration: underline;
     }
   }
-`
+`;
 export const Input = styled.input`
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -55,7 +55,7 @@ export const Input = styled.input`
     border: 1px solid ${(props) => props.theme.surfRiderBlue};
     opacity: 1;
   }
-`
+`;
 
 export const ValidationInput = styled.button`
   cursor: pointer;
@@ -73,4 +73,4 @@ export const ValidationInput = styled.button`
     color: ${(props) => props.theme.surfRiderBlue};
     background: ${(props) => props.theme.white};
   }
-`
+`;

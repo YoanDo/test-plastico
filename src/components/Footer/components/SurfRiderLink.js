@@ -1,5 +1,5 @@
-import React from 'react'
-import { SurfRiderLogo, Link } from '../styles'
+import React from 'react';
+import { SurfRiderLogo, Link } from '../styles';
 
 const SurfRiderLink = () => (
   <Link href="https://surfrider.eu/" target="blank">
@@ -158,6 +158,6 @@ const SurfRiderLink = () => (
       </g>
     </SurfRiderLogo>
   </Link>
-)
+);
 
-export default SurfRiderLink
+export default SurfRiderLink;

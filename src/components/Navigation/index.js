@@ -80,7 +80,7 @@ NavigationLinks.propTypes = {
   burger: bool,
   closePanel: func,
   column: bool,
-  isFooter: bool,
+  isFooter: bool
 };
 
 NavigationLinks.defaultProps = {
@@ -88,7 +88,7 @@ NavigationLinks.defaultProps = {
   burger: false,
   closePanel: Function.prototype,
   column: false,
-  isFooter: false,
+  isFooter: false
 };
 
 export default NavigationLinks;

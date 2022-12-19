@@ -1,20 +1,20 @@
-import React from 'react'
-import { Wrapper, TitlePrimary, TitleSecondary } from './styles.js'
-import { string } from 'prop-types'
+import React from 'react';
+import { string } from 'prop-types';
+import { Wrapper, TitlePrimary, TitleSecondary } from './styles.js';
 
 const Title = ({ label }) => (
   <Wrapper>
     <TitlePrimary>{label}</TitlePrimary>
     <TitleSecondary>{label}</TitleSecondary>
   </Wrapper>
-)
+);
 
 Title.propTypes = {
-  label: string,
-}
+  label: string
+};
 
 Title.defaultProps = {
-  label: null,
-}
+  label: null
+};
 
-export default Title
+export default Title;

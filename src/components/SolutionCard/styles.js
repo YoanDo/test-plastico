@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { TextTitle } from '../Title/styles'
+import styled from 'styled-components';
+import { TextTitle } from '../Title/styles';
 
 export const SolutionCardWrapper = styled.div`
   align-items: flex-start;
@@ -17,13 +17,14 @@ export const SolutionCardWrapper = styled.div`
       line-height: ${({ theme }) => theme.thirdFS};
     }
   }
-`
+`;
 
 export const Text = styled.span`
   font-size: ${({ theme }) => theme.fourthFS};
   margin-bottom: ${({ theme }) => theme.spacing(1)};
-  color: ${({ isIntro, theme }) => (isIntro ? theme.surfRiderBlue : theme.black)};
-`
+  color: ${({ isIntro, theme }) =>
+    isIntro ? theme.surfRiderBlue : theme.black};
+`;
 
 export const PreConclusion = styled(Text)`
   color: ${({ theme }) => theme.surfRiderBlue};
@@ -31,7 +32,7 @@ export const PreConclusion = styled(Text)`
   text-transform: uppercase;
   font-weight: bold;
   margin-top: ${({ theme }) => theme.spacing(2)};
-`
+`;
 
 export const LoaderWrapper = styled.div`
   align-items: center;
@@ -40,4 +41,4 @@ export const LoaderWrapper = styled.div`
   justify-content: center;
   min-height: 400px;
   width: 100%;
-`
+`;

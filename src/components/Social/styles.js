@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const SocialWrapper = styled.div`
   display: flex;
   align-items: center;
   height: 2.4em;
-`
+`;
 
 export const Link = styled.a`
   height: 18px;
@@ -16,7 +16,7 @@ export const Link = styled.a`
   &:first-of-type {
     margin-left: 0;
   }
-`
+`;
 
 export const Icon = styled.svg`
   cursor: pointer;
@@ -31,4 +31,4 @@ export const Icon = styled.svg`
     fill: ${(props) => props.theme.surfRiderBlue};
     opacity: 1;
   }
-`
+`;

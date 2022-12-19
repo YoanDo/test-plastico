@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   @media ${({ theme }) => theme.device.belowLaptop} {
     padding-top: 0;
   }
-`
+`;
 export const HeaderWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
@@ -22,7 +22,7 @@ export const HeaderWrapper = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-`
+`;
 
 export const Title = styled.h1`
   color: ${(props) => props.theme.secondaryColor};
@@ -44,7 +44,7 @@ export const Title = styled.h1`
     font-size: ${({ theme }) => theme.mainTitleFS};
     position: inherit;
   }
-`
+`;
 
 export const About = styled.div`
   align-items: center;
@@ -73,7 +73,7 @@ export const About = styled.div`
     padding: 0px;
     margin-top: ${({ theme }) => theme.mainTitleFS};
   }
-`
+`;
 export const Illustration = styled.div`
   background: url('/images/riverBottleCropped.jpg');
   background-position: center;
@@ -89,4 +89,4 @@ export const Illustration = styled.div`
   @media ${({ theme }) => theme.device.belowLaptop} {
     display: none;
   }
-`
+`;

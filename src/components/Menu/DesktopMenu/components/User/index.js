@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { UserProfile } from './styles'
+import { UserProfile } from './styles';
 
-const User = () => <UserProfile />
+const User = () => <UserProfile />;
 
-export default User
+export default User;

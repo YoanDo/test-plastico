@@ -1,18 +1,20 @@
-import React from 'react'
-import { string, bool } from 'prop-types'
+import React from 'react';
+import { string, bool } from 'prop-types';
 
-import BreakerWrapper from './styles'
+import BreakerWrapper from './styles';
 
-const Breaker = ({ color, bold }) => <BreakerWrapper color={color} bold={bold} />
+const Breaker = ({ color, bold }) => (
+  <BreakerWrapper color={color} bold={bold} />
+);
 
 Breaker.propTypes = {
   color: string,
-  bold: bool,
-}
+  bold: bool
+};
 
 Breaker.defaultProps = {
   color: null,
-  bold: false,
-}
+  bold: false
+};
 
-export default Breaker
+export default Breaker;

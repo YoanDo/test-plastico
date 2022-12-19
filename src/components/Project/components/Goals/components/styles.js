@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const GoalWrapper = styled.div`
   display: flex;
@@ -19,9 +19,9 @@ export const GoalWrapper = styled.div`
     flex-direction: column;
     width: 100%;
   }
-`
+`;
 
 export const Title = styled.h2`
   font-family: 'Bebas Neue';
   font-size: ${(props) => props.theme.thirdFS};
-`
+`;

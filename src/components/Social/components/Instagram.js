@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import { Icon, Link } from '../styles'
+import { Icon, Link } from '../styles';
 
 const Instagram = () => (
   <Link href="https://www.instagram.com/surfridereurope/" target="blank">
@@ -11,6 +11,6 @@ const Instagram = () => (
       />
     </Icon>
   </Link>
-)
+);
 
-export default Instagram
+export default Instagram;

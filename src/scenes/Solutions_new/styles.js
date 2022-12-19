@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Schema = styled.div`
   width: 100%;
@@ -11,7 +11,7 @@ export const Schema = styled.div`
   @media ${({ theme }) => theme.device.belowLaptop} {
     min-height: 34vh;
   }
-`
+`;
 export const GetInTouchWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -41,4 +41,4 @@ export const GetInTouchWrapper = styled.div`
       transform: rotate(1deg);
     }
   }
-`
+`;

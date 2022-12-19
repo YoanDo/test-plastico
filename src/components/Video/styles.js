@@ -1,15 +1,15 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Row = styled.div`
-  display: flex ;
+  display: flex;
   flex-direction: row;
-  span{
+  span {
     font-size: ${({ theme }) => theme.biggerFS};
   }
   @media screen and (max-width: 992px) {
     flex-direction: column;
   }
-`
+`;
 
 export const VideoWrapper = styled.div`
   align-items: center;
@@ -29,7 +29,7 @@ export const VideoWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
-`
+`;
 export const LeftSide = styled.div`
   display: flex;
   flex-basis: 50%;
@@ -37,7 +37,7 @@ export const LeftSide = styled.div`
   @media screen and (max-width: 992px) {
     flex-basis: 100%;
   }
-`
+`;
 
 export const RightSide = styled.div`
   align-items: center;
@@ -48,16 +48,16 @@ export const RightSide = styled.div`
   margin: auto 0;
   padding: ${({ theme }) => theme.spacing(1)};
   width: 100%;
-  span{
+  span {
     width: 80%;
-    display: inline-block
+    display: inline-block;
   }
   @media screen and (max-width: 992px) {
     flex-basis: 100%;
-    display: content ;
-    span{
+    display: content;
+    span {
       width: 100%;
-      margin-top: ${({theme}) => theme.spacing(2)};
+      margin-top: ${({ theme }) => theme.spacing(2)};
     }
   }
-`
+`;

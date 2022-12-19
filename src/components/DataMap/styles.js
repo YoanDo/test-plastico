@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Wrapper } from '../../hoc/layout/styles'
+import styled from 'styled-components';
+import { Wrapper } from '../../hoc/layout/styles';
 
 export const MapWrapper = styled(Wrapper)`
   height: ${({ height }) => height};
@@ -8,4 +8,4 @@ export const MapWrapper = styled(Wrapper)`
     margin-top: ${({ theme }) => theme.mainTitleFS};
     padding: 0;
   }
-`
+`;

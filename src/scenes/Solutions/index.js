@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react'
-import { FormattedMessage } from 'react-intl'
+import React, { useEffect } from 'react';
+import { FormattedMessage } from 'react-intl';
 
-import SolutionsHeader from '../../components/SolutionsHeader'
-import SolutionsList from '../../containers/Solutions'
-import { Wrapper } from '../../hoc/layout/styles'
-import { setSolutionsList } from '../../services/solutions'
-import { GetInTouchWrapper, Schema } from './styles'
+import SolutionsHeader from '../../components/SolutionsHeader';
+import SolutionsList from '../../containers/Solutions';
+import { Wrapper } from '../../hoc/layout/styles';
+import { setSolutionsList } from '../../services/solutions';
+import { GetInTouchWrapper, Schema } from './styles';
 
-const SolutionsPage= () => {
+const SolutionsPage = () => {
   useEffect(() => {
-    setSolutionsList()
-  }, [])
+    setSolutionsList();
+  }, []);
 
   return (
     <>
@@ -29,16 +29,19 @@ const SolutionsPage= () => {
             <FormattedMessage id="solution_get_in_touch" />
           </span>
           <span>
-            <a href="mailto:jpoumey@surfrider.eu?subject=Plastic origins" target="_top">
+            <a
+              href="mailto:jpoumey@surfrider.eu?subject=Plastic origins"
+              target="_top"
+            >
               email
             </a>
           </span>
         </GetInTouchWrapper>
       </Wrapper>
     </>
-  )
-}
+  );
+};
 
-SolutionsPage.propTypes = {}
+SolutionsPage.propTypes = {};
 
-export default SolutionsPage
+export default SolutionsPage;

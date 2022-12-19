@@ -1,7 +1,7 @@
-import React from 'react'
-import Goal from './components/Goal'
+import React from 'react';
+import Goal from './components/Goal';
 
-import { GoalsWrapper } from './styles'
+import { GoalsWrapper } from './styles';
 
 const Goals = () => (
   <GoalsWrapper>
@@ -9,5 +9,5 @@ const Goals = () => (
     <Goal label="analyse" delay={100} />
     <Goal label="broadcast" delay={200} />
   </GoalsWrapper>
-)
-export default Goals
+);
+export default Goals;

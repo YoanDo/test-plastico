@@ -1,7 +1,7 @@
-import { gql } from '@apollo/client'
-import client from '../../../apollo-client'
-import capitalize from '../../helpers/CapitalizeFirstLetterOfSentence'
-import isValidHttpUrl from '../../helpers/isUrlValid'
+import { gql } from '@apollo/client';
+import client from '../../../apollo-client';
+import capitalize from '../../helpers/CapitalizeFirstLetterOfSentence';
+import isValidHttpUrl from '../../helpers/isUrlValid';
 
 export async function getSolutionsList() {
   const { data } = await client.query({
@@ -13,13 +13,18 @@ export async function getSolutionsList() {
           title_en
         }
       }
-    `,
-  })
-  const newArrayOfData = data.solutionCards.map(({ id, title_fr, title_en }) => {
-    return { en: { title: title_en }, fr: { title: title_fr }, id, isFullyLoaded: false }
-  })
+    `
+  });
+  const newArrayOfData = data.solutionCards.map(
+    ({ id, title_fr, title_en }) => ({
+      en: { title: title_en },
+      fr: { title: title_fr },
+      id,
+      isFullyLoaded: false
+    })
+  );
 
-  return Object.fromEntries(newArrayOfData.map((o) => [o.id, o]))
+  return Object.fromEntries(newArrayOfData.map((o) => [o.id, o]));
 }
 
 export async function getSolutionCardById(selectedId) {
@@ -50,11 +55,11 @@ export async function getSolutionCardById(selectedId) {
         }
       }
     `,
-    variables: { selectedId: selectedId },
-  })
+    variables: { selectedId }
+  });
 
   if (error) {
-    console.log(error)
+    console.log(error);
   }
 
   const {
@@ -74,24 +79,24 @@ export async function getSolutionCardById(selectedId) {
     title_fr,
     illegal_dumping_label,
     pdf_link_fr,
-    pdf_link_en,
-  } = data.solutionCard
+    pdf_link_en
+  } = data.solutionCard;
 
   return {
-    id: id,
+    id,
     fr: {
       title: capitalize(title_fr),
       intro: capitalize(intro_fr),
       description: description_fr,
       pdfLink: isValidHttpUrl(pdf_link_fr),
-      whatYouWillFind: what_you_will_find_fr,
+      whatYouWillFind: what_you_will_find_fr
     },
     en: {
       title: capitalize(title_en),
       intro: capitalize(intro_en),
       description: description_en,
       pdfLink: isValidHttpUrl(pdf_link_en),
-      whatYouWillFind: what_you_will_find_en,
+      whatYouWillFind: what_you_will_find_en
     },
     label: {
       sanitation: sanitation_label,
@@ -99,8 +104,8 @@ export async function getSolutionCardById(selectedId) {
       else: other_label,
       foodPackaging: food_packaging_label,
       cigaretteButts: cigarette_butts_label,
-      agricultural: agricultural_label,
+      agricultural: agricultural_label
     },
-    isFullyLoaded: true,
-  }
+    isFullyLoaded: true
+  };
 }

@@ -1,17 +1,17 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react'
+import React from 'react';
 
-import SolutionCard from '.'
+import SolutionCard from '.';
 
 export default {
   title: 'Component/Solutions/Card',
   component: SolutionCard,
-  argTypes: { isLoading: { control: 'boolean' }, title: { control: 'text' } },
-}
+  argTypes: { isLoading: { control: 'boolean' }, title: { control: 'text' } }
+};
 
-const Template = (args) => <SolutionCard {...args} />
+const Template = (args) => <SolutionCard {...args} />;
 
-export const Default = Template.bind({})
+export const Default = Template.bind({});
 Default.args = {
-  title: 'hello',
-}
+  title: 'hello'
+};

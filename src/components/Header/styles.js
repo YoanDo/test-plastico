@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 // import background from '/images/headerbg_1900x1200.jpg'
 
@@ -16,13 +16,13 @@ export const Banner = styled.div`
     height: 100%;
     background-image: none;
   }
-`
+`;
 export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
   opacity: 0;
-`
+`;
 export const TagLine = styled.span`
   color: ${({ theme }) => theme.white};
   font-family: ${({ theme }) => theme.primaryFF};
@@ -30,7 +30,7 @@ export const TagLine = styled.span`
   margin-top: ${({ theme }) => theme.fourthFS};
   text-align: center;
   text-transform: uppercase;
-`
+`;
 
 export const MobileBanner = styled.div`
   @media (max-width: 900px) {
@@ -43,4 +43,4 @@ export const MobileBanner = styled.div`
     justify-content: center;
     width: 100%;
   }
-`
+`;

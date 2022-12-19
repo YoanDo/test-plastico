@@ -1,11 +1,11 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
-import isLoadingReducer from './isLoadingReducer'
-import solutionsReducer from './solutionsReducer'
+import isLoadingReducer from './isLoadingReducer';
+import solutionsReducer from './solutionsReducer';
 
 const faqReducer = combineReducers({
   isLoading: isLoadingReducer,
-  allSolutions: solutionsReducer,
-})
+  allSolutions: solutionsReducer
+});
 
-export default faqReducer
+export default faqReducer;

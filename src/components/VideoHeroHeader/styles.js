@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   position: relative;
@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   @media (min-width: 1280px) {
     margin-top: -50px;
   }
-`
+`;
 
 export const VideoContainer = styled.article`
   display: block;
@@ -22,5 +22,4 @@ export const VideoContainer = styled.article`
     width: 105%;
     height: 130%;
   }
-
-`
+`;

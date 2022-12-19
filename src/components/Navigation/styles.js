@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 // Links
 export const Links = styled.div`
@@ -21,11 +21,13 @@ export const Links = styled.div`
       border-bottom: 2px solid ${({ theme }) => theme.surfRiderBlue};
     }
     @media (max-width: 900px) {
-      font-size: ${(props) => (props.burger ? props.theme.fourthFS : props.theme.defaultFS)};
-      margin-bottom: ${(props) => (props.burger ? props.theme.fourthFS : 'inherit')};
+      font-size: ${(props) =>
+        props.burger ? props.theme.fourthFS : props.theme.defaultFS};
+      margin-bottom: ${(props) =>
+        props.burger ? props.theme.fourthFS : 'inherit'};
       line-height: 1.6;
       margin-right: 0;
       font-family: ${(props) => (props.burger ? 'Bebas Neue' : 'inherit')};
     }
   }
-`
+`;

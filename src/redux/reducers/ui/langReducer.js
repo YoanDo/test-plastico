@@ -1,10 +1,10 @@
-import { createReducer } from '@reduxjs/toolkit'
-import { updateLanguage } from '../../actions'
+import { createReducer } from '@reduxjs/toolkit';
+import { updateLanguage } from '../../actions';
 
-const initialState = 'fr'
+const initialState = 'fr';
 
 const isLoading = createReducer(initialState, {
-  [updateLanguage]: (state, actions) => actions.payload,
-})
+  [updateLanguage]: (state, actions) => actions.payload
+});
 
-export default isLoading
+export default isLoading;

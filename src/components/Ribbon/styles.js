@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const SurfRiderRibbon = styled.div`
   align-items: flex-end;
@@ -19,7 +19,7 @@ export const SurfRiderRibbon = styled.div`
     align-items: center;
     padding-bottom: 5px;
   }
-`
+`;
 
 export const TopRibbon = styled.div`
   display: flex;
@@ -32,13 +32,13 @@ export const TopRibbon = styled.div`
     text-align: center;
     font-size: ${(props) => props.theme.smallFS};
   }
-`
+`;
 
 export const BotRibbon = styled.div`
   width: 100%;
   max-width: 76px;
   margin: auto auto 5px auto;
-`
+`;
 
 export const Logo = styled.div`
   background: url('/images/surfrider.png');
@@ -49,4 +49,4 @@ export const Logo = styled.div`
   background-repeat: no-repeat;
   border: 0px;
   content: '';
-`
+`;

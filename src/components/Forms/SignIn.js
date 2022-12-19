@@ -1,20 +1,23 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import { FormattedMessage } from 'react-intl'
-import axios from 'axios'
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { FormattedMessage } from 'react-intl';
+import axios from 'axios';
 
-import { Field, Form, Input, ValidationInput } from './styles'
+import { Field, Form, Input, ValidationInput } from './styles';
 
 const SignIn = ({ switchToSignUp }) => {
-  const { register, handleSubmit, errors } = useForm()
+  const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     axios
-      .post('https://func-plasticorigins-backend-dev.azurewebsites.net/login', data)
+      .post(
+        'https://func-plasticorigins-backend-dev.azurewebsites.net/login',
+        data
+      )
       // eslint-disable-next-line no-console
       .then((response) => console.log(response))
       // eslint-disable-next-line no-console
-      .catch((e) => console.log(e))
-  }
+      .catch((e) => console.log(e));
+  };
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
@@ -28,7 +31,7 @@ const SignIn = ({ switchToSignUp }) => {
           name="email"
           ref={register({
             required: true,
-            pattern: /^\S+@\S+$/i,
+            pattern: /^\S+@\S+$/i
           })}
         />
         {errors.email && (
@@ -41,7 +44,12 @@ const SignIn = ({ switchToSignUp }) => {
         <p>
           <FormattedMessage id="password" />:
         </p>
-        <Input type="password" placeholder="*******" name="password" ref={register({ required: true })} />
+        <Input
+          type="password"
+          placeholder="*******"
+          name="password"
+          ref={register({ required: true })}
+        />
         {errors.password && (
           <span>
             <FormattedMessage id="signup_error_password" />
@@ -57,15 +65,15 @@ const SignIn = ({ switchToSignUp }) => {
         </u>
       </Field>
     </Form>
-  )
-}
+  );
+};
 
 SignIn.propTypes = {
-  switchToSignUp: Function.prototype,
-}
+  switchToSignUp: Function.prototype
+};
 
 SignIn.defaultProps = {
-  switchToSignUp: false,
-}
+  switchToSignUp: false
+};
 
-export default SignIn
+export default SignIn;

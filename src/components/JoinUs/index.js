@@ -1,9 +1,9 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
-import { SponsorsWrapper } from './styles'
-import { Wrapper } from '../../hoc/layout/styles'
-import Button from '../UI/Button'
+import { SponsorsWrapper } from './styles';
+import { Wrapper } from '../../hoc/layout/styles';
+import Button from '../UI/Button';
 
 const JoinUs = () => (
   <SponsorsWrapper>
@@ -18,6 +18,6 @@ const JoinUs = () => (
       </a>
     </Wrapper>
   </SponsorsWrapper>
-)
+);
 
-export default JoinUs
+export default JoinUs;

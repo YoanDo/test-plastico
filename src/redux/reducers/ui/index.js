@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux'
-import modalReducer from './modal'
-import langReducer from './langReducer'
+import { combineReducers } from 'redux';
+import modalReducer from './modal';
+import langReducer from './langReducer';
 
-export default combineReducers({ modal: modalReducer, lang: langReducer })
+export default combineReducers({ modal: modalReducer, lang: langReducer });

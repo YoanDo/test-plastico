@@ -1,9 +1,23 @@
-import Link from 'next/link'
-import React from 'react'
-import { CardBanner, ContentWrapper, DateText, PreText, Title, Wrapper } from './styles'
+import Link from 'next/link';
+import React from 'react';
+import {
+  CardBanner,
+  ContentWrapper,
+  DateText,
+  PreText,
+  Title,
+  Wrapper
+} from './styles';
 
-const PostThumbnail = ({ title, description, imageUrl, creationDate, id, slug }) => {
-  const formattedDate = new Date(creationDate).toLocaleDateString("fr")
+const PostThumbnail = ({
+  title,
+  description,
+  imageUrl,
+  creationDate,
+  id,
+  slug
+}) => {
+  const formattedDate = new Date(creationDate).toLocaleDateString('fr');
 
   return (
     <Link href={`/post/${slug}`}>
@@ -19,8 +33,6 @@ const PostThumbnail = ({ title, description, imageUrl, creationDate, id, slug })
   );
 };
 
-PostThumbnail.propTypes = {
+PostThumbnail.propTypes = {};
 
-};
-
-export default React.memo(PostThumbnail)
+export default React.memo(PostThumbnail);

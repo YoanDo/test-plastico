@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-`
+`;
 export const CardWrapper = styled.div`
   margin: 0 auto;
   margin-bottom: 25px;
@@ -25,4 +25,4 @@ export const CardWrapper = styled.div`
       margin-right: auto;
     }
   }
-`
+`;

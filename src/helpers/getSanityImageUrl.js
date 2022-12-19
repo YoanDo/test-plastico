@@ -1,11 +1,11 @@
-import React from 'react'
-import imageUrlBuilder from '@sanity/image-url'
-import sanityClient from '../../client'
+import React from 'react';
+import imageUrlBuilder from '@sanity/image-url';
+import sanityClient from '../../client';
 
-const builder = imageUrlBuilder(sanityClient)
+const builder = imageUrlBuilder(sanityClient);
 
 function getSanityImageUrl(source) {
-  return builder.image(source)
+  return builder.image(source);
 }
 
-export default getSanityImageUrl
+export default getSanityImageUrl;

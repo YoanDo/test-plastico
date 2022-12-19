@@ -1,22 +1,25 @@
-import axios from 'axios'
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useForm } from 'react-hook-form'
+import axios from 'axios';
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { useForm } from 'react-hook-form';
 
-import { Field, Form, Input, ValidationInput } from './styles'
+import { Field, Form, Input, ValidationInput } from './styles';
 
 const SignUp = ({ switchToSignIn }) => {
-  const { register, handleSubmit, errors, getValues } = useForm()
+  const { register, handleSubmit, errors, getValues } = useForm();
   const onSubmit = (data) => {
-    console.log(data)
+    console.log(data);
     axios
-      .post('https://func-plasticorigins-backend-dev.azurewebsites.net/register', data)
+      .post(
+        'https://func-plasticorigins-backend-dev.azurewebsites.net/register',
+        data
+      )
       // eslint-disable-next-line no-console
       .then((response) => console.log(response))
       // eslint-disable-next-line no-console
-      .catch((e) => console.log(e))
-  }
-  console.log({ errors }) // todo remove
+      .catch((e) => console.log(e));
+  };
+  console.log({ errors }); // todo remove
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
@@ -31,7 +34,7 @@ const SignUp = ({ switchToSignIn }) => {
           ref={register({
             required: true,
             minLength: 2,
-            maxLength: 20,
+            maxLength: 20
           })}
         />
         {errors.firstname && (
@@ -51,7 +54,7 @@ const SignUp = ({ switchToSignIn }) => {
           ref={register({
             required: true,
             minLength: 2,
-            maxLength: 30,
+            maxLength: 30
           })}
         />
         {errors.lastname && (
@@ -70,7 +73,7 @@ const SignUp = ({ switchToSignIn }) => {
           name="email"
           ref={register({
             required: true,
-            pattern: /^\S+@\S+$/i,
+            pattern: /^\S+@\S+$/i
           })}
         />
         {errors.email && (
@@ -89,7 +92,7 @@ const SignUp = ({ switchToSignIn }) => {
           name="birthday"
           ref={register({
             required: true,
-            maxLength: 12,
+            maxLength: 12
           })}
         />
         {errors.birthday && (
@@ -102,7 +105,12 @@ const SignUp = ({ switchToSignIn }) => {
         <p>
           <FormattedMessage id="password" />:
         </p>
-        <Input type="password" placeholder="*******" name="password" ref={register({ required: true })} />
+        <Input
+          type="password"
+          placeholder="*******"
+          name="password"
+          ref={register({ required: true })}
+        />
         {errors.password && (
           <span>
             <FormattedMessage id="signup_error_password" />
@@ -130,7 +138,12 @@ const SignUp = ({ switchToSignIn }) => {
         {errors.passwordConfirmation && <span>{errors.passwordConfirmation.message}</span>}
       </Field> */}
       <Field row>
-        <input type="checkbox" placeholder="Newsletter" name="newsletter" ref={register} />
+        <input
+          type="checkbox"
+          placeholder="Newsletter"
+          name="newsletter"
+          ref={register}
+        />
         <p>
           <FormattedMessage id="subscribe" />
         </p>
@@ -144,15 +157,15 @@ const SignUp = ({ switchToSignIn }) => {
         </u>
       </Field>
     </Form>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;
 
 SignUp.propTypes = {
-  switchToSignIn: Function.prototype,
-}
+  switchToSignIn: Function.prototype
+};
 
 SignUp.defaultProps = {
-  switchToSignIn: false,
-}
+  switchToSignIn: false
+};

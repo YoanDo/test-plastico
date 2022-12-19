@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Wrapper } from '../../hoc/layout/styles'
+import styled from 'styled-components';
+import { Wrapper } from '../../hoc/layout/styles';
 
 export const SponsorsWrapper = styled.div`
   display: flex;
@@ -52,4 +52,4 @@ export const SponsorsWrapper = styled.div`
       display: none;
     }
   }
-`
+`;

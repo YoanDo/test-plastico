@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const LoaderGif = styled.div`
   background: url('/gifs/Rolling.gif');
@@ -6,4 +6,4 @@ export const LoaderGif = styled.div`
   width: ${({ size }) => size}px;
   background-position: center;
   background-size: cover;
-`
+`;

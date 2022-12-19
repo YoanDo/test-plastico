@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const DataWrapper = styled.div`
   display: flex;
@@ -10,14 +10,14 @@ export const DataWrapper = styled.div`
     flex: 1;
     flex-direction: column;
   }
-`
+`;
 export const Count = styled.div`
   text-align: center;
   font-size: ${({ theme }) => theme.mainTitleFS};
   color: ${({ theme }) => theme.secondaryColor};
   font-family: ${({ theme }) => theme.secondaryFF};
   opacity: 0.85;
-`
+`;
 export const Key = styled.span`
   color: ${({ theme }) => theme.black};
   font-family: ${({ theme }) => theme.primaryFF};
@@ -29,4 +29,4 @@ export const Key = styled.span`
   @media (max-width: 900px) {
     color: ${({ theme }) => theme.black};
   }
-`
+`;
