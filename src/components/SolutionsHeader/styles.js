@@ -50,16 +50,14 @@ export const Title = styled.h1`
 
 export const About = styled.div`
   align-items: center;
+  background: white;
   color: ${(props) => props.theme.black};
   display: flex;
   font-family: ${({ theme }) => theme.primaryFF};
   font-weight: 300;
   height: 400px;
-  display: flex;
-  align-items: center;
   justify-content: center;
   max-width: 45vw;
-  background: white;
   padding-right: 16px;
   position: relative;
   z-index: 2;
@@ -68,6 +66,7 @@ export const About = styled.div`
     font-size: ${(props) => props.theme.fourthFS};
     position: relative;
     display: block;
+    margin: auto;
   }
   @media ${({ theme }) => theme.device.belowLaptop} {
     height: auto;

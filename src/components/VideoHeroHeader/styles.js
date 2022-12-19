@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   position: relative;
   width: 100%;
   @media (min-width: 1280px) {
-    margin-top: -50px;
+    margin-top: 50px;
   }
 `;
 

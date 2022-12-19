@@ -10,11 +10,11 @@ const theme = {
   smallFS: '12px',
   defaultFS: '16px',
   biggerFS: '18px',
+  fourthFS: '20px',
+  thirdFS: '50px',
   landingTitle: '134px',
   mainTitleFS: '78px',
   secondaryFS: '62px',
-  thirdFS: '50px',
-  fourthFS: '20px',
   // font-family -
   defaultFF: "'Montserrat', sans-serif",
   secondaryFF: "'Bebas Neue', sans-serif",
