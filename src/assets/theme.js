@@ -24,7 +24,7 @@ const theme = {
   ribbonWidth: '90px',
 
   // Screen sizes
-  maxWidth: '1280px',
+  maxWidth: '1080px',
   desktopHeaderHeight: 80,
 
   size: {
@@ -34,12 +34,12 @@ const theme = {
     tablet: '768px',
     laptop: '1024px',
     laptopL: '1440px',
-    desktop: '2560px',
+    desktop: '2560px'
   },
 
   // spacing
-  spacing: (x) => `${x * 1.3}rem`,
-}
+  spacing: (x) => `${x * 14}px`
+};
 
 theme.device = {
   // default
@@ -53,7 +53,7 @@ theme.device = {
   desktopL: `(min-width: ${theme.size.desktop})`,
   // other
   belowTablet: `(max-width: calc(${theme.size.tablet} - 1px))`,
-  belowLaptop: `(max-width: calc(${theme.size.laptop} - 1px))`,
-}
+  belowLaptop: `(max-width: calc(${theme.size.laptop} - 1px))`
+};
 
-export default theme
+export default theme;
