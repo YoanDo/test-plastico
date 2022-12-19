@@ -1,15 +1,22 @@
-import React, { useState } from 'react'
-import Fade from 'react-reveal/Fade'
-import { FormattedMessage } from 'react-intl'
-import { bool } from 'prop-types'
+import React, { useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
+import { FormattedMessage } from 'react-intl';
+import { bool } from 'prop-types';
 
-import SignUpForm from '../Forms/SignUp'
-import SignInForm from '../Forms/SignIn'
+import SignUpForm from '../Forms/SignUp';
+import SignInForm from '../Forms/SignIn';
 
-import { Wrapper, Claim, ClaimWrapper, InnerSpace, Left, Right } from './styles'
+import {
+  Wrapper,
+  Claim,
+  ClaimWrapper,
+  InnerSpace,
+  Left,
+  Right
+} from './styles';
 
 const Login = ({ signUp }) => {
-  const [showSignUp, setSignUp] = useState(signUp)
+  const [showSignUp, setSignUp] = useState(signUp);
 
   return (
     <Wrapper>
@@ -39,15 +46,15 @@ const Login = ({ signUp }) => {
         </InnerSpace>
       </Right>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Login
+export default React.memo(Login);
 
 Login.propTypes = {
-  signUp: bool,
-}
+  signUp: bool
+};
 
 Login.defaultProps = {
-  signUp: false,
-}
+  signUp: false
+};
