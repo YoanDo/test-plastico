@@ -8,8 +8,8 @@ const theme = {
   // font-sizes - scale: 1.250
   smallerFS: '10px',
   smallFS: '12px',
-  defaultFS: '14px',
-  biggerFS: '16px',
+  defaultFS: '16px',
+  biggerFS: '18px',
   landingTitle: '134px',
   mainTitleFS: '78px',
   secondaryFS: '62px',
@@ -38,7 +38,7 @@ const theme = {
   },
 
   // spacing
-  spacing: (x) => `${x * 14}px`
+  spacing: (x) => `${x * 16}px`
 };
 
 theme.device = {
