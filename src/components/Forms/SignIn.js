@@ -28,12 +28,10 @@ const SignIn = ({ switchToSignUp }) => {
         <Input
           type="text"
           placeholder="Email"
-          name="email"
-          ref={register({
+          {...register('email', {
             required: true,
             pattern: /^\S+@\S+$/i
-          })}
-        />
+          })} />
         {errors.email && (
           <span>
             <FormattedMessage id="signup_error_email" />
@@ -47,9 +45,7 @@ const SignIn = ({ switchToSignUp }) => {
         <Input
           type="password"
           placeholder="*******"
-          name="password"
-          ref={register({ required: true })}
-        />
+          {...register('password', { required: true })} />
         {errors.password && (
           <span>
             <FormattedMessage id="signup_error_password" />
