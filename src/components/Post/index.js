@@ -1,8 +1,10 @@
 import React from 'react';
 import { array, string } from 'prop-types';
 import { PortableText } from '@portabletext/react';
+import { Container } from 'reactstrap';
 import { ContentWrapper, PostBanner, PostTitle, PostWrapper } from './styles';
 import getSanityImageUrl from '../../helpers/getSanityImageUrl';
+import PostThumbnailList from '../../containers/PostThumbnailList';
 
 const ptComponents = {
   types: {
@@ -25,20 +27,24 @@ const ptComponents = {
   }
 };
 
-const Post = ({ title, bannerUrl, body }) => (
+const Post = ({ title, bannerUrl, body, id }) => (
   <PostWrapper>
     <PostBanner url={bannerUrl} />
-    <ContentWrapper>
-      <PostTitle>{title}</PostTitle>
-      <PortableText value={body} components={ptComponents} />
-    </ContentWrapper>
+    <Container>
+      <ContentWrapper>
+        <PostTitle>{title}</PostTitle>
+        <PortableText value={body} components={ptComponents} />
+      </ContentWrapper>
+    </Container>
+    <PostThumbnailList activePostId={id} />
   </PostWrapper>
 );
 
 Post.propTypes = {
   title: string,
   bannerUrl: string,
-  body: array
+  body: array,
+  id: string
 };
 
 export default React.memo(Post);

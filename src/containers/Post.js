@@ -14,23 +14,33 @@ const Post = () => {
   const userLanguage = useSelector((state) => getUserLanguage(state));
   const isUserFrench = userLanguage === 'fr';
 
+  const { slug } = router.query;
+
   useEffect(() => {
-    const { slug } = router.query;
     getPostBySlug(slug).then(({ props }) => {
       setPostDetails(props.post[0]);
       setIsLoading(false);
     });
-  }, []);
+  }, [slug]);
 
   // todo change for skeleton
   if (isLoading || !postDetails) return <>loading ...'</>;
 
-  const { body_en, body_fr, illustration, title_en, title_fr } = postDetails;
+  const {
+    body_en,
+    body_fr,
+    illustration,
+    title_en,
+    title_fr,
+    _id: id
+  } = postDetails;
   const title = isUserFrench ? title_fr : title_en;
   const body = isUserFrench ? body_fr : body_en;
   const imageUrl = getSanityImageUrl(illustration).width(1200).url() || 'null';
 
-  return <PostComponent title={title} bannerUrl={imageUrl} body={body} />;
+  return (
+    <PostComponent title={title} bannerUrl={imageUrl} body={body} id={id} />
+  );
 };
 
 Post.propTypes = {};

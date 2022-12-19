@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   justify-content: flex-start;
   margin: 0 auto;
   max-width: ${({ theme }) => theme.maxWidth};
-  padding-top: 25vh;
+  /* padding-top: 25vh; */
   position: relative;
   width: 100%;
   width: 100%;
@@ -40,9 +40,11 @@ export const Title = styled.h1`
   width: max-content;
   font-size: 220px;
   margin-right: auto;
+  margin-left: calc(90px + ${({ theme }) => theme.spacing(4)});
   @media ${({ theme }) => theme.device.belowLaptop} {
     font-size: ${({ theme }) => theme.mainTitleFS};
     position: inherit;
+    margin-left: 0;
   }
 `;
 
