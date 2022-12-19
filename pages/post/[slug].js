@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../../src/components/Footer';
-import Post from '../../src/containers/post';
+import Post from '../../src/containers/Post';
 import withLayout from '../../src/hoc/layout';
 
 const PostPage = () => (

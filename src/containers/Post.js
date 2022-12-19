@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
-import { getAllPosts, getPostBySlug } from '../services/posts';
+import { getPostBySlug } from '../services/posts';
 import PostComponent from '../components/Post';
 import { getUserLanguage } from '../redux/selectors/ui';
 import getSanityImageUrl from '../helpers/getSanityImageUrl';
@@ -29,8 +29,6 @@ const Post = () => {
   const title = isUserFrench ? title_fr : title_en;
   const body = isUserFrench ? body_fr : body_en;
   const imageUrl = getSanityImageUrl(illustration).width(1200).url() || 'null';
-
-  console.log(imageUrl, { postDetails });
 
   return <PostComponent title={title} bannerUrl={imageUrl} body={body} />;
 };
