@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   border-radius: 4px;
-  border: 1px solid ${({ theme }) => theme.surfRiderBlue};
+  /* border: 1px solid ${({ theme }) => theme.surfRiderBlue}; */
   cursor: pointer;
   height: 100%;
   margin-bottom: ${({ theme }) => theme.spacing(1)};
@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    transform: scale(1.025);
+    transform: scale(1.015);
   }
 `;
 export const CardBanner = styled.div`
@@ -22,26 +22,28 @@ export const CardBanner = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: ${({ theme }) => theme.surfRiderBlue};
+  color: ${({ theme }) => theme.black};
   margin-bottom: ${({ theme }) => theme.spacing(0.25)};
-  line-height: 1;
+  line-height: 1.1;
+  font-size: 26px;
 `;
 
 export const ContentWrapper = styled.div`
-  padding: ${({ theme }) => theme.spacing(0.5)};
+  padding: ${({ theme }) => theme.spacing(1)};
   display: flex;
   flex-direction: column;
 `;
 
 export const DateText = styled.span`
   color: ${({ theme }) => theme.grey};
-  font-size: ${({ theme }) => theme.smallerFS};
-  margin-bottom: ${({ theme }) => theme.spacing(0.25)};
+  font-size: ${({ theme }) => theme.smallFS};
+  margin-bottom: ${({ theme }) => theme.spacing(0.5)};
 `;
 
 export const PreText = styled.span`
   text-transform: lowercase;
   font-size: ${({ theme }) => theme.defaultFS};
+  color: ${({ theme }) => theme.black};
   &:first-letter {
     text-transform: capitalize;
   }

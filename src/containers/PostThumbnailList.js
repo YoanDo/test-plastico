@@ -2,23 +2,31 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Col, Container, Row } from 'reactstrap';
+import { string } from 'prop-types';
 import { getAllPosts } from '../redux/selectors/posts';
+import { getAllPosts as fetchAllPost } from '../services/posts';
 import getSanityImageUrl from '../helpers/getSanityImageUrl';
 import PostThumbnail from '../components/PostThumbnail';
 import truncateText from '../helpers/truncateText';
 import { getUserLanguage } from '../redux/selectors/ui';
 
-const PostThumbnailList = () => {
+const PostThumbnailList = ({ activePostId }) => {
   const posts = useSelector((state) => getAllPosts(state));
   const userLanguage = useSelector((state) => getUserLanguage(state));
   const isUserFrench = userLanguage === 'fr';
 
-  if (!posts.length) return <>loading</>;
+  if (!posts.length) {
+    fetchAllPost();
+    return <>loading...</>;
+  }
+  const postsToDisplay = posts
+    .slice(0, 6)
+    .filter((p) => p._id !== activePostId);
 
   return (
     <Container>
       <Row>
-        {posts.map((post) => {
+        {postsToDisplay.map((post) => {
           const {
             title_fr,
             title_en,
@@ -59,6 +67,8 @@ const PostThumbnailList = () => {
   );
 };
 
-PostThumbnailList.propTypes = {};
+PostThumbnailList.propTypes = {
+  activePostId: string
+};
 
 export default React.memo(PostThumbnailList);

@@ -24,8 +24,8 @@ const PostThumbnail = ({
       <Wrapper>
         <CardBanner url={imageUrl} />
         <ContentWrapper>
-          <DateText>{formattedDate}</DateText>
           <Title>{title}</Title>
+          <DateText>{formattedDate}</DateText>
           <PreText>{description}</PreText>
         </ContentWrapper>
       </Wrapper>
