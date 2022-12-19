@@ -8,7 +8,6 @@ import { Field, Form, Input, ValidationInput } from './styles';
 const SignUp = ({ switchToSignIn }) => {
   const { register, handleSubmit, errors, getValues } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
     axios
       .post(
         'https://func-plasticorigins-backend-dev.azurewebsites.net/register',
@@ -19,7 +18,6 @@ const SignUp = ({ switchToSignIn }) => {
       // eslint-disable-next-line no-console
       .catch((e) => console.log(e));
   };
-  console.log({ errors }); // todo remove
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
@@ -30,8 +28,7 @@ const SignUp = ({ switchToSignIn }) => {
         <Input
           type="text"
           placeholder="First name"
-          name="firstname"
-          ref={register({
+          {...register('firstname', {
             required: true,
             minLength: 2,
             maxLength: 20
@@ -50,8 +47,7 @@ const SignUp = ({ switchToSignIn }) => {
         <Input
           type="text"
           placeholder="Last name"
-          name="lastname"
-          ref={register({
+          {...register('lastname', {
             required: true,
             minLength: 2,
             maxLength: 30
@@ -70,8 +66,7 @@ const SignUp = ({ switchToSignIn }) => {
         <Input
           type="text"
           placeholder="Email"
-          name="email"
-          ref={register({
+          {...register('email', {
             required: true,
             pattern: /^\S+@\S+$/i
           })}
@@ -89,8 +84,7 @@ const SignUp = ({ switchToSignIn }) => {
         <Input
           type="date"
           placeholder="01/01/2020"
-          name="birthday"
-          ref={register({
+          {...register('birthday', {
             required: true,
             maxLength: 12
           })}
@@ -108,8 +102,7 @@ const SignUp = ({ switchToSignIn }) => {
         <Input
           type="password"
           placeholder="*******"
-          name="password"
-          ref={register({ required: true })}
+          {...register('password', { required: true })}
         />
         {errors.password && (
           <span>
@@ -124,8 +117,8 @@ const SignUp = ({ switchToSignIn }) => {
         </p>
         <Input
           type="password"
-          name="passwordConfirmation"
-          ref={register({
+          
+          {...register("passwordConfirmation", {
             required: 'Please confirm your password!',
             validate: {
               matchesPreviousPassword: value => {
@@ -142,7 +135,7 @@ const SignUp = ({ switchToSignIn }) => {
           type="checkbox"
           placeholder="Newsletter"
           name="newsletter"
-          ref={register}
+          {...register}
         />
         <p>
           <FormattedMessage id="subscribe" />
