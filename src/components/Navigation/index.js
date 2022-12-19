@@ -1,26 +1,37 @@
-import React from 'react'
-import Link from 'next/link'
-import { FormattedMessage } from 'react-intl'
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { FormattedMessage } from 'react-intl';
 
-import { func, bool, string } from 'prop-types'
-import { IOS_APP_LINK, ANDROID_APP_LINK } from '../../constants/appLinks'
-import { Links } from './styles'
-import getMobileOperatingSystem from '../../helpers/getMobileOperatingSystem'
+import { func, bool, string } from 'prop-types';
+import { IOS_APP_LINK, ANDROID_APP_LINK } from '../../constants/appLinks';
+import { Links } from './styles';
+import getMobileOperatingSystem from '../../helpers/getMobileOperatingSystem';
 
 const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
   const isUserFrench =
     typeof window !== 'undefined' &&
     typeof window.navigator !== 'undefined' &&
     navigator.language &&
-    navigator.language.split(/[-_]/)[0] === 'fr'
+    navigator.language.split(/[-_]/)[0] === 'fr';
+  const [legalNaming, setLegalNaming] = useState('CGU');
 
-  const conditions = isUserFrench ? 'CGU' : 'GTC'
+  useEffect(() => {
+    setLegalNaming(isUserFrench ? 'CGU' : 'GTC');
+  }, [isUserFrench]);
+
   const isIOs =
-    typeof window !== 'undefined' && typeof window.navigator !== 'undefined' && getMobileOperatingSystem() === 'iOS'
-  const appLink = isIOs ? IOS_APP_LINK : ANDROID_APP_LINK
+    typeof window !== 'undefined' &&
+    typeof window.navigator !== 'undefined' &&
+    getMobileOperatingSystem() === 'iOS';
+  const appLink = isIOs ? IOS_APP_LINK : ANDROID_APP_LINK;
 
   return (
-    <Links column={column} burger={burger} align={align} onClick={() => closePanel()}>
+    <Links
+      column={column}
+      burger={burger}
+      align={align}
+      onClick={() => closePanel()}
+    >
       <Link href={{ pathname: '/' }}>
         <span>Plastic Origins</span>
       </Link>
@@ -55,14 +66,14 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
         </a>
       )}
       {isFooter && (
-        <Link href={{ pathname: `/${conditions}` }}>
-          <span>{conditions}</span>
+        <Link href={{ pathname: `/${legalNaming}` }}>
+          <span>{legalNaming}</span>
         </Link>
       )}
       {/* <span>About us</span> */}
     </Links>
-  )
-}
+  );
+};
 
 NavigationLinks.propTypes = {
   align: string,
@@ -70,7 +81,7 @@ NavigationLinks.propTypes = {
   closePanel: func,
   column: bool,
   isFooter: bool,
-}
+};
 
 NavigationLinks.defaultProps = {
   align: 'center',
@@ -78,6 +89,6 @@ NavigationLinks.defaultProps = {
   closePanel: Function.prototype,
   column: false,
   isFooter: false,
-}
+};
 
-export default NavigationLinks
+export default NavigationLinks;
