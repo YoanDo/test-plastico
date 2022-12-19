@@ -1,10 +1,10 @@
 import React from 'react'
 
-import ArticleCard from '.'
+import PostThumbnail from '.'
 
 export default {
-  title: 'Blog/ArticleCard',
-  component: ArticleCard,
+  title: 'Blog/PostThumbnail',
+  component: PostThumbnail,
   argTypes: {
     // title: {  } },
   },
@@ -13,7 +13,7 @@ export default {
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template = (args) =>
   <div style={{ width: '200px' }}>
-    <ArticleCard {...args} />
+    <PostThumbnail {...args} />
   </div>
 
 export const Default = Template.bind({})

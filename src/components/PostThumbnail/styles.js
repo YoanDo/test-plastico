@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.surfRiderBlue};
   cursor: pointer;
   height: 100%;
-  border-radius: 4px;
-  overflow: hidden;
   margin-bottom: ${({ theme }) => theme.spacing(1)};
+  overflow: hidden;
+  transition: all .2s ease-in-out; 
+
+  &:hover{
+    transform: scale(1.025); 
+  }
 `
 export const CardBanner = styled.div`
   background-image: url(${({ url }) => url});
@@ -19,6 +24,7 @@ export const CardBanner = styled.div`
 export const Title = styled.h2`
   color: ${({ theme }) => theme.surfRiderBlue};
   margin-bottom: ${({ theme }) => theme.spacing(.25)};
+  line-height: 1;
 `
 
 export const ContentWrapper = styled.div`
@@ -34,5 +40,10 @@ export const DateText = styled.span`
 `
 
 export const PreText = styled.span`
+  text-transform: lowercase;
+  font-size: ${({theme}) => theme.defaultFS};
+  &:first-letter{
+    text-transform: capitalize;
+  }
   
 `
