@@ -1,32 +1,32 @@
-import React, { Fragment } from 'react'
-import { string, number } from 'prop-types'
-import { FormattedMessage } from 'react-intl'
-import Fade from 'react-reveal/Fade'
-import { GoalWrapper, Title } from './styles'
+import React from 'react';
+import { string, number } from 'prop-types';
+import { FormattedMessage } from 'react-intl';
+import { Fade } from 'react-awesome-reveal';
+import { GoalWrapper, Title } from './styles';
 
 const Goal = ({ label, delay }) => (
   <GoalWrapper>
     <Fade bottom delay={delay}>
-      <Fragment>
+      <>
         <Title>
           <FormattedMessage id={`${label}_title`} />
         </Title>
         <span>
           <FormattedMessage id={`${label}_text`} />
         </span>
-      </Fragment>
+      </>
     </Fade>
   </GoalWrapper>
-)
+);
 
 Goal.propTypes = {
   label: string,
-  delay: number,
-}
+  delay: number
+};
 
 Goal.defaultProps = {
   label: null,
-  delay: 0,
-}
+  delay: 0
+};
 
-export default Goal
+export default React.memo(Goal);

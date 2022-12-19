@@ -1,15 +1,15 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
-import Fade from 'react-reveal/Fade'
-import { useMediaQuery } from 'react-responsive'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { Fade } from 'react-awesome-reveal';
+import { useMediaQuery } from 'react-responsive';
 
-import { Wrapper } from '../../hoc/layout/styles'
-import { About, AboutImage, Left, Section } from './styles'
-import Title from '../Title'
-import Goals from './components/Goals'
+import { Wrapper } from '../../hoc/layout/styles';
+import { About, AboutImage, Left, Section } from './styles';
+import Title from '../Title';
+import Goals from './components/Goals';
 
 const Project = () => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' });
 
   return (
     <Wrapper>
@@ -41,6 +41,6 @@ const Project = () => {
         <Goals />
       </Section>
     </Wrapper>
-  )
-}
-export default Project
+  );
+};
+export default React.memo(Project);
