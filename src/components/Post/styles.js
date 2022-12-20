@@ -1,8 +1,12 @@
 import styled from 'styled-components';
+import { Wrapper } from '../../hoc/layout/styles';
 
 export const PostWrapper = styled.div`
   padding-top: 50px;
   min-height: calc(100vh - 224px);
+  ${Wrapper} {
+    padding-top: 0;
+  }
 `;
 
 export const PostBanner = styled.div`

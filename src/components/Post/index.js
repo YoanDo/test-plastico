@@ -5,6 +5,7 @@ import { Container } from 'reactstrap';
 import { ContentWrapper, PostBanner, PostTitle, PostWrapper } from './styles';
 import getSanityImageUrl from '../../helpers/getSanityImageUrl';
 import PostThumbnailList from '../../containers/PostThumbnailList';
+import { Wrapper } from '../../hoc/layout/styles';
 
 const ptComponents = {
   types: {
@@ -30,13 +31,15 @@ const ptComponents = {
 const Post = ({ title, bannerUrl, body, id }) => (
   <PostWrapper>
     <PostBanner url={bannerUrl} />
-    <Container>
-      <ContentWrapper>
-        <PostTitle>{title}</PostTitle>
-        <PortableText value={body} components={ptComponents} />
-      </ContentWrapper>
-    </Container>
-    <PostThumbnailList activePostId={id} />
+    <Wrapper>
+      <Container>
+        <ContentWrapper>
+          <PostTitle>{title}</PostTitle>
+          <PortableText value={body} components={ptComponents} />
+        </ContentWrapper>
+      </Container>
+      <PostThumbnailList activePostId={id} />
+    </Wrapper>
   </PostWrapper>
 );
 
