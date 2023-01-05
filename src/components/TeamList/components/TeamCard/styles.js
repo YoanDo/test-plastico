@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+const size = '120px';
 export const Picture = styled.div`
   display: block;
   background: url(${({ backgroundUrl }) => backgroundUrl});
@@ -7,8 +8,8 @@ export const Picture = styled.div`
   background-size: cover;
   position: relative;
   border-radius: 100%;
-  height: ${({ theme }) => theme.mainTitleFS};
-  width: ${({ theme }) => theme.mainTitleFS};
+  height: ${size};
+  width: ${size};
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
   right: 0;
@@ -16,13 +17,13 @@ export const Picture = styled.div`
 export const Color = styled.div`
   background: ${({ theme }) => theme.surfRiderBlue};
   border-radius: 100%;
-  height: ${({ theme }) => theme.mainTitleFS};
+  height: ${size};
   left: 50%;
   opacity: 30%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: ${({ theme }) => theme.mainTitleFS};
+  width: ${size};
 `;
 
 export const PictureWrapper = styled.div`
@@ -49,6 +50,7 @@ export const IdentityRow = styled.div`
 export const Position = styled.span`
   color: ${({ theme }) => theme.surfRiderBlue};
   letter-spacing: 1px;
+  text-align: center;
 `;
 
 export const Wrapper = styled.a`
