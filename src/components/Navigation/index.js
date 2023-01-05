@@ -70,7 +70,6 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
           <span>{legalNaming}</span>
         </Link>
       )}
-      {/* <span>About us</span> */}
     </Links>
   );
 };

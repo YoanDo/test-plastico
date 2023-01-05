@@ -7,6 +7,9 @@ export const PostWrapper = styled.div`
   ${Wrapper} {
     padding-top: 0;
   }
+  @media (min-width: 900px) {
+    padding-top: 0;
+  }
 `;
 
 export const PostBanner = styled.div`
