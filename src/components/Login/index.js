@@ -24,12 +24,12 @@ const Login = ({ signUp }) => {
         <InnerSpace>
           <ClaimWrapper>
             <Claim>
-              <Fade bottom delay={200} duration={1600}>
+              <Fade direction="up" delay={200} duration={1600}>
                 <FormattedMessage id="get_involved_1" />
               </Fade>
             </Claim>
             <Claim>
-              <Fade bottom delay={600} duration={1000}>
+              <Fade direction="up" delay={600} duration={1000}>
                 <FormattedMessage id="get_involved_2" />
               </Fade>
             </Claim>

@@ -6,7 +6,7 @@ import { GoalWrapper, Title } from './styles';
 
 const Goal = ({ label, delay }) => (
   <GoalWrapper>
-    <Fade bottom delay={delay}>
+    <Fade direction="up" delay={delay}>
       <>
         <Title>
           <FormattedMessage id={`${label}_title`} />
