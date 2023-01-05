@@ -23,7 +23,7 @@ const Project = () => {
         </Title>
         <Left>
           {!isTabletOrMobile && <span name="project" />}
-          <Fade direction="up">
+          <Fade direction="up" triggerOnce>
             <About>
               <span>
                 "

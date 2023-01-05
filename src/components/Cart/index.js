@@ -7,7 +7,7 @@ import { CartWrapper, Title, Content, ButtonWrapper } from './styles';
 import Button from '../UI/Button';
 
 const Cart = ({ label, displayTitle, marginBottom, link, isNegative }) => (
-  <Fade direction="up">
+  <Fade direction="up" triggerOnce>
     <CartWrapper
       displayTitle={displayTitle}
       marginBottom={marginBottom}
