@@ -19,3 +19,6 @@ export const addSolutionDetails = createAction('addSolutionDetails');
 // POSTS //
 export const setPosts = createAction('setPosts');
 export const setPostLoading = createAction('setPostLoading');
+
+// PEOPLE //
+export const setMembers = createAction('setMembers');
