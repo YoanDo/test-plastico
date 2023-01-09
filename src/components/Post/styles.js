@@ -6,6 +6,7 @@ export const PostWrapper = styled.div`
   min-height: calc(100vh - 224px);
   ${Wrapper} {
     padding-top: 0;
+    margin-top: ${({ theme }) => theme.spacing(3)};
   }
   @media (min-width: 900px) {
     padding-top: 0;
@@ -26,9 +27,7 @@ export const ContentWrapper = styled.div`
   max-width: 1080px;
   margin-bottom: ${({ theme }) => theme.spacing(3)};
   ul {
-    list-style: inside;
-    text-indent: -20px;
-    margin-left: 20px;
+    list-style: square;
   }
   p {
     font-weight: 400;
@@ -40,6 +39,6 @@ export const ContentWrapper = styled.div`
 `;
 
 export const PostTitle = styled.h1`
-  margin-top: ${({ theme }) => theme.spacing(3)};
   margin-bottom: ${({ theme }) => theme.spacing(1)};
+  font-size: ${({ theme }) => theme.mainTitleFS};
 `;

@@ -19,9 +19,8 @@ const PostThumbnailList = ({ activePostId }) => {
     fetchAllPost();
     return <>loading...</>;
   }
-  const postsToDisplay = posts
-    .slice(0, 6)
-    .filter((p) => p._id !== activePostId);
+  const slicedPosts = posts.filter((p) => p._id !== activePostId).slice(0, 6);
+  const postsToDisplay = activePostId ? slicedPosts : posts;
 
   return (
     <Container>
