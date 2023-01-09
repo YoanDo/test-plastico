@@ -9,15 +9,12 @@ const SolutionsHeader = () => (
       <Title>Solutions</Title>
       <Container>
         <Row>
-          <Col md="6" className="my-2">
+          <Col md="12" className="my-2">
             <About id="about">
               <span>
                 <FormattedMessage id="solution_intro_1" />
               </span>
             </About>
-          </Col>
-          <Col md="6" className="my-2">
-            <Illustration />
           </Col>
         </Row>
       </Container>

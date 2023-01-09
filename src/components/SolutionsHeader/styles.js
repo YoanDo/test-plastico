@@ -55,9 +55,7 @@ export const About = styled.div`
   display: flex;
   font-family: ${({ theme }) => theme.primaryFF};
   font-weight: 300;
-  height: 400px;
   justify-content: center;
-  max-width: 45vw;
   padding-right: 16px;
   position: relative;
   z-index: 2;
