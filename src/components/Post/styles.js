@@ -40,5 +40,5 @@ export const ContentWrapper = styled.div`
 
 export const PostTitle = styled.h1`
   margin-bottom: ${({ theme }) => theme.spacing(1)};
-  font-size: 80px;
+  font-size: ${({ theme }) => theme.secondaryFS};
 `;
