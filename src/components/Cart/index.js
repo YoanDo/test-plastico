@@ -6,7 +6,14 @@ import { FormattedMessage } from 'react-intl';
 import { CartWrapper, Title, Content, ButtonWrapper } from './styles';
 import Button from '../UI/Button';
 
-const Cart = ({ label, displayTitle, marginBottom, link, isNegative }) => (
+const Cart = ({
+  displayTitle,
+  isNegative,
+  isTargetingSelf,
+  label,
+  link,
+  marginBottom
+}) => (
   <Fade direction="up" triggerOnce>
     <CartWrapper
       displayTitle={displayTitle}
@@ -18,7 +25,11 @@ const Cart = ({ label, displayTitle, marginBottom, link, isNegative }) => (
       </Title>
       <Content>{label && <FormattedMessage id={`${label}_content`} />}</Content>
       <ButtonWrapper>
-        <a href={link} target="_blank" rel="noopener noreferrer">
+        <a
+          href={link}
+          target={isTargetingSelf ? '_self' : '_blank'}
+          rel="noopener noreferrer"
+        >
           <Button negative={isNegative} fullWidth label={`${label}_cta`} />
         </a>
       </ButtonWrapper>
@@ -29,6 +40,7 @@ const Cart = ({ label, displayTitle, marginBottom, link, isNegative }) => (
 Cart.propTypes = {
   displayTitle: bool,
   isNegative: bool,
+  isTargetingSelf: bool,
   label: string,
   link: string,
   marginBottom: bool
@@ -37,6 +49,7 @@ Cart.propTypes = {
 Cart.defaultProps = {
   displayTitle: true,
   isNegative: false,
+  isTargetingSelf: false,
   label: null,
   link: null,
   marginBottom: true

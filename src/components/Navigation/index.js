@@ -40,7 +40,7 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
           <FormattedMessage id="our_project" />
         </span>
       </Link> */}
-      <Link href={{ pathname: '/', query: { target: 'getInvolved' } }}>
+      <Link href={{ pathname: '/join-us' }}>
         <span>
           <FormattedMessage id="contribute" />
         </span>

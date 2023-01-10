@@ -17,7 +17,12 @@ const GetInvolved = () => {
         </>
       </Title>
       <CartWrapper>
-        <Cart isNegative label="get_involved_collect" link={zoomLink} />
+        <Cart
+          isNegative
+          label="get_involved_collect"
+          link="/join-us"
+          isTargetingSelf
+        />
         <Cart
           isNegative
           label="get_involved_label"
