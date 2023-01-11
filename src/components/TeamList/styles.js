@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  margin-bottom: ${({ theme }) => theme.spacing(2)};
+  h2 {
+    margin-bottom: ${({ theme }) => theme.spacing(1)};
+  }
+`;
+
+export const TeamWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
