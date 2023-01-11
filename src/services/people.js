@@ -1,5 +1,5 @@
 import sanityClient from '../../client';
-import { setMembers } from '../redux/actions';
+import { setMembers, setVolunteers } from '../redux/actions';
 import state from '../redux/store';
 
 export async function getAllMembers() {
@@ -7,4 +7,11 @@ export async function getAllMembers() {
   state.dispatch(setMembers(members));
 
   return members;
+}
+
+export async function getAllVolunteers() {
+  const volunteers = await sanityClient.fetch(`*[_type == "volunteer"]`);
+  state.dispatch(setVolunteers(volunteers));
+
+  return volunteers;
 }

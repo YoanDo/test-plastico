@@ -11,7 +11,7 @@ export const updateLanguage = createAction('updateLanguage');
 export const downloadAppModal = (modalProps = {}) =>
   showModal({ modalType: modalTypes.DOWNLOAD_APP_MODAL, modalProps });
 
-// SOLUTIONS //
+// SOLUTIONS // ! todo delete
 export const setSolutions = createAction('setSolutions');
 export const updateSolutionsLoading = createAction('updateSolutionsLoading');
 export const addSolutionDetails = createAction('addSolutionDetails');
@@ -22,3 +22,4 @@ export const setPostLoading = createAction('setPostLoading');
 
 // PEOPLE //
 export const setMembers = createAction('setMembers');
+export const setVolunteers = createAction('setVolunteers');

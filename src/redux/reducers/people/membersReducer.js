@@ -3,8 +3,8 @@ import { setMembers } from '../../actions';
 
 const initialState = [];
 
-const postsReducer = createReducer(initialState, {
+const membersReducer = createReducer(initialState, {
   [setMembers]: (state, actions) => actions.payload
 });
 
-export default postsReducer;
+export default membersReducer;
