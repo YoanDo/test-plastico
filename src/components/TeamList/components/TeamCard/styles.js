@@ -33,13 +33,15 @@ export const PictureWrapper = styled.div`
 `;
 
 export const IdentityRow = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 
   span {
-    font-size: ${({ theme }) => theme.biggerFS};
+    font-size: ${({ theme }) => theme.defaultFS};
+    white-space: nowrap;
   }
 
   span:nth-child(1) {

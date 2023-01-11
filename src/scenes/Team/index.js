@@ -10,9 +10,10 @@ import {
   SponsorsWrapper
 } from './styles';
 import Title from '../../components/Title';
-import TeamList from '../../components/TeamList';
 import JoinUs from '../../components/JoinUs';
 import { Wrapper } from '../../hoc/layout/styles';
+import TeamMembers from '../../containers/TeamMembers';
+import TeamVolunteers from '../../containers/TeamVolunteers';
 
 const Team = () => {
   // images
@@ -54,7 +55,8 @@ const Team = () => {
         </HeaderIntroWrapper>
       </HeaderWrapper>
       <Wrapper>
-        <TeamList />
+        <TeamMembers />
+        <TeamVolunteers />
       </Wrapper>
       <JoinUs />
       <Wrapper>
