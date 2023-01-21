@@ -4,6 +4,9 @@ import { Wrapper } from '../../hoc/layout/styles';
 export const PostWrapper = styled.div`
   padding-top: 50px;
   min-height: calc(100vh - 224px);
+  h1 {
+    line-height: 1;
+  }
   ${Wrapper} {
     padding-top: 0;
     margin-top: ${({ theme }) => theme.spacing(3)};
@@ -26,12 +29,16 @@ export const ContentWrapper = styled.div`
   padding-top: 0;
   max-width: 1080px;
   margin-bottom: ${({ theme }) => theme.spacing(3)};
+
   ul {
     list-style: square;
   }
+
   p {
     font-weight: 400;
+    margin-top: ${({ theme }) => theme.spacing(2)};
   }
+
   li {
     font-size: ${({ theme }) => theme.defaultFS};
     font-weight: 400;
