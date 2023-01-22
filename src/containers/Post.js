@@ -32,14 +32,22 @@ const Post = () => {
     illustration,
     title_en,
     title_fr,
+    publishedAt,
     _id: id
   } = postDetails;
   const title = isUserFrench ? title_fr : title_en;
   const body = isUserFrench ? body_fr : body_en;
   const imageUrl = getSanityImageUrl(illustration).width(1200).url() || 'null';
+  const publicationDate = new Date(publishedAt).toLocaleDateString('fr');
 
   return (
-    <PostComponent title={title} bannerUrl={imageUrl} body={body} id={id} />
+    <PostComponent
+      bannerUrl={imageUrl}
+      body={body}
+      id={id}
+      publicationDate={publicationDate}
+      title={title}
+    />
   );
 };
 
