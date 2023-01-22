@@ -2,6 +2,7 @@ const theme = {
   // colors
   white: '#FFF',
   black: '#555555',
+  grey: '#787878',
   surfRiderBlue: '#0073be',
   secondaryColor: '#70F9C5',
 
