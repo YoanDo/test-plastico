@@ -1,18 +1,5 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  border-radius: 4px;
-  /* border: 1px solid ${({ theme }) => theme.surfRiderBlue}; */
-  cursor: pointer;
-  height: 100%;
-  margin-bottom: ${({ theme }) => theme.spacing(1)};
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    transform: scale(1.015);
-  }
-`;
 export const CardBanner = styled.div`
   background-image: url(${({ url }) => url});
   background-position: center;
@@ -29,22 +16,38 @@ export const Title = styled.h2`
 `;
 
 export const ContentWrapper = styled.div`
-  padding: ${({ theme }) => theme.spacing(1)};
   display: flex;
   flex-direction: column;
+  padding: ${({ theme }) => theme.spacing(1)};
 `;
 
 export const DateText = styled.span`
-  color: ${({ theme }) => theme.grey};
+  color: ${({ theme }) => theme.grey} !important;
   font-size: ${({ theme }) => theme.smallFS};
   margin-bottom: ${({ theme }) => theme.spacing(0.5)};
 `;
 
 export const PreText = styled.span`
-  text-transform: lowercase;
-  font-size: ${({ theme }) => theme.defaultFS};
   color: ${({ theme }) => theme.black};
+  font-size: ${({ theme }) => theme.defaultFS};
+  text-transform: lowercase;
   &:first-letter {
     text-transform: capitalize;
+  }
+`;
+
+export const Wrapper = styled.div`
+  border-radius: 4px;
+  cursor: pointer;
+  height: 100%;
+  margin-bottom: ${({ theme }) => theme.spacing(1)};
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.015);
+  }
+  ${DateText} {
+    color: ${({ theme }) => theme.grey};
   }
 `;

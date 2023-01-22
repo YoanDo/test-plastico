@@ -14,7 +14,6 @@ const PostThumbnail = ({
   description,
   imageUrl,
   creationDate,
-  id,
   slug
 }) => {
   const formattedDate = new Date(creationDate).toLocaleDateString('fr');

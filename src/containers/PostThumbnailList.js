@@ -31,7 +31,7 @@ const PostThumbnailList = ({ activePostId }) => {
             title_en,
             body_fr,
             body_en,
-            _createdAt: creationDate,
+            publishedAt: creationDate,
             _id: id,
             slug,
             illustration
