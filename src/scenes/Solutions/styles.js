@@ -30,23 +30,15 @@ export const GetInTouchWrapper = styled.div`
       margin-left: ${({ theme }) => theme.spacing(0.25)};
     }
     &:last-of-type:after {
+      z-index: -1;
+      top: 6px;
+      left: -5px;
+      width: 104%;
+      position: absolute;
+      height: 20px;
       background-color: ${(props) => props.theme.secondaryColor};
       content: '';
-      height: 20px;
-      left: -5px;
-      position: absolute;
-      top: 6px;
       transform: rotate(1deg);
-      width: 104%;
-      z-index: -1;
-    }
-    &:hover:last-of-type:after {
-      background: lime;
-    }
-  }
-  span:hover {
-    &:last-of-type:after {
-      background: lime;
     }
   }
 `;

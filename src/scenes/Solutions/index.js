@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import SolutionsHeader from '../../components/SolutionsHeader';
-import SolutionsList from '../../containers/Solutions';
+import PostThumbnailList from '../../containers/PostThumbnailList';
 import { Wrapper } from '../../hoc/layout/styles';
-import { setSolutionsList } from '../../services/solutions';
-import { GetInTouchWrapper, Schema } from './styles';
+import { getAllPosts } from '../../services/posts';
+import { GetInTouchWrapper } from './styles';
 
 const SolutionsPage = () => {
   useEffect(() => {
-    setSolutionsList();
+    getAllPosts();
   }, []);
 
   return (
@@ -17,11 +17,8 @@ const SolutionsPage = () => {
       <Wrapper>
         <SolutionsHeader />
       </Wrapper>
-      {/* <Wrapper>
-        <Schema />
-      </Wrapper> */}
       <Wrapper>
-        <SolutionsList />
+        <PostThumbnailList />
       </Wrapper>
       <Wrapper>
         <GetInTouchWrapper>
@@ -44,4 +41,4 @@ const SolutionsPage = () => {
 
 SolutionsPage.propTypes = {};
 
-export default SolutionsPage;
+export default React.memo(SolutionsPage);
