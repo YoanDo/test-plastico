@@ -1,7 +1,7 @@
+/* eslint-disable react/prop-types */
 import { IntlProvider } from 'react-intl';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
-import App from 'next/app';
 import React, { useState, useEffect } from 'react';
 import { createWrapper } from 'next-redux-wrapper';
 
