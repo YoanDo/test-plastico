@@ -1,28 +1,30 @@
-/* eslint-disable react/display-name */
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { isNil } from 'ramda';
 import { animateScroll as scroll } from 'react-scroll';
 import { TweenMax } from 'gsap';
-
 import { useDispatch } from 'react-redux';
+
 import Menu from '../../containers/DesktopMenu';
 import GlobalStyle, { Wrapper, PreventAnimationFlashWrapper } from './styles';
 import { updateLanguage } from '../../redux/actions';
 
-const withLayout = (Page) => () => {
+const smoothScroll = (target) => {
+  if (isNil(target)) return null;
+  const targetPosition = target.offsetTop;
+  scroll.scrollTo(targetPosition, {
+    activeClass: true,
+    duration: 500,
+    delay: 100,
+    smooth: true
+  });
+};
+
+const Layout = ({ data, children }) => {
   const { target } = useRouter().query;
   const dispatch = useDispatch();
-  const smoothScroll = () => {
-    if (isNil(target)) return null;
-    const targetPosition = document.getElementsByName(target)[0].offsetTop;
-    scroll.scrollTo(targetPosition, {
-      activeClass: true,
-      duration: 500,
-      delay: 100,
-      smooth: true
-    });
-  };
+  const contentRef = useRef(null);
+
   useEffect(() => {
     const isUserFrench =
       typeof window !== 'undefined' &&
@@ -37,18 +39,28 @@ const withLayout = (Page) => () => {
 
   useEffect(() => {
     TweenMax.set('#preventAnimationFlashWrapper', { opacity: 1 });
-    smoothScroll();
-  });
+    smoothScroll(contentRef.current);
+  }, [contentRef]);
 
   return (
     <PreventAnimationFlashWrapper id="preventAnimationFlashWrapper">
       <Wrapper menu>
         <Menu />
       </Wrapper>
-      <Page />
+      <div ref={contentRef}>{children}</div>
       <GlobalStyle whiteColor />
     </PreventAnimationFlashWrapper>
   );
+};
+
+const withLayout = (Page) => {
+  const WrappedPage = (props) => (
+    <Layout {...props}>
+      <Page {...props} />
+    </Layout>
+  );
+
+  return WrappedPage;
 };
 
 export default withLayout;
