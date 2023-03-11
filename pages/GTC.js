@@ -1,13 +1,25 @@
 import React, { Fragment } from 'react';
 
-import GTC from '../src/components/Legal/GTC';
 import Footer from '../src/components/Footer';
 import withLayout from '../src/hoc/layout';
+import client from '../client';
+import Legal from '../src/components/Legal/Index';
 
-const GTCPage = () => (
+const CGUPage = ({ data }) => (
   <>
-    <GTC />
+    <Legal data={data} />
     <Footer />
   </>
 );
-export default withLayout(GTCPage);
+
+export async function getStaticProps() {
+  const data = await client.fetch('*[_type == "page" && title == "gtc"][0]');
+
+  return {
+    props: {
+      data
+    }
+  };
+}
+
+export default withLayout(CGUPage);
