@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import React, { useState, useEffect } from 'react';
 import { createWrapper } from 'next-redux-wrapper';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import BurgerMenu from '../src/components/Menu/BurgerMenu';
 import store from '../src/redux/store';
