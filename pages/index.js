@@ -8,11 +8,13 @@ import Wave from '../src/components/Wave';
 import withLayout from '../src/hoc/layout';
 import VideoHeroHeader from '../src/containers/VideoHeader';
 import Header from '../src/components/Header';
+import client from '../client';
+import SponsorsHome from '../src/components/SponsorsHome';
 
 const Project = dynamic(import('../src/components/Project'));
 const Video = dynamic(import('../src/components/Video'));
 
-function HomePage() {
+function HomePage({ sponsors }) {
   return (
     <>
       <BrowserView>
@@ -26,8 +28,20 @@ function HomePage() {
       <Project />
       <Video />
       <Wave />
+      <SponsorsHome sponsors={sponsors} />
       <Footer />
     </>
   );
 }
+
+export async function getStaticProps() {
+  const data = await client.fetch('*[_type == "sponsor"]');
+
+  return {
+    props: {
+      sponsors: data
+    }
+  };
+}
+
 export default withLayout(HomePage);
