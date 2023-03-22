@@ -5,10 +5,12 @@ import { About, HeaderWrapper, Illustration, Wrapper, Title } from './styles';
 const SponsorsHeader = () => (
   <Wrapper>
     <HeaderWrapper>
-      <Title>Sponsors</Title>
+      <Title>
+        <FormattedMessage id="partners" />
+      </Title>
       <About id="about">
         <span>
-          <FormattedMessage id="join_us_intro" />
+          <FormattedMessage id="partners_intro" />
         </span>
       </About>
     </HeaderWrapper>
