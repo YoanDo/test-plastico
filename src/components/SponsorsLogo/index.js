@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { getSanityImageUrl } from '../../helpers';
+import getSanityImageUrl from '../../helpers/getSanityImageUrl';
 
 const Container = styled.div`
   display: flex;

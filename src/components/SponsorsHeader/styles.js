@@ -22,6 +22,9 @@ export const HeaderWrapper = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
+  @media ${({ theme }) => theme.device.belowLaptop} {
+    margin-top: 20vh;
+  }
 `;
 
 export const Title = styled.h1`
@@ -75,7 +78,7 @@ export const About = styled.div`
   }
 `;
 export const Illustration = styled.div`
-  background: url('/images/formation.jpg');
+  background: url('/images/partners.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
