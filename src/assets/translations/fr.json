@@ -84,5 +84,12 @@
   "join_us_intro": "Nous avons besoin de vous pour obtenir un maximum de données sur la pollution plastique en rivière ! Pour cela, il vous suffit de télécharger l'Application Plastic Origins et de vous former à son utilisation. \n \n En vous formant et en allant sur le terrain, vous contribuez à alimenter une base de données robuste issue de la science participative !",
   "memberTeam": "L'équipe surfrider",
   "volunteerTeam": "Bénévoles & développeurs",
-  "our_partners": "Nos partenaires"
+  "our_partners": "Nos partenaires",
+  "partners": "Partenaires",
+  "partners_intro": "Surfrider Europe est persuadée qu’une transformation en profondeur de notre société ne pourra se faire qu’en impliquant l’ensemble de ses acteurs: les citoyens, les institutions publiques et les entreprises. \n \nDepuis maintenant 30 ans, l’association peut compter sur ses nombreux partenaires qui ont choisi de s’engager à ses côtés pour la protection de l’Océan.",
+  "gold": "Gold 🥇",
+  "silver": "Silver 🥈",
+  "bronze": "Bronze 🥉",
+  "technical": "Technique 🛠",
+  "field": "Terrain 🛶"
 }
