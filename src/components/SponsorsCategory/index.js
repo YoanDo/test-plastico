@@ -21,7 +21,7 @@ const SponsorsCategory = ({ category, sponsors }) => {
   return (
     <CategoryWrapper>
       <h1>
-        <FormattedMessage id={category} /> ({selectedSponsors.length})
+        <FormattedMessage id={category} />
       </h1>
       <SponsorLogos sponsors={selectedSponsors} />
     </CategoryWrapper>
