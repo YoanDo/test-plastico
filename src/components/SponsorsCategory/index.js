@@ -8,6 +8,7 @@ const CategoryWrapper = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing(4)};
   h1 {
     font-family: ${({ theme }) => theme.secondaryFF};
+    font-size: ${({ theme }) => theme.thirdFS};
   }
 `;
 
@@ -23,7 +24,7 @@ const SponsorsCategory = ({ category, sponsors }) => {
       <h1>
         <FormattedMessage id={category} />
       </h1>
-      <SponsorLogos sponsors={selectedSponsors} />
+      <SponsorLogos isBlackAndWhite={false} sponsors={selectedSponsors} />
     </CategoryWrapper>
   );
 };
