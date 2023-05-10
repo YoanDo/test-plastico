@@ -43,7 +43,8 @@ const TeamList = ({ title, members }) => {
             }) => {
               const job = isUserFrench ? jobFr : jobEn;
               const imageUrl =
-                getSanityImageUrl(avatar).width(220).url() || 'null';
+                (avatar && getSanityImageUrl(avatar)?.width(220)?.url()) ||
+                'null';
               return (
                 <CardWrapper key={link}>
                   <TeamCard
