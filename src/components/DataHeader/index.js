@@ -78,9 +78,9 @@ const DataHeader = () => {
           </span>
         </About>
       </RightSide>
-      <IconWrapper id="icon">
+      {/* <IconWrapper id="icon">
         <Image src="/svg/chevron_down.svg" onClick={scrollDown} />
-      </IconWrapper>
+      </IconWrapper> */}
     </Wrapper>
   );
 };

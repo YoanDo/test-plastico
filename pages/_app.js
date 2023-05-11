@@ -5,6 +5,8 @@ import { ThemeProvider } from 'styled-components';
 import React, { useState, useEffect } from 'react';
 import { createWrapper } from 'next-redux-wrapper';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import '../src/assets/mapAssets/mapStyles.css';
 
 import BurgerMenu from '../src/components/Menu/BurgerMenu';
 import store from '../src/redux/store';

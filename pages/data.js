@@ -4,10 +4,12 @@ import withLayout from '../src/hoc/layout';
 import DataHeader from '../src/components/DataHeader';
 import DataMap from '../src/components/DataMap';
 import Footer from '../src/components/Footer';
+import Map from '../src/components/MapRough/Map';
 
 const Data = () => (
   <>
     <DataHeader />
+    <Map />
     <DataMap />
     <Footer />
   </>
