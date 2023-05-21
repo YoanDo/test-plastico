@@ -9,7 +9,6 @@ import { getTypeName } from '../../assets/mapAssets/TypeId';
 
 const TrashLayer = ({ map, url }) => {
   const [data, loading] = useFetchData(url);
-
   useEffect(() => {
     const addLayers = () => {
       if (!data || !map) return;
@@ -35,6 +34,8 @@ const TrashLayer = ({ map, url }) => {
           paint: heatmapConfig
         });
       }
+
+      if (!map) return null;
 
       // Adding points layer
       if (!map.getLayer('circle_trash')) {
@@ -115,7 +116,7 @@ const TrashLayer = ({ map, url }) => {
 
     addLayers();
     addClickEffects();
-
+    if (!map) return null;
     return () => {
       map.off('click', 'circle_trash');
       removeClickEffects();
