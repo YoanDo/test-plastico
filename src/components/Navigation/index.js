@@ -58,6 +58,11 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
           <FormattedMessage id="team" />
         </span>
       </Link>
+      <Link href="/partners">
+        <span>
+          <FormattedMessage id="partners" />
+        </span>
+      </Link>
       {burger && (
         <a href={appLink} target="_blank" rel="noreferrer">
           <span>
