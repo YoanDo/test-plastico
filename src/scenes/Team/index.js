@@ -59,56 +59,6 @@ const Team = () => {
         <TeamVolunteers />
       </Wrapper>
       <JoinUs />
-      <Wrapper>
-        <Title>
-          <FormattedMessage id="financial_partners" />
-        </Title>
-        <SponsorsWrapper>
-          <span>🥇</span>
-          <SponsorRow>
-            <SponsorLogo url={gold1} />
-          </SponsorRow>
-        </SponsorsWrapper>
-        <SponsorsWrapper>
-          <span>🥈</span>
-          <SponsorRow>
-            <SponsorLogo url={silver1} />
-            <SponsorLogo url={silver2} />
-            <SponsorLogo url={silver3} />
-            <SponsorLogo url={silver4} />
-            <SponsorLogo url={silver5} />
-          </SponsorRow>
-        </SponsorsWrapper>
-        <SponsorsWrapper>
-          <span>🥉</span>
-          <SponsorRow>
-            <SponsorLogo url={bronze1} />
-            <SponsorLogo url={bronze2} />
-          </SponsorRow>
-        </SponsorsWrapper>
-      </Wrapper>
-      <Wrapper>
-        <Title>
-          <FormattedMessage id="technical_partners" />
-        </Title>
-        <SponsorsWrapper>
-          <SponsorRow>
-            <SponsorLogo url={technical1} />
-            <SponsorLogo url={technical2} />
-            <SponsorLogo url={technical3} />
-          </SponsorRow>
-        </SponsorsWrapper>
-      </Wrapper>
-      <Wrapper>
-        <Title>
-          <FormattedMessage id="field_partners" />
-        </Title>
-        <SponsorRow>
-          <SponsorLogo url={field1} />
-          <SponsorLogo url={field2} />
-          <SponsorLogo url={field3} />
-        </SponsorRow>
-      </Wrapper>
     </>
   );
 };
