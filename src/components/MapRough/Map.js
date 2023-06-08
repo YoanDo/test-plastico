@@ -46,7 +46,7 @@ const Map = () => {
     });
   }, [map]);
 
-  const url = `https://api-dev-plastico.westeurope.cloudapp.azure.com/v1/geojson/-8.0/33.0/28.0/66.0?entity_type=trash`;
+  const url = `https://api-plastico-prod.azurewebsites.net/v1/geojson/-8.0/33.0/28.0/66.0?entity_type=trash`;
   return (
     <>
       <div className="sidebar">
