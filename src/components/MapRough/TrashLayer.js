@@ -9,17 +9,19 @@ import { getTypeName } from '../../assets/mapAssets/TypeId';
 
 const TrashLayer = ({ map, url }) => {
   const [data, loading] = useFetchData(url);
-  useEffect(() => {
-    const addLayers = () => {
-      if (!data || !map) return;
 
+  useEffect(() => {
+    if (!map || !data) return;
+
+    const addLayers = () => {
       // Adding source
-      const source = map.getSource('data');
+      let source = map.getSource('data');
       if (!source) {
         map.addSource('data', {
           type: 'geojson',
           data
         });
+        source = map.getSource('data');
       } else {
         source.setData(data);
       }
@@ -35,8 +37,6 @@ const TrashLayer = ({ map, url }) => {
         });
       }
 
-      if (!map) return null;
-
       // Adding points layer
       if (!map.getLayer('circle_trash')) {
         map.addLayer({
@@ -49,7 +49,7 @@ const TrashLayer = ({ map, url }) => {
         });
       }
 
-      // Adding a layer that makes non selected points greyish
+      // Adding a layer that makes non-selected points greyish
       if (!map.getLayer('circle_trash_background')) {
         map.addLayer({
           id: 'circle_trash_background',
@@ -61,7 +61,7 @@ const TrashLayer = ({ map, url }) => {
         });
       }
 
-      // Adding a layer that highlights points of the same campaign than the clicked point
+      // Adding a layer that highlights points of the same campaign as the clicked point
       if (!map.getLayer('circle_trash_highlight')) {
         map.addLayer({
           id: 'circle_trash_highlight',
@@ -75,7 +75,6 @@ const TrashLayer = ({ map, url }) => {
     };
 
     const addClickEffects = () => {
-      if (!map) return null;
       map.on('click', 'circle_trash', (event) => {
         const feature = event.features[0];
         const typeName = getTypeName(feature.properties.type_id);
@@ -94,34 +93,37 @@ const TrashLayer = ({ map, url }) => {
           .addTo(map);
 
         const clickedCampaign = feature.properties.id_ref_campaign_fk;
-        map.setFilter('circle_trash_highlight', [
-          '==',
-          'id_ref_campaign_fk',
-          clickedCampaign
-        ]);
+        if (map.setFilter) {
+          map.setFilter('circle_trash_highlight', [
+            '==',
+            'id_ref_campaign_fk',
+            clickedCampaign
+          ]);
+        }
 
-        map.setLayoutProperty(
-          'circle_trash_background',
-          'visibility',
-          'visible'
-        );
+        if (map.setLayoutProperty) {
+          map.setLayoutProperty(
+            'circle_trash_background',
+            'visibility',
+            'visible'
+          );
+        }
       });
-    };
-
-    const removeClickEffects = () => {
-      if (!map) return null;
-      map.setFilter('circle_trash_highlight', ['==', 'id_ref_campaign_fk', '']);
-      map.setLayoutProperty('circle_trash_background', 'visibility', 'none');
     };
 
     addLayers();
     addClickEffects();
-    if (!map) return null;
+
     return () => {
       map.off('click', 'circle_trash');
-      removeClickEffects();
+      map.removeLayer('circle_trash_highlight');
+      map.removeLayer('circle_trash_background');
+      map.removeLayer('circle_trash');
+      map.removeLayer('heatmap_trash');
+      map.removeSource('data');
     };
-  }, [data, map]);
+  }, [map, data]);
+
   return null;
 };
 
