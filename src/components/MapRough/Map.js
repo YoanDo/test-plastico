@@ -2,18 +2,20 @@ import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import TrashLayer from './TrashLayer';
 
-mapboxgl.accessToken =
-  'pk.eyJ1Ijoic2FiaW5lYWxsb3VzdXJmcmlkZXIiLCJhIjoiY2xnZXY3NWFpMHoyaDNtcDhrYWZscGJ1ZCJ9.I21vKjTW3QIyuwfb19HhDg';
-
 const Map = () => {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [lng, setLng] = useState(2.1); // -1.0
   const [lat, setLat] = useState(46.1); // 43.47
   const [zoom, setZoom] = useState(5); // 14
+  const isMapLoaded = useRef(false);
+
+  const url = `https://api-plastico-prod.azurewebsites.net/v1/geojson/-8.0/33.0/28.0/66.0?entity_type=trash`;
 
   useEffect(() => {
     if (map.current) return;
+    mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
+      'pk.eyJ1IjoiY2hvc2Vuc291bHMiLCJhIjoiY2s4ZTlteTN4MTQyZTNocXBqdXluM2c2dCJ9.iGBZLUChDBUlCqyOtDeCaw';
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v12',
@@ -28,14 +30,15 @@ const Map = () => {
     map.current.addControl(new mapboxgl.NavigationControl());
 
     map.current.on('load', () => {
-      console.log('Map is loaded.');
+      isMapLoaded.current = true;
+      console.log(isMapLoaded.current);
       map.current.resize();
     });
 
     return () => {
       map.current.remove();
     };
-  }, [lat, lng, zoom]);
+  }, []);
 
   useEffect(() => {
     if (!map.current) return;
@@ -46,15 +49,15 @@ const Map = () => {
     });
   }, [map]);
 
-  const url = `https://api-plastico-prod.azurewebsites.net/v1/geojson/-8.0/33.0/28.0/66.0?entity_type=trash`;
   return (
-    <>
+    <div>
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
       <div ref={mapContainer} className="map-container" />
-      {map.current && <TrashLayer url={url} map={map.current} />}
-    </>
+      <TrashLayer url={url} map={map.current} />{' '}
+      {/*  zoom={zoom} isMapLoaded = {isMapLoaded.current}/> */}
+    </div>
   );
 };
 
