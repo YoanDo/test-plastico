@@ -56,7 +56,6 @@
   "contribute": "Participer",
   "soon_available": "Bientôt disponible sur l'app store 😉",
   "tagline": "Cartographier la pollution plastique des rivières",
-  "data_intro": " L’objectif principal du projet Plastic Origins est de cartographier la pollution plastique des rivières pour identifier les zones les plus polluées et inciter nos élus à prendre des mesures rapidement. Découvrez nos premiers résultats.",
   "get_involve_zoom_link": "https://us02web.zoom.us/meeting/register/tZ0rc-utpzgqGdR0Kn3NDRgFuq4saddL9ugz",
   "pm": "Gestion de projet",
   "founder": "Fondateur",
@@ -91,5 +90,6 @@
   "silver": "Silver 🥈",
   "bronze": "Bronze 🥉",
   "technical": "Technique 🛠",
-  "field": "Terrain 🛶"
+  "field": "Terrain 🛶",
+  "data_intro": "L’objectif principal du projet Plastic Origins est de cartographier la pollution plastique des rivières pour identifier les zones les plus polluées et inciter nos élus à prendre des mesures rapidement. Découvrez nos premiers résultats.​"
 }
