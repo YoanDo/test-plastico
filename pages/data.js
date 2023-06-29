@@ -1,15 +1,30 @@
 import React, { Fragment } from 'react';
+import { array } from 'prop-types';
 import withLayout from '../src/hoc/layout';
 
-import DataHeader from '../src/components/DataHeader';
 import Footer from '../src/components/Footer';
-import Map from '../src/components/MapRough/Map';
+import DataPage from '../src/scenes/Data';
+import client from '../client';
 
-const Data = () => (
+const Data = ({ faqs }) => (
   <>
     <DataHeader />
-    <Map />
+    <DataPage faqs={faqs} />
     <Footer />
   </>
 );
+
+export async function getStaticProps() {
+  const faqs = await client.fetch('*[_type == "dataFaq"]');
+
+  return {
+    props: {
+      faqs
+    }
+  };
+}
+
+Data.propTypes = {
+  faqs: array
+};
 export default withLayout(Data);
