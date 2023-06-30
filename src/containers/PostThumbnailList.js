@@ -22,10 +22,13 @@ const PostThumbnailList = ({ activePostId }) => {
   const slicedPosts = posts.filter((p) => p._id !== activePostId).slice(0, 6);
   const postsToDisplay = activePostId ? slicedPosts : posts;
 
+  const reorganizedPost = [...postsToDisplay].sort(
+    (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
+  );
   return (
     <Container>
       <Row>
-        {postsToDisplay.map((post) => {
+        {reorganizedPost.map((post) => {
           const {
             title_fr,
             title_en,
