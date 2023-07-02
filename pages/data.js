@@ -8,7 +8,6 @@ import client from '../client';
 
 const Data = ({ faqs }) => (
   <>
-    {console.log(faqs)}
     <DataPage faqs={faqs} />
     <Footer />
   </>
