@@ -2,6 +2,7 @@ import React from 'react';
 import { array } from 'prop-types';
 import { useSelector } from 'react-redux';
 import { getUserLanguage } from '../redux/selectors/ui';
+import Accordions from '../components/UI/Accordions';
 
 const DataFaq = ({ faqs }) => {
   const userLang = useSelector((state) => getUserLanguage(state));
@@ -13,19 +14,7 @@ const DataFaq = ({ faqs }) => {
     answer: faq[`answer_${userLang}`]
   }));
 
-  return (
-    <pre>
-      <code>
-        {JSON.stringify(
-          {
-            transformedFaqs
-          },
-          null,
-          2
-        )}
-      </code>
-    </pre>
-  );
+  return <Accordions data={transformedFaqs} />;
 };
 
 DataFaq.propTypes = {
