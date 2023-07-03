@@ -1,9 +1,10 @@
 const theme = {
   // colors
   white: '#FFF',
-  black: '#555555',
+  black: '#001726',
   grey: '#787878',
   surfRiderBlue: '#0073be',
+  lightBlue: '#CCE3F2',
   secondaryColor: '#70F9C5',
 
   // font-sizes - scale: 1.250
