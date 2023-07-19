@@ -3,7 +3,7 @@ const theme = {
   white: '#FFF',
   black: '#001726',
   grey: '#787878',
-  surfRiderBlue: '#0073be',
+  surfRiderBlue: '#0273BE',
   lightBlue: '#CCE3F2',
   secondaryColor: '#70F9C5',
 
