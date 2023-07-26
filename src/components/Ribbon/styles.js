@@ -41,7 +41,7 @@ export const BotRibbon = styled.div`
 `;
 
 export const Logo = styled.div`
-  background: url('/images/surfrider.png');
+  background: url('/images/surfrider_logo_white.png');
   min-height: 100px;
   min-width: 76px;
   background-position: center;

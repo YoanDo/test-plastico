@@ -1,14 +1,15 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-
+import Link from 'next/link';
 import Social from '../Social';
-import SurfRiderLink from './components/SurfRiderLink';
-import { FooterWrapper, SocialWrapper } from './styles';
+import { FooterWrapper, SocialWrapper, SurfRiderLogo } from './styles';
 import Navigation from '../Navigation';
 
 const Footer = () => (
   <FooterWrapper>
-    <SurfRiderLink />
+    <Link href="https://surfrider.eu/" target="blank">
+      <SurfRiderLogo />
+    </Link>
     <Navigation column align="flex-start" isFooter />
     <SocialWrapper>
       <p>

@@ -29,10 +29,13 @@ export const Link = styled.a`
   max-width: 70px;
 `;
 
-export const SurfRiderLogo = styled.svg`
-  flex: none;
-  fill: ${(props) => props.theme.surfRiderBlue};
-  transition: fill 0.25s;
-  height: 100px;
-  width: auto;
+export const SurfRiderLogo = styled.div`
+  background: url('/images/surfrider_logo_blue.png');
+  min-height: 100px;
+  min-width: 76px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 0px;
+  content: '';
 `;

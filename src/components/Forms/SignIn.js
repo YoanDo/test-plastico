@@ -31,7 +31,8 @@ const SignIn = ({ switchToSignUp }) => {
           {...register('email', {
             required: true,
             pattern: /^\S+@\S+$/i
-          })} />
+          })}
+        />
         {errors.email && (
           <span>
             <FormattedMessage id="signup_error_email" />
@@ -45,7 +46,8 @@ const SignIn = ({ switchToSignUp }) => {
         <Input
           type="password"
           placeholder="*******"
-          {...register('password', { required: true })} />
+          {...register('password', { required: true })}
+        />
         {errors.password && (
           <span>
             <FormattedMessage id="signup_error_password" />
