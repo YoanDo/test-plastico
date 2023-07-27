@@ -30,7 +30,7 @@ const Accordions = ({ data }) => (
 Accordions.propTypes = {
   data: shape({
     question: string,
-    answer: string,
+    answer: string
   })
 };
 

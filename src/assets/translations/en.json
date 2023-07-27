@@ -56,7 +56,6 @@
   "contribute": "Contribute",
   "soon_available": "Soon available 😉",
   "tagline": "Map river plastic pollution",
-  "data_intro": "The goal of the Plastic Origins project is to map river plastic pollution to localize hotspots and urge our decision makers to take action where it’s the most urgent. Discover our first results",
   "get_involve_zoom_link": "https://us02web.zoom.us/meeting/register/tZ0rcOCqqDkqHtP_hcUF0lI3avfpi10DuTNq",
   "pm": "Project management",
   "founder": "Founder",
@@ -91,5 +90,14 @@
   "silver": "Silver 🥈",
   "bronze": "Bronze 🥉",
   "technical": "Technical 🛠",
-  "field": "Field 🛶"
+  "field": "Field 🛶",
+  "data_intro": "The main objective of the Plastic Origins project is to map plastic pollution in rivers to identify the most polluted areas and encourage our elected officials to take prompt action. Discover our initial results.",
+  "data_use": "Freedom of Data Use",
+  "data_use_sub": "The data made available on this site are public data related to the environment. They are subject to European and French regulations, including the Aarhus Convention of June 25, 1998, the circular of the Prime Minister of February 14, 1994, and the CEE Directive 2003/4 of January 28, 2003. They are communicated to the public by Surfrider 'in order to contribute to protecting everyone's right, in present and future generations, to live in an environment conducive to health and well-being...' (Article 1 of the Aarhus Convention). As such, information regarding each data is freely communicable, and everyone has the possibility to use it in compliance with the regulations governing its use.",
+  "data_use_restriction": "Restriction: Copyright on Databases and Maps",
+  "data_use_restriction_sub": "This database created by Surfrider Foundation is protected by copyright (Article L 112-3 of the Intellectual Property Code). Similarly, the geographical map of waste distribution is an original creation of Surfrider Foundation protected by copyright (Article L 111-1 of the Intellectual Property Code). Surfrider Foundation allows the use of consultable resources, provided that the mention 'Surfrider Foundation' is cited alongside each use. Additionally, the user will ensure not to distort the data. They will refrain from using them if they realize that they are no longer sufficiently up-to-date.",
+  "data_use_free": "Free Use",
+  "data_use_free_sub": "The online posting and public dissemination of the data are provided free of charge.",
+  "data_use_warning": "Warning",
+  "data_use_warning_sub": "The data made available reflect the state of knowledge on macro-waste stranded on the banks of European watercourses. They should not be considered exhaustive in any case."
 }

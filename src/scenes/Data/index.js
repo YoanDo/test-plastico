@@ -5,6 +5,7 @@ import DataHeader from '../../components/DataHeader2';
 import DataFaq from '../../containers/DataFaq';
 import { Wrapper } from '../../hoc/layout/styles';
 import { Title } from './styles';
+import DataUse from '../../components/DataUse';
 
 const DataPage = ({ faqs }) => (
   <>
@@ -16,12 +17,13 @@ const DataPage = ({ faqs }) => (
     </Wrapper>
     <Wrapper>
       <Title>source</Title>
+      <DataUse />
     </Wrapper>
   </>
 );
 
 DataPage.propTypes = {
-  faq: array
+  faqs: array
 };
 
 export default DataPage;
