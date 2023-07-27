@@ -10,7 +10,7 @@ import DataUse from '../../components/DataUse';
 const DataPage = ({ faqs }) => (
   <>
     <DataHeader />
-    <Map />- _lien vers source_
+    <Map />
     <Wrapper>
       <Title>questions</Title>
       <DataFaq faqs={faqs} />
