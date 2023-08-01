@@ -19,12 +19,12 @@ const Text = styled.p`
 
 const DataUse = () => (
   <DataUseWrapper>
-    <Title>
+    {/* <Title>
       <FormattedMessage id="data_use" />
     </Title>
     <Text>
       <FormattedMessage id="data_use_sub" />
-    </Text>
+    </Text> */}
     <Title>
       <FormattedMessage id="data_use_restriction" />
     </Title>
