@@ -19,6 +19,7 @@ export const Links = styled.div`
     border-bottom: 2px solid transparent;
     &:hover {
       border-bottom: 2px solid ${({ theme }) => theme.surfRiderBlue};
+      color: ${(props) => props.theme.surfRiderBlue};
     }
     @media (max-width: 900px) {
       font-size: ${(props) =>

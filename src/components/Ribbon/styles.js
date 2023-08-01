@@ -37,7 +37,7 @@ export const TopRibbon = styled.div`
 export const BotRibbon = styled.div`
   width: 100%;
   max-width: 76px;
-  margin: auto auto 5px auto;
+  margin: auto auto 12px auto;
 `;
 
 export const Logo = styled.div`

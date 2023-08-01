@@ -7,14 +7,12 @@ import {
   MenuWrapper,
   NavigationLinksWrapper,
   RightWrapper,
-  SocialWrapper,
   Wrapper
 } from './styles';
 import Button from '../../UI/Button';
-import Social from '../../Social';
+
 import NavigationLinks from '../../Navigation';
 // import User from './components/User'
-import theme from '../../../assets/theme';
 
 import Ribbon from '../../Ribbon';
 
@@ -44,14 +42,11 @@ const Menu = ({ openDownloadAppModal }) => {
   return (
     <Wrapper id="wrapper">
       <MenuWrapper>
-        <Ribbon left={theme.spacing(1)} />
+        <Ribbon />
         <NavigationLinksWrapper className="item">
           <NavigationLinks />
         </NavigationLinksWrapper>
         <RightWrapper>
-          <SocialWrapper className="item">
-            <Social />
-          </SocialWrapper>
           <Button label="download_app" onClick={openDownloadAppModal} />
         </RightWrapper>
       </MenuWrapper>

@@ -26,7 +26,7 @@ const theme = {
   ribbonWidth: '90px',
 
   // Screen sizes
-  maxWidth: '1080px',
+  maxWidth: '1048px',
   desktopHeaderHeight: 80,
 
   size: {
