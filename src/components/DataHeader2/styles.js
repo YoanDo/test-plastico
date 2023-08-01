@@ -12,8 +12,11 @@ export const Wrapper = styled.div`
   width: 100%;
   @media ${({ theme }) => theme.device.belowLaptop} {
     padding-top: 0;
+    margin: 0 ${({ theme }) => theme.spacing(1)};
+    max-width: calc(100vw - ${({ theme }) => theme.spacing(2)});
   }
 `;
+
 export const HeaderWrapper = styled.div`
   margin: 0 auto;
   width: 100%;

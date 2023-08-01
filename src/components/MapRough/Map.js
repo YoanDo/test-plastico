@@ -30,8 +30,6 @@ const Map = () => {
     map.current.addControl(new mapboxgl.NavigationControl());
 
     map.current.on('load', () => {
-      isMapLoaded.current = true;
-      console.log(isMapLoaded.current);
       map.current.resize();
     });
 

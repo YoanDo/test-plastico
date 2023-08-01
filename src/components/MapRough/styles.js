@@ -6,7 +6,10 @@ export const MapWrapper = styled.div`
   width: fit-content;
   .map-container {
     height: 60vh;
-    width: 100vw;
+
+    @media (max-width: 900px) {
+      width: calc(100vw - ${({ theme }) => theme.spacing(2)});
+    }
   }
   .sideBar {
     position: absolute;
