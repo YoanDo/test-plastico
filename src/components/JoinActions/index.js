@@ -10,9 +10,9 @@ const JoinActions = () => {
   const videoFR = 'https://www.youtube.com/embed/hLCT34H7BnY';
   const videoSrc = lang === 'fr' ? videoFR : videoEN;
   const pdfEN =
-    'https://plasticostorageprod.blob.core.windows.net/public/Training_PO.pdf';
+    'https://plasticostorageprod.blob.core.windows.net/public/training_po_en_2023.pdf';
   const pdfFR =
-    'https://plasticostorageprod.blob.core.windows.net/public/Formation_PO.pdf';
+    'https://plasticostorageprod.blob.core.windows.net/public/training_po_fr_2023.pdf';
   const pdfSrc = lang === 'fr' ? pdfFR : pdfEN;
 
   return (
