@@ -55,23 +55,37 @@ export const Title = styled.h1`
 export const About = styled.div`
   align-items: center;
   color: ${(props) => props.theme.black};
+  background-color: white;
   display: flex;
   font-family: ${({ theme }) => theme.primaryFF};
   font-weight: 300;
   height: 400px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  max-width: 45vw;
-  background: white;
+  max-width: 35vw;
   padding-right: 16px;
   position: relative;
+  white-space: pre-line;
   z-index: 2;
   span {
     text-align: left;
     font-size: ${(props) => props.theme.fourthFS};
     position: relative;
-    display: block;
+  }
+  .highlight {
+    font-size: ${(props) => props.theme.fourthFS};
+    position: relative;
+    width: fit-content;
+    &:after {
+      z-index: -1;
+      top: 6px;
+      left: -5px;
+      width: 104%;
+      position: absolute;
+      height: 20px;
+      background-color: ${(props) => props.theme.secondaryColor};
+      content: '';
+      transform: rotate(1deg);
+    }
   }
   @media ${({ theme }) => theme.device.belowLaptop} {
     height: auto;
@@ -86,8 +100,8 @@ export const Illustration = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  height: 520px;
-  width: 830px;
+  height: 400px;
+  width: 1030px;
   position: absolute;
   bottom: 0px;
   right: -320px;
@@ -95,4 +109,8 @@ export const Illustration = styled.div`
   @media ${({ theme }) => theme.device.belowLaptop} {
     display: none;
   }
+`;
+
+export const IntroWrapper = styled.div`
+  display: inline-block;
 `;
