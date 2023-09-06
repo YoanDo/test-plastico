@@ -14,7 +14,7 @@ const Data = ({ faqs }) => (
 );
 
 export async function getStaticProps() {
-  const faqs = await client.fetch('*[_type == "dataFaq"]');
+  const faqs = await client.fetch('*[_type == "dataFaq"] | order(positionAsc)');
 
   return {
     props: {
