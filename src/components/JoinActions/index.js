@@ -22,7 +22,7 @@ const JoinActions = () => {
         link="https://us02web.zoom.us/meeting/register/tZ0rc-utpzgqGdR0Kn3NDRgFuq4saddL9ugz"
         isNegative
       />
-      <Cart label="get_involved_video" link={videoSrc} isNegative />
+      {/* <Cart label="get_involved_video" link={videoSrc} isNegative /> */}
       <Cart label="get_involved_pdf" link={pdfSrc} isNegative />
     </Wrapper>
   );
