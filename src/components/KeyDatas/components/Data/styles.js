@@ -5,10 +5,13 @@ export const DataWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 100%;
   flex: 1 1 0px;
+  margin: ${({ theme }) => theme.spacing(2)};
   @media (max-width: 900px) {
     flex: 1;
     flex-direction: column;
+    margin: auto;
   }
 `;
 export const Count = styled.div`
@@ -26,6 +29,7 @@ export const Key = styled.span`
   opacity: 0.85;
   text-align: center;
   text-transform: uppercase;
+  white-space: pre-line;
   @media (max-width: 900px) {
     color: ${({ theme }) => theme.black};
   }
