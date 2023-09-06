@@ -101,7 +101,7 @@
   "data_use_warning_sub": "The data displayed reflect the state of knowledge on macro-waste stranded on the banks of European watercourses. They should not be considered exhaustive in any case.",
   "data_use_restriction": "Restriction",
   "data_use_restriction_sub": "This database created by Surfrider Foundation is protected by copyright (Article L 112-3 of the Intellectual Property Code). In the same way, the geographical map of waste distribution is an original creation of Surfrider Foundation protected by copyright (Article L 111-1 of the Intellectual Property Code). Surfrider Foundation allows the use of consultable resources, provided that the mention 'Surfrider Foundation' is cited alongside each use. Additionally, the user will ensure not to distort the data. They should not use it if they realize that it is no longer sufficiently up to date.",
-  "data_map_legend": "This interactive map shows the distribution of waste reported through the Plastic Origins application! (Move around the map to see the observations appear for the first time!)",
+  "data_map_legend": "Click once on the map to see the waste spotted using the Plastic Origins application!",
   "data_map_text": "On this map, each dot represents a waste at the precise location where it was spotted via the Plastic Origins application. Additional details are available by clicking on the dots, including the date of observation. This can be used to confirm the presence of a waste that could have continued its way to the ocean, or a bulky item that has been there for several years, etc.",
   "reported_waste": "Reported\nwaste",
   "monitored_rivers": "Monitored\nrivers"
