@@ -45,9 +45,11 @@ const NavigationLinks = ({ align, burger, closePanel, column, isFooter }) => {
           <FormattedMessage id="contribute" />
         </span>
       </Link>
-      {/* <Link href="/data">
-        <span>Data</span>
-      </Link> */}
+      <Link href="/data">
+        <span>
+          <FormattedMessage id="data" />
+        </span>
+      </Link>
       <Link href="/solutions">
         <span>
           <FormattedMessage id="solutions" />
