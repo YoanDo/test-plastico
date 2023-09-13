@@ -5,16 +5,21 @@ import { getUserLanguage } from '../redux/selectors/ui';
 import Accordions from '../components/UI/Accordions';
 
 const DataFaq = ({ faqs }) => {
-  const userLang = useSelector((state) => getUserLanguage(state));
+  const userLang = useSelector(getUserLanguage);
 
-  if (!faqs) return null;
+  if (!faqs) {
+    return null;
+  }
 
-  const transformedFaqs = faqs.map((faq) => ({
-    question: faq[`question_${userLang}`],
-    answer: faq[`answer_${userLang}`]
-  }));
+  const filteredAndOrderedFaqs = faqs
+    .slice() // Create a shallow copy of the array to avoid mutating the original
+    .sort((a, b) => a.position - b.position)
+    .map((faq) => ({
+      question: faq[`question_${userLang}`],
+      answer: faq[`answer_${userLang}`]
+    }));
 
-  return <Accordions data={transformedFaqs} />;
+  return <Accordions data={filteredAndOrderedFaqs} />;
 };
 
 DataFaq.propTypes = {

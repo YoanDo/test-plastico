@@ -1,12 +1,11 @@
 import React from 'react';
-
+import { array } from 'prop-types';
 import {
   AccordionBody,
   AccordionHeader,
   AccordionItem,
   UncontrolledAccordion
 } from 'reactstrap';
-import { shape, string } from 'prop-types';
 import { PortableText } from '@portabletext/react';
 import { AccordionsWrapper } from './styles';
 import getSanityImageUrl from '../../../helpers/getSanityImageUrl';
@@ -27,15 +26,18 @@ const ptComponents = {
     }
   }
 };
+
 const Accordions = ({ data }) => (
   <AccordionsWrapper>
     <UncontrolledAccordion defaultOpen="1">
-      {data.map((x, index) => {
-        const { question, answer } = x;
+      {data.map((faq, index) => {
+        const { question, answer } = faq;
+        const accordionId = index.toString(); // Unique ID for each accordion item
+
         return (
-          <AccordionItem>
-            <AccordionHeader targetId={index}>{question}</AccordionHeader>
-            <AccordionBody accordionId={index}>
+          <AccordionItem key={accordionId}>
+            <AccordionHeader targetId={accordionId}>{question}</AccordionHeader>
+            <AccordionBody accordionId={accordionId}>
               <PortableText value={answer} components={ptComponents} />
             </AccordionBody>
           </AccordionItem>
@@ -46,10 +48,7 @@ const Accordions = ({ data }) => (
 );
 
 Accordions.propTypes = {
-  data: shape({
-    question: string,
-    answer: string
-  })
+  data: array
 };
 
 export default Accordions;
