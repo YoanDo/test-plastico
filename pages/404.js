@@ -6,17 +6,23 @@ import Post from '../src/containers/Post';
 
 const Data = () => {
   const router = useRouter();
-  const completeUrl = router.asPath;
   const [postSlug, setPostSlug] = useState(null);
 
   useEffect(() => {
-    const urlSegments = completeUrl.split('/');
-    const postIndex = urlSegments.indexOf('post');
-    if (postIndex !== -1 && urlSegments.length > postIndex + 1) {
-      const slug = urlSegments[postIndex + 1];
-      setPostSlug(slug);
+    // S'assurer que le code s'exécute côté client
+    if (typeof window !== 'undefined') {
+      const completeUrl = window.location.pathname;
+      const urlSegments = completeUrl.split('/');
+      const postIndex = urlSegments.indexOf('post');
+
+      if (postIndex !== -1 && urlSegments.length > postIndex + 1) {
+        setPostSlug(urlSegments[postIndex + 1]);
+      } else {
+        // Redirection vers la page d'accueil si pas un slug de post
+        router.push('/');
+      }
     }
-  }, [completeUrl]);
+  }, [router]);
 
   if (postSlug) {
     return (
@@ -27,7 +33,8 @@ const Data = () => {
     );
   }
 
-  router.push('/');
+  // Rendre un contenu par défaut si aucun slug de post
+  return <div>Loading...</div>;
 };
 
 export default withLayout(Data);
