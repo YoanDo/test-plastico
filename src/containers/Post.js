@@ -7,7 +7,7 @@ import PostComponent from '../components/Post';
 import { getUserLanguage } from '../redux/selectors/ui';
 import getSanityImageUrl from '../helpers/getSanityImageUrl';
 
-const Post = () => {
+const Post = ({ defaultSlug }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [postDetails, setPostDetails] = useState({});
@@ -17,7 +17,7 @@ const Post = () => {
   const { slug } = router.query;
 
   useEffect(() => {
-    getPostBySlug(slug).then(({ props }) => {
+    getPostBySlug(defaultSlug || slug).then(({ props }) => {
       setPostDetails(props.post[0]);
       setIsLoading(false);
     });
