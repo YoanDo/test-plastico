@@ -41,7 +41,8 @@ export async function getStaticProps() {
     props: {
       stats,
       sponsors: sponsorInfos
-    }
+    },
+    revalidate: 10
   };
 }
 
